@@ -9,7 +9,7 @@
     "lint": "eslint .",
     "typecheck": "tsc -b --pretty false",
     "test": "vitest run",
-    "validate:questions": "node scripts/validate-questions.mjs"
+    "validate:questions": "python3 scripts/validate-questions.py"
   },
   "devDependencies": {
     "@eslint/js": "^9.35.0",

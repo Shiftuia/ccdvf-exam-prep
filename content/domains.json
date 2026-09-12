@@ -1,0 +1,225 @@
+{
+  "examCode": "CCDV-F",
+  "examName": "Claude Certified Developer Foundations",
+  "examVersion": "1.0",
+  "itemCount": 53,
+  "timeLimitMinutes": 120,
+  "passScaledScore": 720,
+  "maxScaledScore": 1000,
+  "domains": [
+    {
+      "id": "applications-integration",
+      "name": "Applications & Integration",
+      "weightPercent": 33.1,
+      "questionCount": 17,
+      "subSkills": [
+        {
+          "id": "understanding-requirements",
+          "name": "Understanding Requirements",
+          "weightPercent": 3.4,
+          "questionCount": 2
+        },
+        {
+          "id": "systems-life-cycle",
+          "name": "Systems Life Cycle",
+          "weightPercent": 2.8,
+          "questionCount": 1
+        },
+        {
+          "id": "claude-api-mechanics",
+          "name": "Claude API Mechanics",
+          "weightPercent": 6.8,
+          "questionCount": 4
+        },
+        {
+          "id": "sw-eng-foundations",
+          "name": "SW Eng Foundations",
+          "weightPercent": 7.4,
+          "questionCount": 4
+        },
+        {
+          "id": "claude-app-design",
+          "name": "Claude App Design",
+          "weightPercent": 8.6,
+          "questionCount": 4
+        },
+        {
+          "id": "config-management",
+          "name": "Config Management",
+          "weightPercent": 4.1,
+          "questionCount": 2
+        }
+      ]
+    },
+    {
+      "id": "model-selection-optimization",
+      "name": "Model Selection & Optimization",
+      "weightPercent": 16.8,
+      "questionCount": 9,
+      "subSkills": [
+        {
+          "id": "llm-fundamentals",
+          "name": "LLM Fundamentals",
+          "weightPercent": 5.2,
+          "questionCount": 3
+        },
+        {
+          "id": "tech-fundamentals",
+          "name": "Tech Fundamentals",
+          "weightPercent": 6.1,
+          "questionCount": 3
+        },
+        {
+          "id": "model-selection",
+          "name": "Model Selection",
+          "weightPercent": 2.7,
+          "questionCount": 1
+        },
+        {
+          "id": "cost-token-management",
+          "name": "Cost/Token Management",
+          "weightPercent": 2.8,
+          "questionCount": 2
+        }
+      ]
+    },
+    {
+      "id": "agents-workflows",
+      "name": "Agents & Workflows",
+      "weightPercent": 14.7,
+      "questionCount": 8,
+      "subSkills": [
+        {
+          "id": "agent-architecture",
+          "name": "Agent Architecture",
+          "weightPercent": 4.5,
+          "questionCount": 3
+        },
+        {
+          "id": "agent-construction",
+          "name": "Agent Construction",
+          "weightPercent": 5.3,
+          "questionCount": 3
+        },
+        {
+          "id": "agent-patterns",
+          "name": "Agent Patterns",
+          "weightPercent": 4.9,
+          "questionCount": 2
+        }
+      ]
+    },
+    {
+      "id": "prompt-context-engineering",
+      "name": "Prompt & Context Engineering",
+      "weightPercent": 11.0,
+      "questionCount": 6,
+      "subSkills": [
+        {
+          "id": "context-engineering",
+          "name": "Context Engineering",
+          "weightPercent": 3.8,
+          "questionCount": 2
+        },
+        {
+          "id": "prompt-engineering",
+          "name": "Prompt Engineering",
+          "weightPercent": 4.6,
+          "questionCount": 3
+        },
+        {
+          "id": "output-handling",
+          "name": "Output Handling",
+          "weightPercent": 2.6,
+          "questionCount": 1
+        }
+      ]
+    },
+    {
+      "id": "tools-mcps",
+      "name": "Tools & MCPs",
+      "weightPercent": 10.6,
+      "questionCount": 6,
+      "subSkills": [
+        {
+          "id": "tool-implementation",
+          "name": "Tool Implementation",
+          "weightPercent": 4.4,
+          "questionCount": 3
+        },
+        {
+          "id": "mcp-development",
+          "name": "MCP Development",
+          "weightPercent": 2.1,
+          "questionCount": 3
+        }
+      ]
+    },
+    {
+      "id": "security-safety",
+      "name": "Security & Safety",
+      "weightPercent": 8.1,
+      "questionCount": 4,
+      "subSkills": [
+        {
+          "id": "ai-app-security",
+          "name": "AI App Security",
+          "weightPercent": 3.2,
+          "questionCount": 2
+        },
+        {
+          "id": "guardrails",
+          "name": "Guardrails",
+          "weightPercent": 2.3,
+          "questionCount": 1
+        },
+        {
+          "id": "identity-secrets",
+          "name": "Identity/Secrets",
+          "weightPercent": 1.6,
+          "questionCount": 1
+        }
+      ]
+    },
+    {
+      "id": "claude-code",
+      "name": "Claude Code",
+      "weightPercent": 3.1,
+      "questionCount": 2,
+      "subSkills": [
+        {
+          "id": "claude-code-operation",
+          "name": "Claude Code Operation",
+          "weightPercent": 3.1,
+          "questionCount": 1
+        },
+        {
+          "id": "agentic-customization",
+          "name": "Agentic Customization",
+          "weightPercent": 4.1,
+          "questionCount": 0
+        },
+        {
+          "id": "hooks",
+          "name": "Hooks",
+          "weightPercent": 1.0,
+          "questionCount": 1
+        }
+      ]
+    },
+    {
+      "id": "eval-testing-debugging",
+      "name": "Eval / Testing / Debugging",
+      "weightPercent": 2.6,
+      "questionCount": 1,
+      "subSkills": [
+        {
+          "id": "debugging",
+          "name": "Debugging",
+          "weightPercent": 2.6,
+          "questionCount": 1
+        }
+      ]
+    }
+  ]
+}

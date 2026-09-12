@@ -3,7 +3,7 @@
     "target": "ES2022", "useDefineForClassFields": true,
     "lib": ["ES2022", "DOM", "DOM.Iterable"], "strict": true,
     "module": "ESNext", "skipLibCheck": true, "moduleResolution": "bundler",
-    "allowImportingTsExtensions": false, "noEmit": true
+    "allowImportingTsExtensions": false, "noEmit": true, "resolveJsonModule": true
   },
-  "include": ["src", "tests", "vite.config.ts"]
+  "include": ["src", "tests", "vite.config.ts", "content/domains.json", "content/questions.json"]
 }

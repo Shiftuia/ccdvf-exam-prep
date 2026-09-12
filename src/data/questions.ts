@@ -1,7 +1,25 @@
 import type { Domain, Question } from '../lib/types';
-export const domains: Domain[] = [
- { id: 'applications-integration', name: 'Applications & Integration', questionCount: 17 }, { id: 'model-selection', name: 'Model Selection & Optimization', questionCount: 9 }, { id: 'agents-workflows', name: 'Agents & Workflows', questionCount: 8 }, { id: 'prompt-context', name: 'Prompt & Context Engineering', questionCount: 6 }, { id: 'tools-mcps', name: 'Tools & MCPs', questionCount: 6 }, { id: 'security-safety', name: 'Security & Safety', questionCount: 4 }, { id: 'claude-code', name: 'Claude Code', questionCount: 2 }, { id: 'eval-testing-debugging', name: 'Eval / Testing / Debugging', questionCount: 1 }
-];
-const single = (id: string, domainId: string, stem: string): Question => ({ id, domainId, subSkillId: domainId, type: 'single', difficulty: 'medium', stem, options: [ { id: 'approach', text: 'Choose the approach that satisfies the stated requirement.', correct: true, explanation: 'This choice directly addresses the constraint described in the scenario.' }, { id: 'shortcut', text: 'Use a shortcut without checking the relevant constraint.', correct: false, explanation: 'A shortcut can miss the requirement that determines whether the solution is safe or useful.' }, { id: 'assume', text: 'Assume the default behaviour is correct for every case.', correct: false, explanation: 'Defaults need to be validated against the actual task rather than assumed.' }, { id: 'ignore', text: 'Ignore the constraint and optimize only for speed.', correct: false, explanation: 'Speed alone does not make an implementation correct when it violates the stated constraint.' } ], rationale: 'Placeholder item used to exercise the original-question practice flow.', sourceNote: 'Original placeholder written to blueprint scope; not a real exam question.' });
-const multi = (): Question => ({ id: 'q-placeholder-multi', domainId: 'tools-mcps', subSkillId: 'tools-mcps', type: 'multi', difficulty: 'medium', stem: 'Placeholder multi-select: which practices make a tool integration safer? Select all that apply.', options: [ { id: 'validate', text: 'Validate inputs against the tool contract.', correct: true, explanation: 'Validation prevents malformed or unsafe input from reaching the tool.' }, { id: 'least-privilege', text: 'Use narrowly scoped credentials.', correct: true, explanation: 'Least privilege limits the impact of a compromised or mistaken call.' }, { id: 'trust', text: 'Trust all tool output without checking it.', correct: false, explanation: 'Tool output is external data and must be handled defensively.' }, { id: 'secrets', text: 'Place credentials in prompt text.', correct: false, explanation: 'Secrets belong in protected configuration, not prompts or user-visible text.' } ], rationale: 'Placeholder multi-select used to exercise exact-set scoring and full feedback.', sourceNote: 'Original placeholder written to blueprint scope; not a real exam question.' });
-export const questions: Question[] = [single('q-placeholder-single', 'applications-integration', 'Placeholder single-select: when requirements conflict, what should a developer do first?'), multi()];
+import domainsDoc from '../../content/domains.json';
+import questionsDoc from '../../content/questions.json';
+
+type SubSkill = { id: string; name: string; weightPercent: number; questionCount: number };
+type DomainDoc = { id: string; name: string; weightPercent: number; questionCount: number; subSkills: SubSkill[] };
+
+const parsedDomains = domainsDoc as { domains: DomainDoc[] };
+
+export const examMeta = {
+  examCode: domainsDoc.examCode,
+  examName: domainsDoc.examName,
+  itemCount: domainsDoc.itemCount,
+  timeLimitMinutes: domainsDoc.timeLimitMinutes,
+  passScaledScore: domainsDoc.passScaledScore,
+  maxScaledScore: domainsDoc.maxScaledScore,
+};
+
+export const domains: Domain[] = parsedDomains.domains.map((domain) => ({
+  id: domain.id,
+  name: domain.name,
+  questionCount: domain.questionCount,
+}));
+
+export const questions: Question[] = (questionsDoc as { questions: Question[] }).questions;

@@ -1,0 +1,1914 @@
+{
+  "schemaVersion": 1,
+  "generatedAt": "2026-09-12",
+  "questions": [
+    {
+      "id": "q-understanding-requirements-01",
+      "domainId": "applications-integration",
+      "subSkillId": "understanding-requirements",
+      "type": "single",
+      "difficulty": "medium",
+      "stem": "Placeholder item for Applications & Integration / Understanding Requirements (#1): which approach best satisfies the stated constraint in this scenario?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Address the specific constraint the Understanding Requirements item 1 scenario describes directly.",
+          "correct": true,
+          "explanation": "This option resolves exactly the constraint the scenario calls out, which is what the item is testing."
+        },
+        {
+          "id": "b",
+          "text": "Apply a generic best practice without checking it against the Understanding Requirements item 1 scenario.",
+          "correct": false,
+          "explanation": "A generic practice can be wrong here because it was not checked against this scenario's specific constraint."
+        },
+        {
+          "id": "c",
+          "text": "Defer the Understanding Requirements item 1 decision until more requirements arrive.",
+          "correct": false,
+          "explanation": "Deferring avoids the decision the scenario is asking you to make now, based on what is already known."
+        },
+        {
+          "id": "d",
+          "text": "Optimize the Understanding Requirements item 1 response only for implementation speed, ignoring the constraint.",
+          "correct": false,
+          "explanation": "Speed alone does not satisfy a constraint the scenario explicitly requires you to respect."
+        }
+      ],
+      "rationale": "Placeholder item exercising the Understanding Requirements area; real content lands in task E3.",
+      "sourceNote": "Original placeholder written to blueprint scope; not a real exam question."
+    },
+    {
+      "id": "q-understanding-requirements-02",
+      "domainId": "applications-integration",
+      "subSkillId": "understanding-requirements",
+      "type": "single",
+      "difficulty": "medium",
+      "stem": "Placeholder item for Applications & Integration / Understanding Requirements (#2): which approach best satisfies the stated constraint in this scenario?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Address the specific constraint the Understanding Requirements item 2 scenario describes directly.",
+          "correct": true,
+          "explanation": "This option resolves exactly the constraint the scenario calls out, which is what the item is testing."
+        },
+        {
+          "id": "b",
+          "text": "Apply a generic best practice without checking it against the Understanding Requirements item 2 scenario.",
+          "correct": false,
+          "explanation": "A generic practice can be wrong here because it was not checked against this scenario's specific constraint."
+        },
+        {
+          "id": "c",
+          "text": "Defer the Understanding Requirements item 2 decision until more requirements arrive.",
+          "correct": false,
+          "explanation": "Deferring avoids the decision the scenario is asking you to make now, based on what is already known."
+        },
+        {
+          "id": "d",
+          "text": "Optimize the Understanding Requirements item 2 response only for implementation speed, ignoring the constraint.",
+          "correct": false,
+          "explanation": "Speed alone does not satisfy a constraint the scenario explicitly requires you to respect."
+        }
+      ],
+      "rationale": "Placeholder item exercising the Understanding Requirements area; real content lands in task E3.",
+      "sourceNote": "Original placeholder written to blueprint scope; not a real exam question."
+    },
+    {
+      "id": "q-systems-life-cycle-01",
+      "domainId": "applications-integration",
+      "subSkillId": "systems-life-cycle",
+      "type": "single",
+      "difficulty": "medium",
+      "stem": "Placeholder item for Applications & Integration / Systems Life Cycle (#1): which approach best satisfies the stated constraint in this scenario?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Address the specific constraint the Systems Life Cycle item 1 scenario describes directly.",
+          "correct": true,
+          "explanation": "This option resolves exactly the constraint the scenario calls out, which is what the item is testing."
+        },
+        {
+          "id": "b",
+          "text": "Apply a generic best practice without checking it against the Systems Life Cycle item 1 scenario.",
+          "correct": false,
+          "explanation": "A generic practice can be wrong here because it was not checked against this scenario's specific constraint."
+        },
+        {
+          "id": "c",
+          "text": "Defer the Systems Life Cycle item 1 decision until more requirements arrive.",
+          "correct": false,
+          "explanation": "Deferring avoids the decision the scenario is asking you to make now, based on what is already known."
+        },
+        {
+          "id": "d",
+          "text": "Optimize the Systems Life Cycle item 1 response only for implementation speed, ignoring the constraint.",
+          "correct": false,
+          "explanation": "Speed alone does not satisfy a constraint the scenario explicitly requires you to respect."
+        }
+      ],
+      "rationale": "Placeholder item exercising the Systems Life Cycle area; real content lands in task E3.",
+      "sourceNote": "Original placeholder written to blueprint scope; not a real exam question."
+    },
+    {
+      "id": "q-claude-api-mechanics-01",
+      "domainId": "applications-integration",
+      "subSkillId": "claude-api-mechanics",
+      "type": "single",
+      "difficulty": "medium",
+      "stem": "Placeholder item for Applications & Integration / Claude API Mechanics (#1): which approach best satisfies the stated constraint in this scenario?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Address the specific constraint the Claude API Mechanics item 1 scenario describes directly.",
+          "correct": true,
+          "explanation": "This option resolves exactly the constraint the scenario calls out, which is what the item is testing."
+        },
+        {
+          "id": "b",
+          "text": "Apply a generic best practice without checking it against the Claude API Mechanics item 1 scenario.",
+          "correct": false,
+          "explanation": "A generic practice can be wrong here because it was not checked against this scenario's specific constraint."
+        },
+        {
+          "id": "c",
+          "text": "Defer the Claude API Mechanics item 1 decision until more requirements arrive.",
+          "correct": false,
+          "explanation": "Deferring avoids the decision the scenario is asking you to make now, based on what is already known."
+        },
+        {
+          "id": "d",
+          "text": "Optimize the Claude API Mechanics item 1 response only for implementation speed, ignoring the constraint.",
+          "correct": false,
+          "explanation": "Speed alone does not satisfy a constraint the scenario explicitly requires you to respect."
+        }
+      ],
+      "rationale": "Placeholder item exercising the Claude API Mechanics area; real content lands in task E3.",
+      "sourceNote": "Original placeholder written to blueprint scope; not a real exam question."
+    },
+    {
+      "id": "q-claude-api-mechanics-02",
+      "domainId": "applications-integration",
+      "subSkillId": "claude-api-mechanics",
+      "type": "multi",
+      "difficulty": "medium",
+      "stem": "Placeholder multi-select for Applications & Integration / Claude API Mechanics (#2): select all practices that satisfy the stated constraint.",
+      "options": [
+        {
+          "id": "a",
+          "text": "Validate the Claude API Mechanics item 2 approach against the scenario's stated constraint.",
+          "correct": true,
+          "explanation": "Direct validation against the stated constraint is a correct, necessary practice here."
+        },
+        {
+          "id": "b",
+          "text": "Document the Claude API Mechanics item 2 reasoning so the decision is auditable later.",
+          "correct": true,
+          "explanation": "Documenting the reasoning is a correct complementary practice for this kind of decision."
+        },
+        {
+          "id": "c",
+          "text": "Skip verification of the Claude API Mechanics item 2 scenario because it looks familiar.",
+          "correct": false,
+          "explanation": "Familiarity is not verification; skipping it can let a mismatched assumption through."
+        },
+        {
+          "id": "d",
+          "text": "Apply the Claude API Mechanics item 2 decision globally without scoping it to this scenario.",
+          "correct": false,
+          "explanation": "Applying the decision outside its scope can violate constraints in other scenarios."
+        }
+      ],
+      "rationale": "Placeholder multi-select exercising the Claude API Mechanics area; real content lands in task E3.",
+      "sourceNote": "Original placeholder written to blueprint scope; not a real exam question."
+    },
+    {
+      "id": "q-claude-api-mechanics-03",
+      "domainId": "applications-integration",
+      "subSkillId": "claude-api-mechanics",
+      "type": "single",
+      "difficulty": "medium",
+      "stem": "Placeholder item for Applications & Integration / Claude API Mechanics (#3): which approach best satisfies the stated constraint in this scenario?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Address the specific constraint the Claude API Mechanics item 3 scenario describes directly.",
+          "correct": true,
+          "explanation": "This option resolves exactly the constraint the scenario calls out, which is what the item is testing."
+        },
+        {
+          "id": "b",
+          "text": "Apply a generic best practice without checking it against the Claude API Mechanics item 3 scenario.",
+          "correct": false,
+          "explanation": "A generic practice can be wrong here because it was not checked against this scenario's specific constraint."
+        },
+        {
+          "id": "c",
+          "text": "Defer the Claude API Mechanics item 3 decision until more requirements arrive.",
+          "correct": false,
+          "explanation": "Deferring avoids the decision the scenario is asking you to make now, based on what is already known."
+        },
+        {
+          "id": "d",
+          "text": "Optimize the Claude API Mechanics item 3 response only for implementation speed, ignoring the constraint.",
+          "correct": false,
+          "explanation": "Speed alone does not satisfy a constraint the scenario explicitly requires you to respect."
+        }
+      ],
+      "rationale": "Placeholder item exercising the Claude API Mechanics area; real content lands in task E3.",
+      "sourceNote": "Original placeholder written to blueprint scope; not a real exam question."
+    },
+    {
+      "id": "q-claude-api-mechanics-04",
+      "domainId": "applications-integration",
+      "subSkillId": "claude-api-mechanics",
+      "type": "single",
+      "difficulty": "medium",
+      "stem": "Placeholder item for Applications & Integration / Claude API Mechanics (#4): which approach best satisfies the stated constraint in this scenario?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Address the specific constraint the Claude API Mechanics item 4 scenario describes directly.",
+          "correct": true,
+          "explanation": "This option resolves exactly the constraint the scenario calls out, which is what the item is testing."
+        },
+        {
+          "id": "b",
+          "text": "Apply a generic best practice without checking it against the Claude API Mechanics item 4 scenario.",
+          "correct": false,
+          "explanation": "A generic practice can be wrong here because it was not checked against this scenario's specific constraint."
+        },
+        {
+          "id": "c",
+          "text": "Defer the Claude API Mechanics item 4 decision until more requirements arrive.",
+          "correct": false,
+          "explanation": "Deferring avoids the decision the scenario is asking you to make now, based on what is already known."
+        },
+        {
+          "id": "d",
+          "text": "Optimize the Claude API Mechanics item 4 response only for implementation speed, ignoring the constraint.",
+          "correct": false,
+          "explanation": "Speed alone does not satisfy a constraint the scenario explicitly requires you to respect."
+        }
+      ],
+      "rationale": "Placeholder item exercising the Claude API Mechanics area; real content lands in task E3.",
+      "sourceNote": "Original placeholder written to blueprint scope; not a real exam question."
+    },
+    {
+      "id": "q-sw-eng-foundations-01",
+      "domainId": "applications-integration",
+      "subSkillId": "sw-eng-foundations",
+      "type": "single",
+      "difficulty": "medium",
+      "stem": "Placeholder item for Applications & Integration / SW Eng Foundations (#1): which approach best satisfies the stated constraint in this scenario?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Address the specific constraint the SW Eng Foundations item 1 scenario describes directly.",
+          "correct": true,
+          "explanation": "This option resolves exactly the constraint the scenario calls out, which is what the item is testing."
+        },
+        {
+          "id": "b",
+          "text": "Apply a generic best practice without checking it against the SW Eng Foundations item 1 scenario.",
+          "correct": false,
+          "explanation": "A generic practice can be wrong here because it was not checked against this scenario's specific constraint."
+        },
+        {
+          "id": "c",
+          "text": "Defer the SW Eng Foundations item 1 decision until more requirements arrive.",
+          "correct": false,
+          "explanation": "Deferring avoids the decision the scenario is asking you to make now, based on what is already known."
+        },
+        {
+          "id": "d",
+          "text": "Optimize the SW Eng Foundations item 1 response only for implementation speed, ignoring the constraint.",
+          "correct": false,
+          "explanation": "Speed alone does not satisfy a constraint the scenario explicitly requires you to respect."
+        }
+      ],
+      "rationale": "Placeholder item exercising the SW Eng Foundations area; real content lands in task E3.",
+      "sourceNote": "Original placeholder written to blueprint scope; not a real exam question."
+    },
+    {
+      "id": "q-sw-eng-foundations-02",
+      "domainId": "applications-integration",
+      "subSkillId": "sw-eng-foundations",
+      "type": "single",
+      "difficulty": "medium",
+      "stem": "Placeholder item for Applications & Integration / SW Eng Foundations (#2): which approach best satisfies the stated constraint in this scenario?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Address the specific constraint the SW Eng Foundations item 2 scenario describes directly.",
+          "correct": true,
+          "explanation": "This option resolves exactly the constraint the scenario calls out, which is what the item is testing."
+        },
+        {
+          "id": "b",
+          "text": "Apply a generic best practice without checking it against the SW Eng Foundations item 2 scenario.",
+          "correct": false,
+          "explanation": "A generic practice can be wrong here because it was not checked against this scenario's specific constraint."
+        },
+        {
+          "id": "c",
+          "text": "Defer the SW Eng Foundations item 2 decision until more requirements arrive.",
+          "correct": false,
+          "explanation": "Deferring avoids the decision the scenario is asking you to make now, based on what is already known."
+        },
+        {
+          "id": "d",
+          "text": "Optimize the SW Eng Foundations item 2 response only for implementation speed, ignoring the constraint.",
+          "correct": false,
+          "explanation": "Speed alone does not satisfy a constraint the scenario explicitly requires you to respect."
+        }
+      ],
+      "rationale": "Placeholder item exercising the SW Eng Foundations area; real content lands in task E3.",
+      "sourceNote": "Original placeholder written to blueprint scope; not a real exam question."
+    },
+    {
+      "id": "q-sw-eng-foundations-03",
+      "domainId": "applications-integration",
+      "subSkillId": "sw-eng-foundations",
+      "type": "multi",
+      "difficulty": "medium",
+      "stem": "Placeholder multi-select for Applications & Integration / SW Eng Foundations (#3): select all practices that satisfy the stated constraint.",
+      "options": [
+        {
+          "id": "a",
+          "text": "Validate the SW Eng Foundations item 3 approach against the scenario's stated constraint.",
+          "correct": true,
+          "explanation": "Direct validation against the stated constraint is a correct, necessary practice here."
+        },
+        {
+          "id": "b",
+          "text": "Document the SW Eng Foundations item 3 reasoning so the decision is auditable later.",
+          "correct": true,
+          "explanation": "Documenting the reasoning is a correct complementary practice for this kind of decision."
+        },
+        {
+          "id": "c",
+          "text": "Skip verification of the SW Eng Foundations item 3 scenario because it looks familiar.",
+          "correct": false,
+          "explanation": "Familiarity is not verification; skipping it can let a mismatched assumption through."
+        },
+        {
+          "id": "d",
+          "text": "Apply the SW Eng Foundations item 3 decision globally without scoping it to this scenario.",
+          "correct": false,
+          "explanation": "Applying the decision outside its scope can violate constraints in other scenarios."
+        }
+      ],
+      "rationale": "Placeholder multi-select exercising the SW Eng Foundations area; real content lands in task E3.",
+      "sourceNote": "Original placeholder written to blueprint scope; not a real exam question."
+    },
+    {
+      "id": "q-sw-eng-foundations-04",
+      "domainId": "applications-integration",
+      "subSkillId": "sw-eng-foundations",
+      "type": "single",
+      "difficulty": "medium",
+      "stem": "Placeholder item for Applications & Integration / SW Eng Foundations (#4): which approach best satisfies the stated constraint in this scenario?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Address the specific constraint the SW Eng Foundations item 4 scenario describes directly.",
+          "correct": true,
+          "explanation": "This option resolves exactly the constraint the scenario calls out, which is what the item is testing."
+        },
+        {
+          "id": "b",
+          "text": "Apply a generic best practice without checking it against the SW Eng Foundations item 4 scenario.",
+          "correct": false,
+          "explanation": "A generic practice can be wrong here because it was not checked against this scenario's specific constraint."
+        },
+        {
+          "id": "c",
+          "text": "Defer the SW Eng Foundations item 4 decision until more requirements arrive.",
+          "correct": false,
+          "explanation": "Deferring avoids the decision the scenario is asking you to make now, based on what is already known."
+        },
+        {
+          "id": "d",
+          "text": "Optimize the SW Eng Foundations item 4 response only for implementation speed, ignoring the constraint.",
+          "correct": false,
+          "explanation": "Speed alone does not satisfy a constraint the scenario explicitly requires you to respect."
+        }
+      ],
+      "rationale": "Placeholder item exercising the SW Eng Foundations area; real content lands in task E3.",
+      "sourceNote": "Original placeholder written to blueprint scope; not a real exam question."
+    },
+    {
+      "id": "q-claude-app-design-01",
+      "domainId": "applications-integration",
+      "subSkillId": "claude-app-design",
+      "type": "single",
+      "difficulty": "medium",
+      "stem": "Placeholder item for Applications & Integration / Claude App Design (#1): which approach best satisfies the stated constraint in this scenario?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Address the specific constraint the Claude App Design item 1 scenario describes directly.",
+          "correct": true,
+          "explanation": "This option resolves exactly the constraint the scenario calls out, which is what the item is testing."
+        },
+        {
+          "id": "b",
+          "text": "Apply a generic best practice without checking it against the Claude App Design item 1 scenario.",
+          "correct": false,
+          "explanation": "A generic practice can be wrong here because it was not checked against this scenario's specific constraint."
+        },
+        {
+          "id": "c",
+          "text": "Defer the Claude App Design item 1 decision until more requirements arrive.",
+          "correct": false,
+          "explanation": "Deferring avoids the decision the scenario is asking you to make now, based on what is already known."
+        },
+        {
+          "id": "d",
+          "text": "Optimize the Claude App Design item 1 response only for implementation speed, ignoring the constraint.",
+          "correct": false,
+          "explanation": "Speed alone does not satisfy a constraint the scenario explicitly requires you to respect."
+        }
+      ],
+      "rationale": "Placeholder item exercising the Claude App Design area; real content lands in task E3.",
+      "sourceNote": "Original placeholder written to blueprint scope; not a real exam question."
+    },
+    {
+      "id": "q-claude-app-design-02",
+      "domainId": "applications-integration",
+      "subSkillId": "claude-app-design",
+      "type": "single",
+      "difficulty": "medium",
+      "stem": "Placeholder item for Applications & Integration / Claude App Design (#2): which approach best satisfies the stated constraint in this scenario?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Address the specific constraint the Claude App Design item 2 scenario describes directly.",
+          "correct": true,
+          "explanation": "This option resolves exactly the constraint the scenario calls out, which is what the item is testing."
+        },
+        {
+          "id": "b",
+          "text": "Apply a generic best practice without checking it against the Claude App Design item 2 scenario.",
+          "correct": false,
+          "explanation": "A generic practice can be wrong here because it was not checked against this scenario's specific constraint."
+        },
+        {
+          "id": "c",
+          "text": "Defer the Claude App Design item 2 decision until more requirements arrive.",
+          "correct": false,
+          "explanation": "Deferring avoids the decision the scenario is asking you to make now, based on what is already known."
+        },
+        {
+          "id": "d",
+          "text": "Optimize the Claude App Design item 2 response only for implementation speed, ignoring the constraint.",
+          "correct": false,
+          "explanation": "Speed alone does not satisfy a constraint the scenario explicitly requires you to respect."
+        }
+      ],
+      "rationale": "Placeholder item exercising the Claude App Design area; real content lands in task E3.",
+      "sourceNote": "Original placeholder written to blueprint scope; not a real exam question."
+    },
+    {
+      "id": "q-claude-app-design-03",
+      "domainId": "applications-integration",
+      "subSkillId": "claude-app-design",
+      "type": "single",
+      "difficulty": "medium",
+      "stem": "Placeholder item for Applications & Integration / Claude App Design (#3): which approach best satisfies the stated constraint in this scenario?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Address the specific constraint the Claude App Design item 3 scenario describes directly.",
+          "correct": true,
+          "explanation": "This option resolves exactly the constraint the scenario calls out, which is what the item is testing."
+        },
+        {
+          "id": "b",
+          "text": "Apply a generic best practice without checking it against the Claude App Design item 3 scenario.",
+          "correct": false,
+          "explanation": "A generic practice can be wrong here because it was not checked against this scenario's specific constraint."
+        },
+        {
+          "id": "c",
+          "text": "Defer the Claude App Design item 3 decision until more requirements arrive.",
+          "correct": false,
+          "explanation": "Deferring avoids the decision the scenario is asking you to make now, based on what is already known."
+        },
+        {
+          "id": "d",
+          "text": "Optimize the Claude App Design item 3 response only for implementation speed, ignoring the constraint.",
+          "correct": false,
+          "explanation": "Speed alone does not satisfy a constraint the scenario explicitly requires you to respect."
+        }
+      ],
+      "rationale": "Placeholder item exercising the Claude App Design area; real content lands in task E3.",
+      "sourceNote": "Original placeholder written to blueprint scope; not a real exam question."
+    },
+    {
+      "id": "q-claude-app-design-04",
+      "domainId": "applications-integration",
+      "subSkillId": "claude-app-design",
+      "type": "multi",
+      "difficulty": "medium",
+      "stem": "Placeholder multi-select for Applications & Integration / Claude App Design (#4): select all practices that satisfy the stated constraint.",
+      "options": [
+        {
+          "id": "a",
+          "text": "Validate the Claude App Design item 4 approach against the scenario's stated constraint.",
+          "correct": true,
+          "explanation": "Direct validation against the stated constraint is a correct, necessary practice here."
+        },
+        {
+          "id": "b",
+          "text": "Document the Claude App Design item 4 reasoning so the decision is auditable later.",
+          "correct": true,
+          "explanation": "Documenting the reasoning is a correct complementary practice for this kind of decision."
+        },
+        {
+          "id": "c",
+          "text": "Skip verification of the Claude App Design item 4 scenario because it looks familiar.",
+          "correct": false,
+          "explanation": "Familiarity is not verification; skipping it can let a mismatched assumption through."
+        },
+        {
+          "id": "d",
+          "text": "Apply the Claude App Design item 4 decision globally without scoping it to this scenario.",
+          "correct": false,
+          "explanation": "Applying the decision outside its scope can violate constraints in other scenarios."
+        }
+      ],
+      "rationale": "Placeholder multi-select exercising the Claude App Design area; real content lands in task E3.",
+      "sourceNote": "Original placeholder written to blueprint scope; not a real exam question."
+    },
+    {
+      "id": "q-config-management-01",
+      "domainId": "applications-integration",
+      "subSkillId": "config-management",
+      "type": "single",
+      "difficulty": "medium",
+      "stem": "Placeholder item for Applications & Integration / Config Management (#1): which approach best satisfies the stated constraint in this scenario?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Address the specific constraint the Config Management item 1 scenario describes directly.",
+          "correct": true,
+          "explanation": "This option resolves exactly the constraint the scenario calls out, which is what the item is testing."
+        },
+        {
+          "id": "b",
+          "text": "Apply a generic best practice without checking it against the Config Management item 1 scenario.",
+          "correct": false,
+          "explanation": "A generic practice can be wrong here because it was not checked against this scenario's specific constraint."
+        },
+        {
+          "id": "c",
+          "text": "Defer the Config Management item 1 decision until more requirements arrive.",
+          "correct": false,
+          "explanation": "Deferring avoids the decision the scenario is asking you to make now, based on what is already known."
+        },
+        {
+          "id": "d",
+          "text": "Optimize the Config Management item 1 response only for implementation speed, ignoring the constraint.",
+          "correct": false,
+          "explanation": "Speed alone does not satisfy a constraint the scenario explicitly requires you to respect."
+        }
+      ],
+      "rationale": "Placeholder item exercising the Config Management area; real content lands in task E3.",
+      "sourceNote": "Original placeholder written to blueprint scope; not a real exam question."
+    },
+    {
+      "id": "q-config-management-02",
+      "domainId": "applications-integration",
+      "subSkillId": "config-management",
+      "type": "single",
+      "difficulty": "medium",
+      "stem": "Placeholder item for Applications & Integration / Config Management (#2): which approach best satisfies the stated constraint in this scenario?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Address the specific constraint the Config Management item 2 scenario describes directly.",
+          "correct": true,
+          "explanation": "This option resolves exactly the constraint the scenario calls out, which is what the item is testing."
+        },
+        {
+          "id": "b",
+          "text": "Apply a generic best practice without checking it against the Config Management item 2 scenario.",
+          "correct": false,
+          "explanation": "A generic practice can be wrong here because it was not checked against this scenario's specific constraint."
+        },
+        {
+          "id": "c",
+          "text": "Defer the Config Management item 2 decision until more requirements arrive.",
+          "correct": false,
+          "explanation": "Deferring avoids the decision the scenario is asking you to make now, based on what is already known."
+        },
+        {
+          "id": "d",
+          "text": "Optimize the Config Management item 2 response only for implementation speed, ignoring the constraint.",
+          "correct": false,
+          "explanation": "Speed alone does not satisfy a constraint the scenario explicitly requires you to respect."
+        }
+      ],
+      "rationale": "Placeholder item exercising the Config Management area; real content lands in task E3.",
+      "sourceNote": "Original placeholder written to blueprint scope; not a real exam question."
+    },
+    {
+      "id": "q-llm-fundamentals-01",
+      "domainId": "model-selection-optimization",
+      "subSkillId": "llm-fundamentals",
+      "type": "single",
+      "difficulty": "medium",
+      "stem": "Placeholder item for Model Selection & Optimization / LLM Fundamentals (#1): which approach best satisfies the stated constraint in this scenario?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Address the specific constraint the LLM Fundamentals item 1 scenario describes directly.",
+          "correct": true,
+          "explanation": "This option resolves exactly the constraint the scenario calls out, which is what the item is testing."
+        },
+        {
+          "id": "b",
+          "text": "Apply a generic best practice without checking it against the LLM Fundamentals item 1 scenario.",
+          "correct": false,
+          "explanation": "A generic practice can be wrong here because it was not checked against this scenario's specific constraint."
+        },
+        {
+          "id": "c",
+          "text": "Defer the LLM Fundamentals item 1 decision until more requirements arrive.",
+          "correct": false,
+          "explanation": "Deferring avoids the decision the scenario is asking you to make now, based on what is already known."
+        },
+        {
+          "id": "d",
+          "text": "Optimize the LLM Fundamentals item 1 response only for implementation speed, ignoring the constraint.",
+          "correct": false,
+          "explanation": "Speed alone does not satisfy a constraint the scenario explicitly requires you to respect."
+        }
+      ],
+      "rationale": "Placeholder item exercising the LLM Fundamentals area; real content lands in task E3.",
+      "sourceNote": "Original placeholder written to blueprint scope; not a real exam question."
+    },
+    {
+      "id": "q-llm-fundamentals-02",
+      "domainId": "model-selection-optimization",
+      "subSkillId": "llm-fundamentals",
+      "type": "single",
+      "difficulty": "medium",
+      "stem": "Placeholder item for Model Selection & Optimization / LLM Fundamentals (#2): which approach best satisfies the stated constraint in this scenario?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Address the specific constraint the LLM Fundamentals item 2 scenario describes directly.",
+          "correct": true,
+          "explanation": "This option resolves exactly the constraint the scenario calls out, which is what the item is testing."
+        },
+        {
+          "id": "b",
+          "text": "Apply a generic best practice without checking it against the LLM Fundamentals item 2 scenario.",
+          "correct": false,
+          "explanation": "A generic practice can be wrong here because it was not checked against this scenario's specific constraint."
+        },
+        {
+          "id": "c",
+          "text": "Defer the LLM Fundamentals item 2 decision until more requirements arrive.",
+          "correct": false,
+          "explanation": "Deferring avoids the decision the scenario is asking you to make now, based on what is already known."
+        },
+        {
+          "id": "d",
+          "text": "Optimize the LLM Fundamentals item 2 response only for implementation speed, ignoring the constraint.",
+          "correct": false,
+          "explanation": "Speed alone does not satisfy a constraint the scenario explicitly requires you to respect."
+        }
+      ],
+      "rationale": "Placeholder item exercising the LLM Fundamentals area; real content lands in task E3.",
+      "sourceNote": "Original placeholder written to blueprint scope; not a real exam question."
+    },
+    {
+      "id": "q-llm-fundamentals-03",
+      "domainId": "model-selection-optimization",
+      "subSkillId": "llm-fundamentals",
+      "type": "multi",
+      "difficulty": "medium",
+      "stem": "Placeholder multi-select for Model Selection & Optimization / LLM Fundamentals (#3): select all practices that satisfy the stated constraint.",
+      "options": [
+        {
+          "id": "a",
+          "text": "Validate the LLM Fundamentals item 3 approach against the scenario's stated constraint.",
+          "correct": true,
+          "explanation": "Direct validation against the stated constraint is a correct, necessary practice here."
+        },
+        {
+          "id": "b",
+          "text": "Document the LLM Fundamentals item 3 reasoning so the decision is auditable later.",
+          "correct": true,
+          "explanation": "Documenting the reasoning is a correct complementary practice for this kind of decision."
+        },
+        {
+          "id": "c",
+          "text": "Skip verification of the LLM Fundamentals item 3 scenario because it looks familiar.",
+          "correct": false,
+          "explanation": "Familiarity is not verification; skipping it can let a mismatched assumption through."
+        },
+        {
+          "id": "d",
+          "text": "Apply the LLM Fundamentals item 3 decision globally without scoping it to this scenario.",
+          "correct": false,
+          "explanation": "Applying the decision outside its scope can violate constraints in other scenarios."
+        }
+      ],
+      "rationale": "Placeholder multi-select exercising the LLM Fundamentals area; real content lands in task E3.",
+      "sourceNote": "Original placeholder written to blueprint scope; not a real exam question."
+    },
+    {
+      "id": "q-tech-fundamentals-01",
+      "domainId": "model-selection-optimization",
+      "subSkillId": "tech-fundamentals",
+      "type": "single",
+      "difficulty": "medium",
+      "stem": "Placeholder item for Model Selection & Optimization / Tech Fundamentals (#1): which approach best satisfies the stated constraint in this scenario?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Address the specific constraint the Tech Fundamentals item 1 scenario describes directly.",
+          "correct": true,
+          "explanation": "This option resolves exactly the constraint the scenario calls out, which is what the item is testing."
+        },
+        {
+          "id": "b",
+          "text": "Apply a generic best practice without checking it against the Tech Fundamentals item 1 scenario.",
+          "correct": false,
+          "explanation": "A generic practice can be wrong here because it was not checked against this scenario's specific constraint."
+        },
+        {
+          "id": "c",
+          "text": "Defer the Tech Fundamentals item 1 decision until more requirements arrive.",
+          "correct": false,
+          "explanation": "Deferring avoids the decision the scenario is asking you to make now, based on what is already known."
+        },
+        {
+          "id": "d",
+          "text": "Optimize the Tech Fundamentals item 1 response only for implementation speed, ignoring the constraint.",
+          "correct": false,
+          "explanation": "Speed alone does not satisfy a constraint the scenario explicitly requires you to respect."
+        }
+      ],
+      "rationale": "Placeholder item exercising the Tech Fundamentals area; real content lands in task E3.",
+      "sourceNote": "Original placeholder written to blueprint scope; not a real exam question."
+    },
+    {
+      "id": "q-tech-fundamentals-02",
+      "domainId": "model-selection-optimization",
+      "subSkillId": "tech-fundamentals",
+      "type": "single",
+      "difficulty": "medium",
+      "stem": "Placeholder item for Model Selection & Optimization / Tech Fundamentals (#2): which approach best satisfies the stated constraint in this scenario?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Address the specific constraint the Tech Fundamentals item 2 scenario describes directly.",
+          "correct": true,
+          "explanation": "This option resolves exactly the constraint the scenario calls out, which is what the item is testing."
+        },
+        {
+          "id": "b",
+          "text": "Apply a generic best practice without checking it against the Tech Fundamentals item 2 scenario.",
+          "correct": false,
+          "explanation": "A generic practice can be wrong here because it was not checked against this scenario's specific constraint."
+        },
+        {
+          "id": "c",
+          "text": "Defer the Tech Fundamentals item 2 decision until more requirements arrive.",
+          "correct": false,
+          "explanation": "Deferring avoids the decision the scenario is asking you to make now, based on what is already known."
+        },
+        {
+          "id": "d",
+          "text": "Optimize the Tech Fundamentals item 2 response only for implementation speed, ignoring the constraint.",
+          "correct": false,
+          "explanation": "Speed alone does not satisfy a constraint the scenario explicitly requires you to respect."
+        }
+      ],
+      "rationale": "Placeholder item exercising the Tech Fundamentals area; real content lands in task E3.",
+      "sourceNote": "Original placeholder written to blueprint scope; not a real exam question."
+    },
+    {
+      "id": "q-tech-fundamentals-03",
+      "domainId": "model-selection-optimization",
+      "subSkillId": "tech-fundamentals",
+      "type": "single",
+      "difficulty": "medium",
+      "stem": "Placeholder item for Model Selection & Optimization / Tech Fundamentals (#3): which approach best satisfies the stated constraint in this scenario?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Address the specific constraint the Tech Fundamentals item 3 scenario describes directly.",
+          "correct": true,
+          "explanation": "This option resolves exactly the constraint the scenario calls out, which is what the item is testing."
+        },
+        {
+          "id": "b",
+          "text": "Apply a generic best practice without checking it against the Tech Fundamentals item 3 scenario.",
+          "correct": false,
+          "explanation": "A generic practice can be wrong here because it was not checked against this scenario's specific constraint."
+        },
+        {
+          "id": "c",
+          "text": "Defer the Tech Fundamentals item 3 decision until more requirements arrive.",
+          "correct": false,
+          "explanation": "Deferring avoids the decision the scenario is asking you to make now, based on what is already known."
+        },
+        {
+          "id": "d",
+          "text": "Optimize the Tech Fundamentals item 3 response only for implementation speed, ignoring the constraint.",
+          "correct": false,
+          "explanation": "Speed alone does not satisfy a constraint the scenario explicitly requires you to respect."
+        }
+      ],
+      "rationale": "Placeholder item exercising the Tech Fundamentals area; real content lands in task E3.",
+      "sourceNote": "Original placeholder written to blueprint scope; not a real exam question."
+    },
+    {
+      "id": "q-model-selection-01",
+      "domainId": "model-selection-optimization",
+      "subSkillId": "model-selection",
+      "type": "single",
+      "difficulty": "medium",
+      "stem": "Placeholder item for Model Selection & Optimization / Model Selection (#1): which approach best satisfies the stated constraint in this scenario?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Address the specific constraint the Model Selection item 1 scenario describes directly.",
+          "correct": true,
+          "explanation": "This option resolves exactly the constraint the scenario calls out, which is what the item is testing."
+        },
+        {
+          "id": "b",
+          "text": "Apply a generic best practice without checking it against the Model Selection item 1 scenario.",
+          "correct": false,
+          "explanation": "A generic practice can be wrong here because it was not checked against this scenario's specific constraint."
+        },
+        {
+          "id": "c",
+          "text": "Defer the Model Selection item 1 decision until more requirements arrive.",
+          "correct": false,
+          "explanation": "Deferring avoids the decision the scenario is asking you to make now, based on what is already known."
+        },
+        {
+          "id": "d",
+          "text": "Optimize the Model Selection item 1 response only for implementation speed, ignoring the constraint.",
+          "correct": false,
+          "explanation": "Speed alone does not satisfy a constraint the scenario explicitly requires you to respect."
+        }
+      ],
+      "rationale": "Placeholder item exercising the Model Selection area; real content lands in task E3.",
+      "sourceNote": "Original placeholder written to blueprint scope; not a real exam question."
+    },
+    {
+      "id": "q-cost-token-management-01",
+      "domainId": "model-selection-optimization",
+      "subSkillId": "cost-token-management",
+      "type": "multi",
+      "difficulty": "medium",
+      "stem": "Placeholder multi-select for Model Selection & Optimization / Cost/Token Management (#1): select all practices that satisfy the stated constraint.",
+      "options": [
+        {
+          "id": "a",
+          "text": "Validate the Cost/Token Management item 1 approach against the scenario's stated constraint.",
+          "correct": true,
+          "explanation": "Direct validation against the stated constraint is a correct, necessary practice here."
+        },
+        {
+          "id": "b",
+          "text": "Document the Cost/Token Management item 1 reasoning so the decision is auditable later.",
+          "correct": true,
+          "explanation": "Documenting the reasoning is a correct complementary practice for this kind of decision."
+        },
+        {
+          "id": "c",
+          "text": "Skip verification of the Cost/Token Management item 1 scenario because it looks familiar.",
+          "correct": false,
+          "explanation": "Familiarity is not verification; skipping it can let a mismatched assumption through."
+        },
+        {
+          "id": "d",
+          "text": "Apply the Cost/Token Management item 1 decision globally without scoping it to this scenario.",
+          "correct": false,
+          "explanation": "Applying the decision outside its scope can violate constraints in other scenarios."
+        }
+      ],
+      "rationale": "Placeholder multi-select exercising the Cost/Token Management area; real content lands in task E3.",
+      "sourceNote": "Original placeholder written to blueprint scope; not a real exam question."
+    },
+    {
+      "id": "q-cost-token-management-02",
+      "domainId": "model-selection-optimization",
+      "subSkillId": "cost-token-management",
+      "type": "single",
+      "difficulty": "medium",
+      "stem": "Placeholder item for Model Selection & Optimization / Cost/Token Management (#2): which approach best satisfies the stated constraint in this scenario?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Address the specific constraint the Cost/Token Management item 2 scenario describes directly.",
+          "correct": true,
+          "explanation": "This option resolves exactly the constraint the scenario calls out, which is what the item is testing."
+        },
+        {
+          "id": "b",
+          "text": "Apply a generic best practice without checking it against the Cost/Token Management item 2 scenario.",
+          "correct": false,
+          "explanation": "A generic practice can be wrong here because it was not checked against this scenario's specific constraint."
+        },
+        {
+          "id": "c",
+          "text": "Defer the Cost/Token Management item 2 decision until more requirements arrive.",
+          "correct": false,
+          "explanation": "Deferring avoids the decision the scenario is asking you to make now, based on what is already known."
+        },
+        {
+          "id": "d",
+          "text": "Optimize the Cost/Token Management item 2 response only for implementation speed, ignoring the constraint.",
+          "correct": false,
+          "explanation": "Speed alone does not satisfy a constraint the scenario explicitly requires you to respect."
+        }
+      ],
+      "rationale": "Placeholder item exercising the Cost/Token Management area; real content lands in task E3.",
+      "sourceNote": "Original placeholder written to blueprint scope; not a real exam question."
+    },
+    {
+      "id": "q-agent-architecture-01",
+      "domainId": "agents-workflows",
+      "subSkillId": "agent-architecture",
+      "type": "single",
+      "difficulty": "medium",
+      "stem": "Placeholder item for Agents & Workflows / Agent Architecture (#1): which approach best satisfies the stated constraint in this scenario?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Address the specific constraint the Agent Architecture item 1 scenario describes directly.",
+          "correct": true,
+          "explanation": "This option resolves exactly the constraint the scenario calls out, which is what the item is testing."
+        },
+        {
+          "id": "b",
+          "text": "Apply a generic best practice without checking it against the Agent Architecture item 1 scenario.",
+          "correct": false,
+          "explanation": "A generic practice can be wrong here because it was not checked against this scenario's specific constraint."
+        },
+        {
+          "id": "c",
+          "text": "Defer the Agent Architecture item 1 decision until more requirements arrive.",
+          "correct": false,
+          "explanation": "Deferring avoids the decision the scenario is asking you to make now, based on what is already known."
+        },
+        {
+          "id": "d",
+          "text": "Optimize the Agent Architecture item 1 response only for implementation speed, ignoring the constraint.",
+          "correct": false,
+          "explanation": "Speed alone does not satisfy a constraint the scenario explicitly requires you to respect."
+        }
+      ],
+      "rationale": "Placeholder item exercising the Agent Architecture area; real content lands in task E3.",
+      "sourceNote": "Original placeholder written to blueprint scope; not a real exam question."
+    },
+    {
+      "id": "q-agent-architecture-02",
+      "domainId": "agents-workflows",
+      "subSkillId": "agent-architecture",
+      "type": "single",
+      "difficulty": "medium",
+      "stem": "Placeholder item for Agents & Workflows / Agent Architecture (#2): which approach best satisfies the stated constraint in this scenario?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Address the specific constraint the Agent Architecture item 2 scenario describes directly.",
+          "correct": true,
+          "explanation": "This option resolves exactly the constraint the scenario calls out, which is what the item is testing."
+        },
+        {
+          "id": "b",
+          "text": "Apply a generic best practice without checking it against the Agent Architecture item 2 scenario.",
+          "correct": false,
+          "explanation": "A generic practice can be wrong here because it was not checked against this scenario's specific constraint."
+        },
+        {
+          "id": "c",
+          "text": "Defer the Agent Architecture item 2 decision until more requirements arrive.",
+          "correct": false,
+          "explanation": "Deferring avoids the decision the scenario is asking you to make now, based on what is already known."
+        },
+        {
+          "id": "d",
+          "text": "Optimize the Agent Architecture item 2 response only for implementation speed, ignoring the constraint.",
+          "correct": false,
+          "explanation": "Speed alone does not satisfy a constraint the scenario explicitly requires you to respect."
+        }
+      ],
+      "rationale": "Placeholder item exercising the Agent Architecture area; real content lands in task E3.",
+      "sourceNote": "Original placeholder written to blueprint scope; not a real exam question."
+    },
+    {
+      "id": "q-agent-architecture-03",
+      "domainId": "agents-workflows",
+      "subSkillId": "agent-architecture",
+      "type": "single",
+      "difficulty": "medium",
+      "stem": "Placeholder item for Agents & Workflows / Agent Architecture (#3): which approach best satisfies the stated constraint in this scenario?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Address the specific constraint the Agent Architecture item 3 scenario describes directly.",
+          "correct": true,
+          "explanation": "This option resolves exactly the constraint the scenario calls out, which is what the item is testing."
+        },
+        {
+          "id": "b",
+          "text": "Apply a generic best practice without checking it against the Agent Architecture item 3 scenario.",
+          "correct": false,
+          "explanation": "A generic practice can be wrong here because it was not checked against this scenario's specific constraint."
+        },
+        {
+          "id": "c",
+          "text": "Defer the Agent Architecture item 3 decision until more requirements arrive.",
+          "correct": false,
+          "explanation": "Deferring avoids the decision the scenario is asking you to make now, based on what is already known."
+        },
+        {
+          "id": "d",
+          "text": "Optimize the Agent Architecture item 3 response only for implementation speed, ignoring the constraint.",
+          "correct": false,
+          "explanation": "Speed alone does not satisfy a constraint the scenario explicitly requires you to respect."
+        }
+      ],
+      "rationale": "Placeholder item exercising the Agent Architecture area; real content lands in task E3.",
+      "sourceNote": "Original placeholder written to blueprint scope; not a real exam question."
+    },
+    {
+      "id": "q-agent-construction-01",
+      "domainId": "agents-workflows",
+      "subSkillId": "agent-construction",
+      "type": "multi",
+      "difficulty": "medium",
+      "stem": "Placeholder multi-select for Agents & Workflows / Agent Construction (#1): select all practices that satisfy the stated constraint.",
+      "options": [
+        {
+          "id": "a",
+          "text": "Validate the Agent Construction item 1 approach against the scenario's stated constraint.",
+          "correct": true,
+          "explanation": "Direct validation against the stated constraint is a correct, necessary practice here."
+        },
+        {
+          "id": "b",
+          "text": "Document the Agent Construction item 1 reasoning so the decision is auditable later.",
+          "correct": true,
+          "explanation": "Documenting the reasoning is a correct complementary practice for this kind of decision."
+        },
+        {
+          "id": "c",
+          "text": "Skip verification of the Agent Construction item 1 scenario because it looks familiar.",
+          "correct": false,
+          "explanation": "Familiarity is not verification; skipping it can let a mismatched assumption through."
+        },
+        {
+          "id": "d",
+          "text": "Apply the Agent Construction item 1 decision globally without scoping it to this scenario.",
+          "correct": false,
+          "explanation": "Applying the decision outside its scope can violate constraints in other scenarios."
+        }
+      ],
+      "rationale": "Placeholder multi-select exercising the Agent Construction area; real content lands in task E3.",
+      "sourceNote": "Original placeholder written to blueprint scope; not a real exam question."
+    },
+    {
+      "id": "q-agent-construction-02",
+      "domainId": "agents-workflows",
+      "subSkillId": "agent-construction",
+      "type": "single",
+      "difficulty": "medium",
+      "stem": "Placeholder item for Agents & Workflows / Agent Construction (#2): which approach best satisfies the stated constraint in this scenario?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Address the specific constraint the Agent Construction item 2 scenario describes directly.",
+          "correct": true,
+          "explanation": "This option resolves exactly the constraint the scenario calls out, which is what the item is testing."
+        },
+        {
+          "id": "b",
+          "text": "Apply a generic best practice without checking it against the Agent Construction item 2 scenario.",
+          "correct": false,
+          "explanation": "A generic practice can be wrong here because it was not checked against this scenario's specific constraint."
+        },
+        {
+          "id": "c",
+          "text": "Defer the Agent Construction item 2 decision until more requirements arrive.",
+          "correct": false,
+          "explanation": "Deferring avoids the decision the scenario is asking you to make now, based on what is already known."
+        },
+        {
+          "id": "d",
+          "text": "Optimize the Agent Construction item 2 response only for implementation speed, ignoring the constraint.",
+          "correct": false,
+          "explanation": "Speed alone does not satisfy a constraint the scenario explicitly requires you to respect."
+        }
+      ],
+      "rationale": "Placeholder item exercising the Agent Construction area; real content lands in task E3.",
+      "sourceNote": "Original placeholder written to blueprint scope; not a real exam question."
+    },
+    {
+      "id": "q-agent-construction-03",
+      "domainId": "agents-workflows",
+      "subSkillId": "agent-construction",
+      "type": "single",
+      "difficulty": "medium",
+      "stem": "Placeholder item for Agents & Workflows / Agent Construction (#3): which approach best satisfies the stated constraint in this scenario?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Address the specific constraint the Agent Construction item 3 scenario describes directly.",
+          "correct": true,
+          "explanation": "This option resolves exactly the constraint the scenario calls out, which is what the item is testing."
+        },
+        {
+          "id": "b",
+          "text": "Apply a generic best practice without checking it against the Agent Construction item 3 scenario.",
+          "correct": false,
+          "explanation": "A generic practice can be wrong here because it was not checked against this scenario's specific constraint."
+        },
+        {
+          "id": "c",
+          "text": "Defer the Agent Construction item 3 decision until more requirements arrive.",
+          "correct": false,
+          "explanation": "Deferring avoids the decision the scenario is asking you to make now, based on what is already known."
+        },
+        {
+          "id": "d",
+          "text": "Optimize the Agent Construction item 3 response only for implementation speed, ignoring the constraint.",
+          "correct": false,
+          "explanation": "Speed alone does not satisfy a constraint the scenario explicitly requires you to respect."
+        }
+      ],
+      "rationale": "Placeholder item exercising the Agent Construction area; real content lands in task E3.",
+      "sourceNote": "Original placeholder written to blueprint scope; not a real exam question."
+    },
+    {
+      "id": "q-agent-patterns-01",
+      "domainId": "agents-workflows",
+      "subSkillId": "agent-patterns",
+      "type": "single",
+      "difficulty": "medium",
+      "stem": "Placeholder item for Agents & Workflows / Agent Patterns (#1): which approach best satisfies the stated constraint in this scenario?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Address the specific constraint the Agent Patterns item 1 scenario describes directly.",
+          "correct": true,
+          "explanation": "This option resolves exactly the constraint the scenario calls out, which is what the item is testing."
+        },
+        {
+          "id": "b",
+          "text": "Apply a generic best practice without checking it against the Agent Patterns item 1 scenario.",
+          "correct": false,
+          "explanation": "A generic practice can be wrong here because it was not checked against this scenario's specific constraint."
+        },
+        {
+          "id": "c",
+          "text": "Defer the Agent Patterns item 1 decision until more requirements arrive.",
+          "correct": false,
+          "explanation": "Deferring avoids the decision the scenario is asking you to make now, based on what is already known."
+        },
+        {
+          "id": "d",
+          "text": "Optimize the Agent Patterns item 1 response only for implementation speed, ignoring the constraint.",
+          "correct": false,
+          "explanation": "Speed alone does not satisfy a constraint the scenario explicitly requires you to respect."
+        }
+      ],
+      "rationale": "Placeholder item exercising the Agent Patterns area; real content lands in task E3.",
+      "sourceNote": "Original placeholder written to blueprint scope; not a real exam question."
+    },
+    {
+      "id": "q-agent-patterns-02",
+      "domainId": "agents-workflows",
+      "subSkillId": "agent-patterns",
+      "type": "single",
+      "difficulty": "medium",
+      "stem": "Placeholder item for Agents & Workflows / Agent Patterns (#2): which approach best satisfies the stated constraint in this scenario?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Address the specific constraint the Agent Patterns item 2 scenario describes directly.",
+          "correct": true,
+          "explanation": "This option resolves exactly the constraint the scenario calls out, which is what the item is testing."
+        },
+        {
+          "id": "b",
+          "text": "Apply a generic best practice without checking it against the Agent Patterns item 2 scenario.",
+          "correct": false,
+          "explanation": "A generic practice can be wrong here because it was not checked against this scenario's specific constraint."
+        },
+        {
+          "id": "c",
+          "text": "Defer the Agent Patterns item 2 decision until more requirements arrive.",
+          "correct": false,
+          "explanation": "Deferring avoids the decision the scenario is asking you to make now, based on what is already known."
+        },
+        {
+          "id": "d",
+          "text": "Optimize the Agent Patterns item 2 response only for implementation speed, ignoring the constraint.",
+          "correct": false,
+          "explanation": "Speed alone does not satisfy a constraint the scenario explicitly requires you to respect."
+        }
+      ],
+      "rationale": "Placeholder item exercising the Agent Patterns area; real content lands in task E3.",
+      "sourceNote": "Original placeholder written to blueprint scope; not a real exam question."
+    },
+    {
+      "id": "q-context-engineering-01",
+      "domainId": "prompt-context-engineering",
+      "subSkillId": "context-engineering",
+      "type": "multi",
+      "difficulty": "medium",
+      "stem": "Placeholder multi-select for Prompt & Context Engineering / Context Engineering (#1): select all practices that satisfy the stated constraint.",
+      "options": [
+        {
+          "id": "a",
+          "text": "Validate the Context Engineering item 1 approach against the scenario's stated constraint.",
+          "correct": true,
+          "explanation": "Direct validation against the stated constraint is a correct, necessary practice here."
+        },
+        {
+          "id": "b",
+          "text": "Document the Context Engineering item 1 reasoning so the decision is auditable later.",
+          "correct": true,
+          "explanation": "Documenting the reasoning is a correct complementary practice for this kind of decision."
+        },
+        {
+          "id": "c",
+          "text": "Skip verification of the Context Engineering item 1 scenario because it looks familiar.",
+          "correct": false,
+          "explanation": "Familiarity is not verification; skipping it can let a mismatched assumption through."
+        },
+        {
+          "id": "d",
+          "text": "Apply the Context Engineering item 1 decision globally without scoping it to this scenario.",
+          "correct": false,
+          "explanation": "Applying the decision outside its scope can violate constraints in other scenarios."
+        }
+      ],
+      "rationale": "Placeholder multi-select exercising the Context Engineering area; real content lands in task E3.",
+      "sourceNote": "Original placeholder written to blueprint scope; not a real exam question."
+    },
+    {
+      "id": "q-context-engineering-02",
+      "domainId": "prompt-context-engineering",
+      "subSkillId": "context-engineering",
+      "type": "single",
+      "difficulty": "medium",
+      "stem": "Placeholder item for Prompt & Context Engineering / Context Engineering (#2): which approach best satisfies the stated constraint in this scenario?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Address the specific constraint the Context Engineering item 2 scenario describes directly.",
+          "correct": true,
+          "explanation": "This option resolves exactly the constraint the scenario calls out, which is what the item is testing."
+        },
+        {
+          "id": "b",
+          "text": "Apply a generic best practice without checking it against the Context Engineering item 2 scenario.",
+          "correct": false,
+          "explanation": "A generic practice can be wrong here because it was not checked against this scenario's specific constraint."
+        },
+        {
+          "id": "c",
+          "text": "Defer the Context Engineering item 2 decision until more requirements arrive.",
+          "correct": false,
+          "explanation": "Deferring avoids the decision the scenario is asking you to make now, based on what is already known."
+        },
+        {
+          "id": "d",
+          "text": "Optimize the Context Engineering item 2 response only for implementation speed, ignoring the constraint.",
+          "correct": false,
+          "explanation": "Speed alone does not satisfy a constraint the scenario explicitly requires you to respect."
+        }
+      ],
+      "rationale": "Placeholder item exercising the Context Engineering area; real content lands in task E3.",
+      "sourceNote": "Original placeholder written to blueprint scope; not a real exam question."
+    },
+    {
+      "id": "q-prompt-engineering-01",
+      "domainId": "prompt-context-engineering",
+      "subSkillId": "prompt-engineering",
+      "type": "single",
+      "difficulty": "medium",
+      "stem": "Placeholder item for Prompt & Context Engineering / Prompt Engineering (#1): which approach best satisfies the stated constraint in this scenario?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Address the specific constraint the Prompt Engineering item 1 scenario describes directly.",
+          "correct": true,
+          "explanation": "This option resolves exactly the constraint the scenario calls out, which is what the item is testing."
+        },
+        {
+          "id": "b",
+          "text": "Apply a generic best practice without checking it against the Prompt Engineering item 1 scenario.",
+          "correct": false,
+          "explanation": "A generic practice can be wrong here because it was not checked against this scenario's specific constraint."
+        },
+        {
+          "id": "c",
+          "text": "Defer the Prompt Engineering item 1 decision until more requirements arrive.",
+          "correct": false,
+          "explanation": "Deferring avoids the decision the scenario is asking you to make now, based on what is already known."
+        },
+        {
+          "id": "d",
+          "text": "Optimize the Prompt Engineering item 1 response only for implementation speed, ignoring the constraint.",
+          "correct": false,
+          "explanation": "Speed alone does not satisfy a constraint the scenario explicitly requires you to respect."
+        }
+      ],
+      "rationale": "Placeholder item exercising the Prompt Engineering area; real content lands in task E3.",
+      "sourceNote": "Original placeholder written to blueprint scope; not a real exam question."
+    },
+    {
+      "id": "q-prompt-engineering-02",
+      "domainId": "prompt-context-engineering",
+      "subSkillId": "prompt-engineering",
+      "type": "single",
+      "difficulty": "medium",
+      "stem": "Placeholder item for Prompt & Context Engineering / Prompt Engineering (#2): which approach best satisfies the stated constraint in this scenario?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Address the specific constraint the Prompt Engineering item 2 scenario describes directly.",
+          "correct": true,
+          "explanation": "This option resolves exactly the constraint the scenario calls out, which is what the item is testing."
+        },
+        {
+          "id": "b",
+          "text": "Apply a generic best practice without checking it against the Prompt Engineering item 2 scenario.",
+          "correct": false,
+          "explanation": "A generic practice can be wrong here because it was not checked against this scenario's specific constraint."
+        },
+        {
+          "id": "c",
+          "text": "Defer the Prompt Engineering item 2 decision until more requirements arrive.",
+          "correct": false,
+          "explanation": "Deferring avoids the decision the scenario is asking you to make now, based on what is already known."
+        },
+        {
+          "id": "d",
+          "text": "Optimize the Prompt Engineering item 2 response only for implementation speed, ignoring the constraint.",
+          "correct": false,
+          "explanation": "Speed alone does not satisfy a constraint the scenario explicitly requires you to respect."
+        }
+      ],
+      "rationale": "Placeholder item exercising the Prompt Engineering area; real content lands in task E3.",
+      "sourceNote": "Original placeholder written to blueprint scope; not a real exam question."
+    },
+    {
+      "id": "q-prompt-engineering-03",
+      "domainId": "prompt-context-engineering",
+      "subSkillId": "prompt-engineering",
+      "type": "single",
+      "difficulty": "medium",
+      "stem": "Placeholder item for Prompt & Context Engineering / Prompt Engineering (#3): which approach best satisfies the stated constraint in this scenario?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Address the specific constraint the Prompt Engineering item 3 scenario describes directly.",
+          "correct": true,
+          "explanation": "This option resolves exactly the constraint the scenario calls out, which is what the item is testing."
+        },
+        {
+          "id": "b",
+          "text": "Apply a generic best practice without checking it against the Prompt Engineering item 3 scenario.",
+          "correct": false,
+          "explanation": "A generic practice can be wrong here because it was not checked against this scenario's specific constraint."
+        },
+        {
+          "id": "c",
+          "text": "Defer the Prompt Engineering item 3 decision until more requirements arrive.",
+          "correct": false,
+          "explanation": "Deferring avoids the decision the scenario is asking you to make now, based on what is already known."
+        },
+        {
+          "id": "d",
+          "text": "Optimize the Prompt Engineering item 3 response only for implementation speed, ignoring the constraint.",
+          "correct": false,
+          "explanation": "Speed alone does not satisfy a constraint the scenario explicitly requires you to respect."
+        }
+      ],
+      "rationale": "Placeholder item exercising the Prompt Engineering area; real content lands in task E3.",
+      "sourceNote": "Original placeholder written to blueprint scope; not a real exam question."
+    },
+    {
+      "id": "q-output-handling-01",
+      "domainId": "prompt-context-engineering",
+      "subSkillId": "output-handling",
+      "type": "multi",
+      "difficulty": "medium",
+      "stem": "Placeholder multi-select for Prompt & Context Engineering / Output Handling (#1): select all practices that satisfy the stated constraint.",
+      "options": [
+        {
+          "id": "a",
+          "text": "Validate the Output Handling item 1 approach against the scenario's stated constraint.",
+          "correct": true,
+          "explanation": "Direct validation against the stated constraint is a correct, necessary practice here."
+        },
+        {
+          "id": "b",
+          "text": "Document the Output Handling item 1 reasoning so the decision is auditable later.",
+          "correct": true,
+          "explanation": "Documenting the reasoning is a correct complementary practice for this kind of decision."
+        },
+        {
+          "id": "c",
+          "text": "Skip verification of the Output Handling item 1 scenario because it looks familiar.",
+          "correct": false,
+          "explanation": "Familiarity is not verification; skipping it can let a mismatched assumption through."
+        },
+        {
+          "id": "d",
+          "text": "Apply the Output Handling item 1 decision globally without scoping it to this scenario.",
+          "correct": false,
+          "explanation": "Applying the decision outside its scope can violate constraints in other scenarios."
+        }
+      ],
+      "rationale": "Placeholder multi-select exercising the Output Handling area; real content lands in task E3.",
+      "sourceNote": "Original placeholder written to blueprint scope; not a real exam question."
+    },
+    {
+      "id": "q-tool-implementation-01",
+      "domainId": "tools-mcps",
+      "subSkillId": "tool-implementation",
+      "type": "single",
+      "difficulty": "medium",
+      "stem": "Placeholder item for Tools & MCPs / Tool Implementation (#1): which approach best satisfies the stated constraint in this scenario?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Address the specific constraint the Tool Implementation item 1 scenario describes directly.",
+          "correct": true,
+          "explanation": "This option resolves exactly the constraint the scenario calls out, which is what the item is testing."
+        },
+        {
+          "id": "b",
+          "text": "Apply a generic best practice without checking it against the Tool Implementation item 1 scenario.",
+          "correct": false,
+          "explanation": "A generic practice can be wrong here because it was not checked against this scenario's specific constraint."
+        },
+        {
+          "id": "c",
+          "text": "Defer the Tool Implementation item 1 decision until more requirements arrive.",
+          "correct": false,
+          "explanation": "Deferring avoids the decision the scenario is asking you to make now, based on what is already known."
+        },
+        {
+          "id": "d",
+          "text": "Optimize the Tool Implementation item 1 response only for implementation speed, ignoring the constraint.",
+          "correct": false,
+          "explanation": "Speed alone does not satisfy a constraint the scenario explicitly requires you to respect."
+        }
+      ],
+      "rationale": "Placeholder item exercising the Tool Implementation area; real content lands in task E3.",
+      "sourceNote": "Original placeholder written to blueprint scope; not a real exam question."
+    },
+    {
+      "id": "q-tool-implementation-02",
+      "domainId": "tools-mcps",
+      "subSkillId": "tool-implementation",
+      "type": "single",
+      "difficulty": "medium",
+      "stem": "Placeholder item for Tools & MCPs / Tool Implementation (#2): which approach best satisfies the stated constraint in this scenario?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Address the specific constraint the Tool Implementation item 2 scenario describes directly.",
+          "correct": true,
+          "explanation": "This option resolves exactly the constraint the scenario calls out, which is what the item is testing."
+        },
+        {
+          "id": "b",
+          "text": "Apply a generic best practice without checking it against the Tool Implementation item 2 scenario.",
+          "correct": false,
+          "explanation": "A generic practice can be wrong here because it was not checked against this scenario's specific constraint."
+        },
+        {
+          "id": "c",
+          "text": "Defer the Tool Implementation item 2 decision until more requirements arrive.",
+          "correct": false,
+          "explanation": "Deferring avoids the decision the scenario is asking you to make now, based on what is already known."
+        },
+        {
+          "id": "d",
+          "text": "Optimize the Tool Implementation item 2 response only for implementation speed, ignoring the constraint.",
+          "correct": false,
+          "explanation": "Speed alone does not satisfy a constraint the scenario explicitly requires you to respect."
+        }
+      ],
+      "rationale": "Placeholder item exercising the Tool Implementation area; real content lands in task E3.",
+      "sourceNote": "Original placeholder written to blueprint scope; not a real exam question."
+    },
+    {
+      "id": "q-tool-implementation-03",
+      "domainId": "tools-mcps",
+      "subSkillId": "tool-implementation",
+      "type": "single",
+      "difficulty": "medium",
+      "stem": "Placeholder item for Tools & MCPs / Tool Implementation (#3): which approach best satisfies the stated constraint in this scenario?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Address the specific constraint the Tool Implementation item 3 scenario describes directly.",
+          "correct": true,
+          "explanation": "This option resolves exactly the constraint the scenario calls out, which is what the item is testing."
+        },
+        {
+          "id": "b",
+          "text": "Apply a generic best practice without checking it against the Tool Implementation item 3 scenario.",
+          "correct": false,
+          "explanation": "A generic practice can be wrong here because it was not checked against this scenario's specific constraint."
+        },
+        {
+          "id": "c",
+          "text": "Defer the Tool Implementation item 3 decision until more requirements arrive.",
+          "correct": false,
+          "explanation": "Deferring avoids the decision the scenario is asking you to make now, based on what is already known."
+        },
+        {
+          "id": "d",
+          "text": "Optimize the Tool Implementation item 3 response only for implementation speed, ignoring the constraint.",
+          "correct": false,
+          "explanation": "Speed alone does not satisfy a constraint the scenario explicitly requires you to respect."
+        }
+      ],
+      "rationale": "Placeholder item exercising the Tool Implementation area; real content lands in task E3.",
+      "sourceNote": "Original placeholder written to blueprint scope; not a real exam question."
+    },
+    {
+      "id": "q-mcp-development-01",
+      "domainId": "tools-mcps",
+      "subSkillId": "mcp-development",
+      "type": "single",
+      "difficulty": "medium",
+      "stem": "Placeholder item for Tools & MCPs / MCP Development (#1): which approach best satisfies the stated constraint in this scenario?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Address the specific constraint the MCP Development item 1 scenario describes directly.",
+          "correct": true,
+          "explanation": "This option resolves exactly the constraint the scenario calls out, which is what the item is testing."
+        },
+        {
+          "id": "b",
+          "text": "Apply a generic best practice without checking it against the MCP Development item 1 scenario.",
+          "correct": false,
+          "explanation": "A generic practice can be wrong here because it was not checked against this scenario's specific constraint."
+        },
+        {
+          "id": "c",
+          "text": "Defer the MCP Development item 1 decision until more requirements arrive.",
+          "correct": false,
+          "explanation": "Deferring avoids the decision the scenario is asking you to make now, based on what is already known."
+        },
+        {
+          "id": "d",
+          "text": "Optimize the MCP Development item 1 response only for implementation speed, ignoring the constraint.",
+          "correct": false,
+          "explanation": "Speed alone does not satisfy a constraint the scenario explicitly requires you to respect."
+        }
+      ],
+      "rationale": "Placeholder item exercising the MCP Development area; real content lands in task E3.",
+      "sourceNote": "Original placeholder written to blueprint scope; not a real exam question."
+    },
+    {
+      "id": "q-mcp-development-02",
+      "domainId": "tools-mcps",
+      "subSkillId": "mcp-development",
+      "type": "multi",
+      "difficulty": "medium",
+      "stem": "Placeholder multi-select for Tools & MCPs / MCP Development (#2): select all practices that satisfy the stated constraint.",
+      "options": [
+        {
+          "id": "a",
+          "text": "Validate the MCP Development item 2 approach against the scenario's stated constraint.",
+          "correct": true,
+          "explanation": "Direct validation against the stated constraint is a correct, necessary practice here."
+        },
+        {
+          "id": "b",
+          "text": "Document the MCP Development item 2 reasoning so the decision is auditable later.",
+          "correct": true,
+          "explanation": "Documenting the reasoning is a correct complementary practice for this kind of decision."
+        },
+        {
+          "id": "c",
+          "text": "Skip verification of the MCP Development item 2 scenario because it looks familiar.",
+          "correct": false,
+          "explanation": "Familiarity is not verification; skipping it can let a mismatched assumption through."
+        },
+        {
+          "id": "d",
+          "text": "Apply the MCP Development item 2 decision globally without scoping it to this scenario.",
+          "correct": false,
+          "explanation": "Applying the decision outside its scope can violate constraints in other scenarios."
+        }
+      ],
+      "rationale": "Placeholder multi-select exercising the MCP Development area; real content lands in task E3.",
+      "sourceNote": "Original placeholder written to blueprint scope; not a real exam question."
+    },
+    {
+      "id": "q-mcp-development-03",
+      "domainId": "tools-mcps",
+      "subSkillId": "mcp-development",
+      "type": "single",
+      "difficulty": "medium",
+      "stem": "Placeholder item for Tools & MCPs / MCP Development (#3): which approach best satisfies the stated constraint in this scenario?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Address the specific constraint the MCP Development item 3 scenario describes directly.",
+          "correct": true,
+          "explanation": "This option resolves exactly the constraint the scenario calls out, which is what the item is testing."
+        },
+        {
+          "id": "b",
+          "text": "Apply a generic best practice without checking it against the MCP Development item 3 scenario.",
+          "correct": false,
+          "explanation": "A generic practice can be wrong here because it was not checked against this scenario's specific constraint."
+        },
+        {
+          "id": "c",
+          "text": "Defer the MCP Development item 3 decision until more requirements arrive.",
+          "correct": false,
+          "explanation": "Deferring avoids the decision the scenario is asking you to make now, based on what is already known."
+        },
+        {
+          "id": "d",
+          "text": "Optimize the MCP Development item 3 response only for implementation speed, ignoring the constraint.",
+          "correct": false,
+          "explanation": "Speed alone does not satisfy a constraint the scenario explicitly requires you to respect."
+        }
+      ],
+      "rationale": "Placeholder item exercising the MCP Development area; real content lands in task E3.",
+      "sourceNote": "Original placeholder written to blueprint scope; not a real exam question."
+    },
+    {
+      "id": "q-ai-app-security-01",
+      "domainId": "security-safety",
+      "subSkillId": "ai-app-security",
+      "type": "single",
+      "difficulty": "medium",
+      "stem": "Placeholder item for Security & Safety / AI App Security (#1): which approach best satisfies the stated constraint in this scenario?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Address the specific constraint the AI App Security item 1 scenario describes directly.",
+          "correct": true,
+          "explanation": "This option resolves exactly the constraint the scenario calls out, which is what the item is testing."
+        },
+        {
+          "id": "b",
+          "text": "Apply a generic best practice without checking it against the AI App Security item 1 scenario.",
+          "correct": false,
+          "explanation": "A generic practice can be wrong here because it was not checked against this scenario's specific constraint."
+        },
+        {
+          "id": "c",
+          "text": "Defer the AI App Security item 1 decision until more requirements arrive.",
+          "correct": false,
+          "explanation": "Deferring avoids the decision the scenario is asking you to make now, based on what is already known."
+        },
+        {
+          "id": "d",
+          "text": "Optimize the AI App Security item 1 response only for implementation speed, ignoring the constraint.",
+          "correct": false,
+          "explanation": "Speed alone does not satisfy a constraint the scenario explicitly requires you to respect."
+        }
+      ],
+      "rationale": "Placeholder item exercising the AI App Security area; real content lands in task E3.",
+      "sourceNote": "Original placeholder written to blueprint scope; not a real exam question."
+    },
+    {
+      "id": "q-ai-app-security-02",
+      "domainId": "security-safety",
+      "subSkillId": "ai-app-security",
+      "type": "single",
+      "difficulty": "medium",
+      "stem": "Placeholder item for Security & Safety / AI App Security (#2): which approach best satisfies the stated constraint in this scenario?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Address the specific constraint the AI App Security item 2 scenario describes directly.",
+          "correct": true,
+          "explanation": "This option resolves exactly the constraint the scenario calls out, which is what the item is testing."
+        },
+        {
+          "id": "b",
+          "text": "Apply a generic best practice without checking it against the AI App Security item 2 scenario.",
+          "correct": false,
+          "explanation": "A generic practice can be wrong here because it was not checked against this scenario's specific constraint."
+        },
+        {
+          "id": "c",
+          "text": "Defer the AI App Security item 2 decision until more requirements arrive.",
+          "correct": false,
+          "explanation": "Deferring avoids the decision the scenario is asking you to make now, based on what is already known."
+        },
+        {
+          "id": "d",
+          "text": "Optimize the AI App Security item 2 response only for implementation speed, ignoring the constraint.",
+          "correct": false,
+          "explanation": "Speed alone does not satisfy a constraint the scenario explicitly requires you to respect."
+        }
+      ],
+      "rationale": "Placeholder item exercising the AI App Security area; real content lands in task E3.",
+      "sourceNote": "Original placeholder written to blueprint scope; not a real exam question."
+    },
+    {
+      "id": "q-guardrails-01",
+      "domainId": "security-safety",
+      "subSkillId": "guardrails",
+      "type": "single",
+      "difficulty": "medium",
+      "stem": "Placeholder item for Security & Safety / Guardrails (#1): which approach best satisfies the stated constraint in this scenario?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Address the specific constraint the Guardrails item 1 scenario describes directly.",
+          "correct": true,
+          "explanation": "This option resolves exactly the constraint the scenario calls out, which is what the item is testing."
+        },
+        {
+          "id": "b",
+          "text": "Apply a generic best practice without checking it against the Guardrails item 1 scenario.",
+          "correct": false,
+          "explanation": "A generic practice can be wrong here because it was not checked against this scenario's specific constraint."
+        },
+        {
+          "id": "c",
+          "text": "Defer the Guardrails item 1 decision until more requirements arrive.",
+          "correct": false,
+          "explanation": "Deferring avoids the decision the scenario is asking you to make now, based on what is already known."
+        },
+        {
+          "id": "d",
+          "text": "Optimize the Guardrails item 1 response only for implementation speed, ignoring the constraint.",
+          "correct": false,
+          "explanation": "Speed alone does not satisfy a constraint the scenario explicitly requires you to respect."
+        }
+      ],
+      "rationale": "Placeholder item exercising the Guardrails area; real content lands in task E3.",
+      "sourceNote": "Original placeholder written to blueprint scope; not a real exam question."
+    },
+    {
+      "id": "q-identity-secrets-01",
+      "domainId": "security-safety",
+      "subSkillId": "identity-secrets",
+      "type": "multi",
+      "difficulty": "medium",
+      "stem": "Placeholder multi-select for Security & Safety / Identity/Secrets (#1): select all practices that satisfy the stated constraint.",
+      "options": [
+        {
+          "id": "a",
+          "text": "Validate the Identity/Secrets item 1 approach against the scenario's stated constraint.",
+          "correct": true,
+          "explanation": "Direct validation against the stated constraint is a correct, necessary practice here."
+        },
+        {
+          "id": "b",
+          "text": "Document the Identity/Secrets item 1 reasoning so the decision is auditable later.",
+          "correct": true,
+          "explanation": "Documenting the reasoning is a correct complementary practice for this kind of decision."
+        },
+        {
+          "id": "c",
+          "text": "Skip verification of the Identity/Secrets item 1 scenario because it looks familiar.",
+          "correct": false,
+          "explanation": "Familiarity is not verification; skipping it can let a mismatched assumption through."
+        },
+        {
+          "id": "d",
+          "text": "Apply the Identity/Secrets item 1 decision globally without scoping it to this scenario.",
+          "correct": false,
+          "explanation": "Applying the decision outside its scope can violate constraints in other scenarios."
+        }
+      ],
+      "rationale": "Placeholder multi-select exercising the Identity/Secrets area; real content lands in task E3.",
+      "sourceNote": "Original placeholder written to blueprint scope; not a real exam question."
+    },
+    {
+      "id": "q-claude-code-operation-01",
+      "domainId": "claude-code",
+      "subSkillId": "claude-code-operation",
+      "type": "single",
+      "difficulty": "medium",
+      "stem": "Placeholder item for Claude Code / Claude Code Operation (#1): which approach best satisfies the stated constraint in this scenario?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Address the specific constraint the Claude Code Operation item 1 scenario describes directly.",
+          "correct": true,
+          "explanation": "This option resolves exactly the constraint the scenario calls out, which is what the item is testing."
+        },
+        {
+          "id": "b",
+          "text": "Apply a generic best practice without checking it against the Claude Code Operation item 1 scenario.",
+          "correct": false,
+          "explanation": "A generic practice can be wrong here because it was not checked against this scenario's specific constraint."
+        },
+        {
+          "id": "c",
+          "text": "Defer the Claude Code Operation item 1 decision until more requirements arrive.",
+          "correct": false,
+          "explanation": "Deferring avoids the decision the scenario is asking you to make now, based on what is already known."
+        },
+        {
+          "id": "d",
+          "text": "Optimize the Claude Code Operation item 1 response only for implementation speed, ignoring the constraint.",
+          "correct": false,
+          "explanation": "Speed alone does not satisfy a constraint the scenario explicitly requires you to respect."
+        }
+      ],
+      "rationale": "Placeholder item exercising the Claude Code Operation area; real content lands in task E3.",
+      "sourceNote": "Original placeholder written to blueprint scope; not a real exam question."
+    },
+    {
+      "id": "q-hooks-01",
+      "domainId": "claude-code",
+      "subSkillId": "hooks",
+      "type": "single",
+      "difficulty": "medium",
+      "stem": "Placeholder item for Claude Code / Hooks (#1): which approach best satisfies the stated constraint in this scenario?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Address the specific constraint the Hooks item 1 scenario describes directly.",
+          "correct": true,
+          "explanation": "This option resolves exactly the constraint the scenario calls out, which is what the item is testing."
+        },
+        {
+          "id": "b",
+          "text": "Apply a generic best practice without checking it against the Hooks item 1 scenario.",
+          "correct": false,
+          "explanation": "A generic practice can be wrong here because it was not checked against this scenario's specific constraint."
+        },
+        {
+          "id": "c",
+          "text": "Defer the Hooks item 1 decision until more requirements arrive.",
+          "correct": false,
+          "explanation": "Deferring avoids the decision the scenario is asking you to make now, based on what is already known."
+        },
+        {
+          "id": "d",
+          "text": "Optimize the Hooks item 1 response only for implementation speed, ignoring the constraint.",
+          "correct": false,
+          "explanation": "Speed alone does not satisfy a constraint the scenario explicitly requires you to respect."
+        }
+      ],
+      "rationale": "Placeholder item exercising the Hooks area; real content lands in task E3.",
+      "sourceNote": "Original placeholder written to blueprint scope; not a real exam question."
+    },
+    {
+      "id": "q-debugging-01",
+      "domainId": "eval-testing-debugging",
+      "subSkillId": "debugging",
+      "type": "single",
+      "difficulty": "medium",
+      "stem": "Placeholder item for Eval / Testing / Debugging / Debugging (#1): which approach best satisfies the stated constraint in this scenario?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Address the specific constraint the Debugging item 1 scenario describes directly.",
+          "correct": true,
+          "explanation": "This option resolves exactly the constraint the scenario calls out, which is what the item is testing."
+        },
+        {
+          "id": "b",
+          "text": "Apply a generic best practice without checking it against the Debugging item 1 scenario.",
+          "correct": false,
+          "explanation": "A generic practice can be wrong here because it was not checked against this scenario's specific constraint."
+        },
+        {
+          "id": "c",
+          "text": "Defer the Debugging item 1 decision until more requirements arrive.",
+          "correct": false,
+          "explanation": "Deferring avoids the decision the scenario is asking you to make now, based on what is already known."
+        },
+        {
+          "id": "d",
+          "text": "Optimize the Debugging item 1 response only for implementation speed, ignoring the constraint.",
+          "correct": false,
+          "explanation": "Speed alone does not satisfy a constraint the scenario explicitly requires you to respect."
+        }
+      ],
+      "rationale": "Placeholder item exercising the Debugging area; real content lands in task E3.",
+      "sourceNote": "Original placeholder written to blueprint scope; not a real exam question."
+    }
+  ]
+}
