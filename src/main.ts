@@ -10,8 +10,9 @@ const footerDisclaimer = `Blueprint is an independent study resource. It is not 
 
 const authorBlock = `<p><strong>Who made this.</strong> I'm Dima — I build with Claude and write about it on YouTube as Holy Shifted. I sat the Claude Certified Developer – Foundations exam and passed above the 720 pass mark. The credential is verifiable${CREDLY_BADGE_URL ? ` here: <a href="${CREDLY_BADGE_URL}">Credly badge</a>` : ' via a Credly badge (link pending)'}. I wrote every question on this site myself.</p>`;
 
+const BASE = (import.meta.env.VITE_NAV_BASE as string | undefined)?.replace(/\/$/, '') || '';
 const footer = `<footer><p>${footerDisclaimer}</p></footer>`;
-const shell = (content: string) => `<header><a class="brand" href="/">Blueprint <small>by Holy Shifted</small></a><nav><a href="/exam/">Exam</a><a href="/framework/">Framework</a><a href="/cheat-sheet/">Cheat sheet</a><a href="/quiz/">Practice exam</a></nav></header><main>${content}</main>${footer}`;
+const shell = (content: string) => `<header><a class="brand" href="${BASE}/">Blueprint <small>by Holy Shifted</small></a><nav><a href="${BASE}/exam/">Exam</a><a href="${BASE}/framework/">Framework</a><a href="${BASE}/cheat-sheet/">Cheat sheet</a><a href="${BASE}/quiz/">Practice exam</a></nav></header><main>${content}</main>${footer}`;
 
 const tiles = certifications
   .map((item) =>
@@ -191,35 +192,37 @@ function mountQuiz() {
   }
 }
 
-if (path === '/' || path === '/index.html')
+const routePath = BASE && path.startsWith(BASE) ? path.slice(BASE.length) || '/' : path;
+
+if (routePath === '/' || routePath === '/index.html')
   root.innerHTML = shell(
-    `<section class="hero"><p class="eyebrow">Free and independent</p><h1>Practice the blueprint, not a dump.</h1><p>Free practice exams for the Claude certifications — original questions written to each exam's published blueprint, with every answer option explained.</p><a class="button" href="/quiz/">Start the practice exam</a></section><section><h2>What this is</h2><p class="prose">Blueprint is a free, independent study resource for Anthropic's Claude certification exams. It is not affiliated with Anthropic, and it does not contain real exam questions. The practice material is written from scratch against the published blueprint.</p></section><section><h2>Practice exams</h2><div class="tiles">${tiles}</div><p class="muted">Want to know when the next one is up? There's a form at the end of the quiz.</p></section><section class="author">${authorBlock}</section>`
+    `<section class="hero"><p class="eyebrow">Free and independent</p><h1>Practice the blueprint, not a dump.</h1><p>Free practice exams for the Claude certifications — original questions written to each exam's published blueprint, with every answer option explained.</p><a class="button" href="${BASE}/quiz/">Start the practice exam</a></section><section><h2>What this is</h2><p class="prose">Blueprint is a free, independent study resource for Anthropic's Claude certification exams. It is not affiliated with Anthropic, and it does not contain real exam questions. The practice material is written from scratch against the published blueprint.</p></section><section><h2>Practice exams</h2><div class="tiles">${tiles}</div><p class="muted">Want to know when the next one is up? There's a form at the end of the quiz.</p></section><section class="author">${authorBlock}</section>`
   );
-else if (path.startsWith('/exam'))
+else if (routePath.startsWith('/exam'))
   root.innerHTML = placeholder(
     'CCDV-F exam overview',
     'A placeholder overview for the original 53-question practice set and its eight domains. Real content lands in a follow-on task.',
     'Registration for every Claude certification requires a company email at an organisation in the Claude Partner Network; personal Gmail/Outlook addresses are rejected at signup. All four exams run 120 minutes, are multiple choice and multiple response, pass at a scaled 720 on a 100–1000 range, and are valid for 12 months.'
   );
-else if (path.startsWith('/framework'))
+else if (routePath.startsWith('/framework'))
   root.innerHTML = placeholder(
     'How to think about it',
     'A placeholder framework for working methodically through scenario-based questions. Real content lands in a follow-on task.',
     'This page will lay out how to read a scenario question, separate the stated constraint from the noise, and eliminate options systematically.'
   );
-else if (path.startsWith('/cheat-sheet'))
+else if (routePath.startsWith('/cheat-sheet'))
   root.innerHTML = placeholder(
     'CCDV-F cheat sheet',
     "This sheet is my own compression of the CCDV-F blueprint: the eight domains, what each one actually asks you to know, and the distinctions that are easy to get wrong under time pressure. It is written from the published exam guide and from my own preparation and sitting of the exam. It is not an answer key and it is not affiliated with Anthropic.",
     'The full per-domain breakdown is being written and lands in a follow-on task.'
   );
-else if (path.startsWith('/privacy'))
+else if (routePath.startsWith('/privacy'))
   root.innerHTML = placeholder(
     'Privacy',
     'Nothing is collected for the quiz itself. An email is sent only when you explicitly choose to subscribe.',
     'This page will be replaced with the full privacy note in a follow-on task.'
   );
-else if (path.startsWith('/quiz')) mountQuiz();
-else root.innerHTML = shell(`<section class="prose"><h1>There's nothing at this address.</h1><a class="button" href="/">Back to the practice exams</a></section>`);
+else if (routePath.startsWith('/quiz')) mountQuiz();
+else root.innerHTML = shell(`<section class="prose"><h1>There's nothing at this address.</h1><a class="button" href="${BASE}/">Back to the practice exams</a></section>`);
 
 analytics.pageView(path);

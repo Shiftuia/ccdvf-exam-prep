@@ -24,6 +24,11 @@ jobs:
       - run: npm run lint
       - run: npm run validate:questions
       - run: npm run build
+        env:
+          # Nav links use an absolute prefix so client-side routing on subpages
+          # resolves correctly. Empty when a CNAME custom domain is present
+          # (site serves from '/'); otherwise the GitHub Pages project path.
+          VITE_NAV_BASE: ${{ hashFiles('CNAME') != '' && '' || format('/{0}', github.event.repository.name) }}
       - uses: actions/upload-pages-artifact@v3
         with:
           path: dist

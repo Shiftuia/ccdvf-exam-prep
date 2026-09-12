@@ -8,7 +8,7 @@ Blueprint is a fully static, TypeScript/Vite site for original Claude certificat
 
 Checks: `npm test`, `npm run typecheck`, `npm run lint`, `npm run validate:questions`, and `npm run build`.
 
-The app runs without network calls. `VITE_RESULTS_ADAPTER=noop` and `VITE_EMAIL_ADAPTER=noop` are defaults. Set both to `http` and set `VITE_API_ENDPOINT=https://api.example.com` to enable the HTTP adapter modules. Analytics is deliberately a no-op pending the privacy configuration; adding a provider is isolated to `src/adapters/`. `VITE_CREDLY_BADGE_URL` optionally links the "who made this" author block to a public Credly badge; the block ships without a link until it is set.
+The app runs without network calls. `VITE_RESULTS_ADAPTER=noop` and `VITE_EMAIL_ADAPTER=noop` are defaults. Set both to `http` and set `VITE_API_ENDPOINT=https://api.example.com` to enable the HTTP adapter modules. Analytics is deliberately a no-op pending the privacy configuration; adding a provider is isolated to `src/adapters/`. `VITE_CREDLY_BADGE_URL` optionally links the "who made this" author block to a public Credly badge; the block ships without a link until it is set. `VITE_NAV_BASE` sets the absolute prefix used by in-app navigation links and client-side routing (e.g. `/ccdvf-exam-prep`); the CI workflow sets it automatically to the repo name unless a `CNAME` file is present, in which case it is empty (root-served custom domain). Vite's asset `base` itself is always `./` (relative), so the built bundle loads correctly from either the GitHub Pages project URL or a custom domain without a separate build.
 
 ## Deployment
 
