@@ -1,1 +1,0 @@
-{"root":["./src/main.ts","./src/vite-env.d.ts","./src/adapters/index.ts","./src/data/certifications.ts","./src/data/questions.ts","./src/lib/quiz.ts","./src/lib/types.ts","./tests/quiz.test.ts","./vite.config.ts"],"version":"5.9.3"}
