@@ -3,6 +3,16 @@ import frameworkRaw from '../../content/pages/framework.md?raw';
 import cheatSheetRaw from '../../content/pages/cheat-sheet.md?raw';
 import { renderMarkdown } from '../lib/markdown';
 
+// The source markdown files each open with their own "# Title" line. The
+// page shell already renders one <h1> (this file's `h1` field, matched to
+// M2's SEO table), so strip the source's leading H1 here -- otherwise every
+// content page ships two <h1> elements, which is both a duplicate-heading
+// accessibility problem and confusing for on-page SEO signals.
+function stripLeadingH1(markdown: string): string {
+  return markdown.replace(/^#\s+.*\n+/, '');
+}
+
+
 export type ContentPage = {
   title: string;
   description: string;
@@ -22,7 +32,7 @@ export const examOverviewPage: ContentPage = {
   description:
     "Independent guide to the Claude Certified Developer – Foundations exam: 53 items, eight domains, registration details and an original practice set.",
   h1: 'CCDV-F exam guide',
-  bodyHtml: renderMarkdown(examOverviewRaw),
+  bodyHtml: renderMarkdown(stripLeadingH1(examOverviewRaw)),
 };
 
 export const frameworkPage: ContentPage = {
@@ -30,7 +40,7 @@ export const frameworkPage: ContentPage = {
   description:
     'A practical CCDV-F study framework: map the eight published domains, practise the decisions behind them, then review every mistake.',
   h1: 'How to prepare for CCDV-F',
-  bodyHtml: renderMarkdown(frameworkRaw),
+  bodyHtml: renderMarkdown(stripLeadingH1(frameworkRaw)),
 };
 
 export const cheatSheetPage: ContentPage = {
@@ -38,5 +48,5 @@ export const cheatSheetPage: ContentPage = {
   description:
     'A concise CCDV-F cheat sheet covering the eight published exam domains, key distinctions and the areas to review before test day.',
   h1: 'CCDV-F cheat sheet',
-  bodyHtml: renderMarkdown(cheatSheetRaw),
+  bodyHtml: renderMarkdown(stripLeadingH1(cheatSheetRaw)),
 };
