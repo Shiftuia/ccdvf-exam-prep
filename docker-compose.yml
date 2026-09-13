@@ -1,0 +1,40 @@
+services:
+  anthropic-quiz:
+    build: .
+    container_name: anthropic-quiz
+    restart: unless-stopped
+    environment:
+      - TZ=Asia/Jerusalem
+    # Fully static site, zero user input reaching the server (deliberate
+    # security property, see _catalog.yaml). No .env, no bind mounts, no
+    # docker socket, no host-published port -- Traefik reaches it over the
+    # `proxy` network only.
+    user: "101:101"
+    read_only: true
+    tmpfs:
+      - /tmp
+      - /var/cache/nginx
+      - /var/run
+    security_opt:
+      - "no-new-privileges:true"
+    cap_drop:
+      - ALL
+    networks:
+      - proxy
+    labels:
+      - "traefik.enable=true"
+      # LAN access, same as every other service.
+      - "traefik.http.routers.anthropic-quiz-lan.rule=Host(`anthropic-quiz.thinkcentre.local`)"
+      - "traefik.http.routers.anthropic-quiz-lan.entrypoints=web"
+      # Public hostname -- what the Cloudflare Tunnel targets (tunnel is set
+      # up in a separate task; this router just needs to exist so Traefik
+      # can match the Host header once the tunnel forwards it).
+      - "traefik.http.routers.anthropic-quiz-public.rule=Host(`anthropic-quiz.shiftuia.com`)"
+      - "traefik.http.routers.anthropic-quiz-public.entrypoints=web"
+      - "traefik.http.services.anthropic-quiz.loadbalancer.server.port=9006"
+      - "traefik.http.services.anthropic-quiz.loadbalancer.healthcheck.path=/health"
+      - "traefik.http.services.anthropic-quiz.loadbalancer.healthcheck.interval=30s"
+
+networks:
+  proxy:
+    external: true
