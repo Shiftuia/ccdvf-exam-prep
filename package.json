@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "node scripts/generate-html.mjs && node scripts/generate-seo.mjs && vite",
-    "build": "npm run validate:questions && tsc -b && node scripts/generate-html.mjs && node scripts/generate-seo.mjs && vite build",
+    "build": "npm run validate:questions && tsc -b && node scripts/generate-html.mjs && node scripts/generate-seo.mjs && vite build && node scripts/generate-404.mjs",
     "lint": "eslint .",
     "typecheck": "tsc -b --pretty false",
     "test": "vitest run",
