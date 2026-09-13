@@ -29,6 +29,9 @@ jobs:
           # resolves correctly. Empty when a CNAME custom domain is present
           # (site serves from '/'); otherwise the GitHub Pages project path.
           VITE_NAV_BASE: ${{ hashFiles('CNAME') != '' && '' || format('/{0}', github.event.repository.name) }}
+          # Canonical/OG URLs and the generated sitemap need the real deploy
+          # target; same custom-domain-vs-project-page branching as above.
+          VITE_SITE_URL: ${{ hashFiles('CNAME') != '' && format('https://{0}', 'blueprint.holyshifted.com') || format('https://{0}.github.io/{1}', github.repository_owner, github.event.repository.name) }}
       - uses: actions/upload-pages-artifact@v3
         with:
           path: dist

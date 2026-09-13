@@ -4,8 +4,8 @@
   "version": "0.1.0",
   "type": "module",
   "scripts": {
-    "dev": "vite",
-    "build": "tsc -b && vite build",
+    "dev": "node scripts/generate-html.mjs && node scripts/generate-seo.mjs && vite",
+    "build": "npm run validate:questions && tsc -b && node scripts/generate-html.mjs && node scripts/generate-seo.mjs && vite build",
     "lint": "eslint .",
     "typecheck": "tsc -b --pretty false",
     "test": "vitest run",

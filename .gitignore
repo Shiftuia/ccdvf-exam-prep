@@ -3,3 +3,5 @@ dist/
 *.tsbuildinfo
 .env
 .env.*
+public/robots.txt
+public/sitemap.xml

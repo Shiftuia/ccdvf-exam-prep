@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <rect width="1200" height="630" fill="#F6F4EF"/>
+  <rect x="0" y="0" width="1200" height="8" fill="#1F5C5A"/>
+  <text x="80" y="220" font-family="Georgia, 'Iowan Old Style', 'Times New Roman', serif" font-size="88" font-weight="700" fill="#1A1A18">Blueprint</text>
+  <text x="80" y="300" font-family="-apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="40" fill="#1A1A18">CCDV-F practice exam</text>
+  <text x="80" y="360" font-family="-apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="30" fill="#5C5A54">53 original questions &#183; every option explained</text>
+  <line x1="80" y1="420" x2="1120" y2="420" stroke="#DCD7CC" stroke-width="1"/>
+  <text x="80" y="470" font-family="-apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="26" fill="#1A1A18">by Holy Shifted</text>
+  <text x="80" y="580" font-family="-apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="22" fill="#8E8B82">Independent study resource</text>
+</svg>

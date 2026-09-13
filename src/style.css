@@ -64,6 +64,16 @@ h3 { font-size: 1.625rem; }
 
 p { margin: 0 0 16px; }
 .prose, .prose p { max-width: 68ch; }
+.prose ul { max-width: 68ch; padding-left: 20px; }
+.prose li { margin-bottom: 8px; line-height: 1.6; }
+.prose h2 { margin-top: 48px; }
+.prose h2:first-child { margin-top: 0; }
+.table-wrap { overflow-x: auto; margin: 24px 0; border: 1px solid var(--line); border-radius: 10px; -webkit-overflow-scrolling: touch; }
+.prose table { border-collapse: collapse; width: 100%; min-width: 480px; font-size: 0.9375rem; }
+.prose th, .prose td { padding: 10px 14px; border-bottom: 1px solid var(--line); text-align: left; vertical-align: top; }
+.prose th { background: var(--surface-alt); font-weight: 600; white-space: nowrap; }
+.prose td code, .prose p code { background: var(--surface-alt); border-radius: 4px; padding: 1px 5px; font-family: var(--font-mono); font-size: 0.9em; }
+.prose tr:last-child td { border-bottom: none; }
 .muted { color: var(--ink-faint); font-size: 0.9375rem; }
 .disclaimer { color: var(--ink-muted); }
 .eyebrow { color: var(--accent); font-size: 0.8125rem; text-transform: uppercase; letter-spacing: 0.06em; margin-bottom: 8px; }

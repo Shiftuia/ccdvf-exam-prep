@@ -1,0 +1,55 @@
+// Regenerates the six route entry HTML files with real, per-route,
+// statically-indexable SEO metadata (title, description, canonical, Open
+// Graph, Twitter card, WebPage JSON-LD) before every build. Keeping this as
+// a generator instead of six hand-maintained HTML files means the shared
+// boilerplate (viewport, OG defaults, JSON-LD shape) can't drift between
+// pages, and the canonical/OG URLs pick up the real deploy target
+// (VITE_SITE_URL) at build time instead of being hardcoded per environment.
+import { writeFileSync } from 'node:fs';
+import { fileURLToPath } from 'node:url';
+import { dirname, resolve } from 'node:path';
+import { routes } from './routes.mjs';
+
+const __dirname = dirname(fileURLToPath(import.meta.url));
+const root = resolve(__dirname, '..');
+
+const siteUrl = (process.env.VITE_SITE_URL || 'https://shiftuia.github.io/ccdvf-exam-prep').replace(/\/$/, '');
+const ogImage = `${siteUrl}/og/ccdv-f.png`;
+
+const dirFor = (routePath) => (routePath === '/' ? '.' : routePath.replace(/^\//, '').replace(/\/$/, ''));
+
+for (const route of routes) {
+  const canonical = `${siteUrl}${route.path}`;
+  const jsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'WebPage',
+    name: route.title,
+    description: route.description,
+    url: canonical,
+    publisher: { '@type': 'Person', name: 'Holy Shifted' },
+    isAccessibleForFree: true,
+  };
+  const html = `<!doctype html><html lang="en"><head><meta charset="UTF-8"/><meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>${route.title}</title>
+<meta name="description" content="${route.description}"/>
+<link rel="canonical" href="${canonical}"/>
+<meta property="og:site_name" content="Blueprint by Holy Shifted"/>
+<meta property="og:type" content="website"/>
+<meta property="og:locale" content="en_US"/>
+<meta property="og:title" content="${route.title}"/>
+<meta property="og:description" content="${route.description}"/>
+<meta property="og:url" content="${canonical}"/>
+<meta property="og:image" content="${ogImage}"/>
+<meta property="og:image:width" content="1200"/>
+<meta property="og:image:height" content="630"/>
+<meta property="og:image:alt" content="Blueprint by Holy Shifted — CCDV-F practice exam. 53 original questions matched to the published blueprint."/>
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:site" content="@holyshifted"/>
+<meta name="twitter:title" content="${route.title}"/>
+<meta name="twitter:description" content="${route.description}"/>
+<script type="application/ld+json">${JSON.stringify(jsonLd)}</script>
+</head><body><div id="app"></div><script type="module" src="/src/main.ts"></script></body></html>`;
+  const target = resolve(root, dirFor(route.path), 'index.html');
+  writeFileSync(target, html);
+  console.log(`Wrote ${target}`);
+}

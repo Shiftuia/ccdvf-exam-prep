@@ -7,72 +7,78 @@
       "domainId": "applications-integration",
       "subSkillId": "understanding-requirements",
       "type": "single",
-      "difficulty": "medium",
-      "stem": "Placeholder item for Applications & Integration / Understanding Requirements (#1): which approach best satisfies the stated constraint in this scenario?",
+      "difficulty": "easy",
+      "stem": "A stakeholder says, \"Make the support assistant much smarter.\" What is the best next step?",
       "options": [
         {
           "id": "a",
-          "text": "Address the specific constraint the Understanding Requirements item 1 scenario describes directly.",
-          "correct": true,
-          "explanation": "This option resolves exactly the constraint the scenario calls out, which is what the item is testing."
+          "text": "Choose the highest-capability model and compare several prompt variants.",
+          "correct": false,
+          "explanation": "That is a design choice made before the team has defined what success means."
         },
         {
           "id": "b",
-          "text": "Apply a generic best practice without checking it against the Understanding Requirements item 1 scenario.",
+          "text": "Enable streaming so users see the first tokens of an answer sooner.",
           "correct": false,
-          "explanation": "A generic practice can be wrong here because it was not checked against this scenario's specific constraint."
+          "explanation": "Streaming may help a latency target, but no target has been stated yet."
         },
         {
           "id": "c",
-          "text": "Defer the Understanding Requirements item 1 decision until more requirements arrive.",
-          "correct": false,
-          "explanation": "Deferring avoids the decision the scenario is asking you to make now, based on what is already known."
+          "text": "Define measurable functional and non-functional success criteria.",
+          "correct": true,
+          "explanation": "The team needs testable behavior plus targets such as quality, safety, latency, and cost before selecting an architecture."
         },
         {
           "id": "d",
-          "text": "Optimize the Understanding Requirements item 1 response only for implementation speed, ignoring the constraint.",
+          "text": "Build a vector database that covers every support article.",
           "correct": false,
-          "explanation": "Speed alone does not satisfy a constraint the scenario explicitly requires you to respect."
+          "explanation": "Retrieval may be useful, but it is not a substitute for defining the problem and acceptance criteria."
         }
       ],
-      "rationale": "Placeholder item exercising the Understanding Requirements area; real content lands in task E3.",
-      "sourceNote": "Original placeholder written to blueprint scope; not a real exam question."
+      "rationale": "Tests requirements before architecture.",
+      "sourceNote": "Original item written to documented blueprint scope; not a real exam question."
     },
     {
       "id": "q-understanding-requirements-02",
       "domainId": "applications-integration",
       "subSkillId": "understanding-requirements",
-      "type": "single",
+      "type": "multi",
       "difficulty": "medium",
-      "stem": "Placeholder item for Applications & Integration / Understanding Requirements (#2): which approach best satisfies the stated constraint in this scenario?",
+      "stem": "A team must reduce support handling time while keeping responses safe and affordable. Which statements are valid requirements rather than design decisions? Select all that apply.",
       "options": [
         {
           "id": "a",
-          "text": "Address the specific constraint the Understanding Requirements item 2 scenario describes directly.",
+          "text": "At least 90% of evaluated answers meet the support-quality rubric.",
           "correct": true,
-          "explanation": "This option resolves exactly the constraint the scenario calls out, which is what the item is testing."
+          "explanation": "This is a measurable quality target that can be evaluated against a defined test set."
         },
         {
           "id": "b",
-          "text": "Apply a generic best practice without checking it against the Understanding Requirements item 2 scenario.",
+          "text": "Use streaming responses with a fast model.",
           "correct": false,
-          "explanation": "A generic practice can be wrong here because it was not checked against this scenario's specific constraint."
+          "explanation": "This is an implementation approach that might satisfy latency requirements, not a requirement itself."
         },
         {
           "id": "c",
-          "text": "Defer the Understanding Requirements item 2 decision until more requirements arrive.",
-          "correct": false,
-          "explanation": "Deferring avoids the decision the scenario is asking you to make now, based on what is already known."
+          "text": "The p95 time to first visible response is under two seconds.",
+          "correct": true,
+          "explanation": "A percentile, a metric, and a threshold make this a testable non-functional requirement that any architecture can be checked against."
         },
         {
           "id": "d",
-          "text": "Optimize the Understanding Requirements item 2 response only for implementation speed, ignoring the constraint.",
+          "text": "The assistant should feel helpful to most customers.",
           "correct": false,
-          "explanation": "Speed alone does not satisfy a constraint the scenario explicitly requires you to respect."
+          "explanation": "This is an aspiration until it is tied to a rubric, rate, population, and threshold."
+        },
+        {
+          "id": "e",
+          "text": "Monthly model spend must stay below the approved budget ceiling.",
+          "correct": true,
+          "explanation": "This is a measurable cost constraint that architecture choices must respect."
         }
       ],
-      "rationale": "Placeholder item exercising the Understanding Requirements area; real content lands in task E3.",
-      "sourceNote": "Original placeholder written to blueprint scope; not a real exam question."
+      "rationale": "Tests functional and non-functional requirements versus solution choices.",
+      "sourceNote": "Original item written to documented blueprint scope; not a real exam question."
     },
     {
       "id": "q-systems-life-cycle-01",
@@ -80,35 +86,35 @@
       "subSkillId": "systems-life-cycle",
       "type": "single",
       "difficulty": "medium",
-      "stem": "Placeholder item for Applications & Integration / Systems Life Cycle (#1): which approach best satisfies the stated constraint in this scenario?",
+      "stem": "A production team plans to replace a deprecated model before its retirement date. Which sequence is strongest?",
       "options": [
         {
           "id": "a",
-          "text": "Address the specific constraint the Systems Life Cycle item 1 scenario describes directly.",
+          "text": "Export usage to find callers, test the replacement against evals, then roll out and monitor.",
           "correct": true,
-          "explanation": "This option resolves exactly the constraint the scenario calls out, which is what the item is testing."
+          "explanation": "This identifies the blast radius, validates behavior before migration, and closes the loop with operational observation."
         },
         {
           "id": "b",
-          "text": "Apply a generic best practice without checking it against the Systems Life Cycle item 1 scenario.",
+          "text": "Change the model ID in production first, then investigate regressions only if users report them.",
           "correct": false,
-          "explanation": "A generic practice can be wrong here because it was not checked against this scenario's specific constraint."
+          "explanation": "A model migration can change output and parameter compatibility, so production should not be the first test environment."
         },
         {
           "id": "c",
-          "text": "Defer the Systems Life Cycle item 1 decision until more requirements arrive.",
+          "text": "Wait until requests start failing at retirement, then switch every caller to the newest model.",
           "correct": false,
-          "explanation": "Deferring avoids the decision the scenario is asking you to make now, based on what is already known."
+          "explanation": "Retirement is a scheduled dependency event, not an incident that should be discovered by failure."
         },
         {
           "id": "d",
-          "text": "Optimize the Systems Life Cycle item 1 response only for implementation speed, ignoring the constraint.",
+          "text": "Keep the old model in place because deprecated models remain supported after retirement.",
           "correct": false,
-          "explanation": "Speed alone does not satisfy a constraint the scenario explicitly requires you to respect."
+          "explanation": "Deprecated models still work temporarily but have a retirement date and must be migrated."
         }
       ],
-      "rationale": "Placeholder item exercising the Systems Life Cycle area; real content lands in task E3.",
-      "sourceNote": "Original placeholder written to blueprint scope; not a real exam question."
+      "rationale": "Tests eval-driven lifecycle management for model changes.",
+      "sourceNote": "Original item written to documented blueprint scope; not a real exam question."
     },
     {
       "id": "q-claude-api-mechanics-01",
@@ -116,71 +122,77 @@
       "subSkillId": "claude-api-mechanics",
       "type": "single",
       "difficulty": "medium",
-      "stem": "Placeholder item for Applications & Integration / Claude API Mechanics (#1): which approach best satisfies the stated constraint in this scenario?",
+      "stem": "A batch client receives HTTP 429 with no Retry-After header and error.details.error_code set to enforced_spend_limit_reached. What should it do?",
       "options": [
         {
           "id": "a",
-          "text": "Address the specific constraint the Claude API Mechanics item 1 scenario describes directly.",
+          "text": "Stop retrying and surface the spend-cap condition for a limit or tier change.",
           "correct": true,
-          "explanation": "This option resolves exactly the constraint the scenario calls out, which is what the item is testing."
+          "explanation": "A spend-cap 429 has no Retry-After and does not self-resolve on an ordinary backoff schedule."
         },
         {
           "id": "b",
-          "text": "Apply a generic best practice without checking it against the Claude API Mechanics item 1 scenario.",
+          "text": "Retry rapidly because 429 always represents a short rate-limit window.",
           "correct": false,
-          "explanation": "A generic practice can be wrong here because it was not checked against this scenario's specific constraint."
+          "explanation": "This 429 denotes a tier spend cap, so rapid retries only consume attempts without restoring access."
         },
         {
           "id": "c",
-          "text": "Defer the Claude API Mechanics item 1 decision until more requirements arrive.",
+          "text": "Shrink the request payload until it no longer exceeds the model's context window.",
           "correct": false,
-          "explanation": "Deferring avoids the decision the scenario is asking you to make now, based on what is already known."
+          "explanation": "An oversized request is a 400 or 413 class issue, not this spend-cap signal."
         },
         {
           "id": "d",
-          "text": "Optimize the Claude API Mechanics item 1 response only for implementation speed, ignoring the constraint.",
+          "text": "Re-authenticate with a freshly issued API key and resend the same request.",
           "correct": false,
-          "explanation": "Speed alone does not satisfy a constraint the scenario explicitly requires you to respect."
+          "explanation": "Authentication failures are 401 errors; the response identifies an account spending condition."
         }
       ],
-      "rationale": "Placeholder item exercising the Claude API Mechanics area; real content lands in task E3.",
-      "sourceNote": "Original placeholder written to blueprint scope; not a real exam question."
+      "rationale": "Tests the distinction between retryable rate limits and spend-cap responses.",
+      "sourceNote": "Original item written to documented blueprint scope; not a real exam question."
     },
     {
       "id": "q-claude-api-mechanics-02",
       "domainId": "applications-integration",
       "subSkillId": "claude-api-mechanics",
       "type": "multi",
-      "difficulty": "medium",
-      "stem": "Placeholder multi-select for Applications & Integration / Claude API Mechanics (#2): select all practices that satisfy the stated constraint.",
+      "difficulty": "hard",
+      "stem": "An app receives HTTP 200 from the Messages API. Which response conditions still require application-specific handling rather than treating the call as a completed answer? Select all that apply.",
       "options": [
         {
           "id": "a",
-          "text": "Validate the Claude API Mechanics item 2 approach against the scenario's stated constraint.",
-          "correct": true,
-          "explanation": "Direct validation against the stated constraint is a correct, necessary practice here."
+          "text": "The response includes a request-id header.",
+          "correct": false,
+          "explanation": "Request IDs support observability and support cases; they do not signal an incomplete answer."
         },
         {
           "id": "b",
-          "text": "Document the Claude API Mechanics item 2 reasoning so the decision is auditable later.",
+          "text": "stop_reason is refusal.",
           "correct": true,
-          "explanation": "Documenting the reasoning is a correct complementary practice for this kind of decision."
+          "explanation": "A refusal is a successful transport response but not a usable task completion, so it needs a product fallback or message."
         },
         {
           "id": "c",
-          "text": "Skip verification of the Claude API Mechanics item 2 scenario because it looks familiar.",
+          "text": "usage.output_tokens is nonzero.",
           "correct": false,
-          "explanation": "Familiarity is not verification; skipping it can let a mismatched assumption through."
+          "explanation": "Nonzero output usage is normal and does not by itself require a recovery path."
         },
         {
           "id": "d",
-          "text": "Apply the Claude API Mechanics item 2 decision globally without scoping it to this scenario.",
-          "correct": false,
-          "explanation": "Applying the decision outside its scope can violate constraints in other scenarios."
+          "text": "stop_reason is max_tokens.",
+          "correct": true,
+          "explanation": "This indicates output truncation at the configured cap and may require continuation or a larger cap."
+        },
+        {
+          "id": "e",
+          "text": "stop_reason is tool_use.",
+          "correct": true,
+          "explanation": "The client must execute the requested tool and send a tool_result to continue the loop."
         }
       ],
-      "rationale": "Placeholder multi-select exercising the Claude API Mechanics area; real content lands in task E3.",
-      "sourceNote": "Original placeholder written to blueprint scope; not a real exam question."
+      "rationale": "Tests transport success versus response semantics.",
+      "sourceNote": "Original item written to documented blueprint scope; not a real exam question."
     },
     {
       "id": "q-claude-api-mechanics-03",
@@ -188,71 +200,71 @@
       "subSkillId": "claude-api-mechanics",
       "type": "single",
       "difficulty": "medium",
-      "stem": "Placeholder item for Applications & Integration / Claude API Mechanics (#3): which approach best satisfies the stated constraint in this scenario?",
+      "stem": "A streamed request starts successfully, then emits an SSE error event with overloaded_error. Which handling is correct?",
       "options": [
         {
           "id": "a",
-          "text": "Address the specific constraint the Claude API Mechanics item 3 scenario describes directly.",
-          "correct": true,
-          "explanation": "This option resolves exactly the constraint the scenario calls out, which is what the item is testing."
+          "text": "Ignore it because the initial HTTP status was 200 and the stream already began delivering text.",
+          "correct": false,
+          "explanation": "Streaming can fail after headers are sent, so status-code handling alone is insufficient."
         },
         {
           "id": "b",
-          "text": "Apply a generic best practice without checking it against the Claude API Mechanics item 3 scenario.",
+          "text": "Treat it as a malformed tool result and resend the previous tool output as a new turn.",
           "correct": false,
-          "explanation": "A generic practice can be wrong here because it was not checked against this scenario's specific constraint."
+          "explanation": "A tool-result continuation is for a tool_use response, not an overloaded stream."
         },
         {
           "id": "c",
-          "text": "Defer the Claude API Mechanics item 3 decision until more requirements arrive.",
+          "text": "Convert it to a successful empty answer because text may have already arrived.",
           "correct": false,
-          "explanation": "Deferring avoids the decision the scenario is asking you to make now, based on what is already known."
+          "explanation": "Partial text is not proof that the requested operation completed correctly."
         },
         {
           "id": "d",
-          "text": "Optimize the Claude API Mechanics item 3 response only for implementation speed, ignoring the constraint.",
-          "correct": false,
-          "explanation": "Speed alone does not satisfy a constraint the scenario explicitly requires you to respect."
+          "text": "Treat it as the streamed equivalent of a retryable 529 and apply bounded backoff.",
+          "correct": true,
+          "explanation": "overloaded_error is a transient capacity condition; stream consumers must handle it as an in-band error."
         }
       ],
-      "rationale": "Placeholder item exercising the Claude API Mechanics area; real content lands in task E3.",
-      "sourceNote": "Original placeholder written to blueprint scope; not a real exam question."
+      "rationale": "Tests SSE error handling after HTTP success.",
+      "sourceNote": "Original item written to documented blueprint scope; not a real exam question."
     },
     {
       "id": "q-claude-api-mechanics-04",
       "domainId": "applications-integration",
       "subSkillId": "claude-api-mechanics",
       "type": "single",
-      "difficulty": "medium",
-      "stem": "Placeholder item for Applications & Integration / Claude API Mechanics (#4): which approach best satisfies the stated constraint in this scenario?",
+      "difficulty": "hard",
+      "stem": "A client uses prompt caching. usage reports input_tokens: 80, cache_creation_input_tokens: 0, and cache_read_input_tokens: 120000. Which statement is accurate?",
       "options": [
         {
           "id": "a",
-          "text": "Address the specific constraint the Claude API Mechanics item 4 scenario describes directly.",
+          "text": "Total input is 120080 tokens; the cached read is billed at a reduced rate and usually excluded from ITPM.",
           "correct": true,
-          "explanation": "This option resolves exactly the constraint the scenario calls out, which is what the item is testing."
+          "explanation": "Total input includes uncached, cache-write, and cache-read tokens; cache reads typically do not count toward ITPM."
         },
         {
           "id": "b",
-          "text": "Apply a generic best practice without checking it against the Claude API Mechanics item 4 scenario.",
+          "text": "The prompt was only 80 tokens in total, so this request comfortably fits inside any model's context window.",
           "correct": false,
-          "explanation": "A generic practice can be wrong here because it was not checked against this scenario's specific constraint."
+          "explanation": "input_tokens excludes the cached prefix, which still occupies context-window capacity."
         },
         {
           "id": "c",
-          "text": "Defer the Claude API Mechanics item 4 decision until more requirements arrive.",
+          "text": "The 120000 cached tokens are neither billed nor counted against ITPM, and no longer occupy context.",
           "correct": false,
-          "explanation": "Deferring avoids the decision the scenario is asking you to make now, based on what is already known."
+          "explanation": "Caching reduces price and rate-limit impact; it does not make tokens free or remove them from context."
         },
         {
           "id": "d",
-          "text": "Optimize the Claude API Mechanics item 4 response only for implementation speed, ignoring the constraint.",
+          "text": "The cache was missed on this request, because a cache_creation_input_tokens value of zero means no entry exists.",
           "correct": false,
-          "explanation": "Speed alone does not satisfy a constraint the scenario explicitly requires you to respect."
+          "explanation": "A positive cache_read_input_tokens value is direct evidence of a cache hit."
         }
       ],
-      "rationale": "Placeholder item exercising the Claude API Mechanics area; real content lands in task E3.",
-      "sourceNote": "Original placeholder written to blueprint scope; not a real exam question."
+      "rationale": "Tests interpretation of cache-aware usage fields.",
+      "sourceNote": "Original item written to documented blueprint scope; not a real exam question."
     },
     {
       "id": "q-sw-eng-foundations-01",
@@ -260,35 +272,35 @@
       "subSkillId": "sw-eng-foundations",
       "type": "single",
       "difficulty": "medium",
-      "stem": "Placeholder item for Applications & Integration / SW Eng Foundations (#1): which approach best satisfies the stated constraint in this scenario?",
+      "stem": "An agent calls create_refund after Claude requests it. The network drops just after the provider may have accepted the refund. What prevents a duplicate refund on retry?",
       "options": [
         {
           "id": "a",
-          "text": "Address the specific constraint the SW Eng Foundations item 1 scenario describes directly.",
+          "text": "Use an idempotency key or deduplicate the tool execution by its stable operation ID.",
           "correct": true,
-          "explanation": "This option resolves exactly the constraint the scenario calls out, which is what the item is testing."
+          "explanation": "The tool handler must make repeated delivery of the same logical operation safe."
         },
         {
           "id": "b",
-          "text": "Apply a generic best practice without checking it against the SW Eng Foundations item 1 scenario.",
+          "text": "Retry the Messages API call with a larger max_tokens so the tool call completes.",
           "correct": false,
-          "explanation": "A generic practice can be wrong here because it was not checked against this scenario's specific constraint."
+          "explanation": "The duplicate comes from re-executing an external side effect, so a bigger output budget on the model call changes nothing about the refund being sent twice."
         },
         {
           "id": "c",
-          "text": "Defer the SW Eng Foundations item 1 decision until more requirements arrive.",
+          "text": "Set temperature to zero before calling the refund tool so the model requests it once.",
           "correct": false,
-          "explanation": "Deferring avoids the decision the scenario is asking you to make now, based on what is already known."
+          "explanation": "Sampling settings do not provide exactly-once behavior for an external payment action."
         },
         {
           "id": "d",
-          "text": "Optimize the SW Eng Foundations item 1 response only for implementation speed, ignoring the constraint.",
+          "text": "Persist the refund outcome only in the model conversation history and re-read it on retry.",
           "correct": false,
-          "explanation": "Speed alone does not satisfy a constraint the scenario explicitly requires you to respect."
+          "explanation": "Transactional state needs an authoritative system of record, not transient context."
         }
       ],
-      "rationale": "Placeholder item exercising the SW Eng Foundations area; real content lands in task E3.",
-      "sourceNote": "Original placeholder written to blueprint scope; not a real exam question."
+      "rationale": "Tests idempotency at the side-effect boundary.",
+      "sourceNote": "Original item written to documented blueprint scope; not a real exam question."
     },
     {
       "id": "q-sw-eng-foundations-02",
@@ -296,35 +308,35 @@
       "subSkillId": "sw-eng-foundations",
       "type": "single",
       "difficulty": "medium",
-      "stem": "Placeholder item for Applications & Integration / SW Eng Foundations (#2): which approach best satisfies the stated constraint in this scenario?",
+      "stem": "A developer wraps an SDK call in a three-attempt retry helper without changing SDK settings. The SDK already retries transient failures twice. What is the main problem?",
       "options": [
         {
           "id": "a",
-          "text": "Address the specific constraint the SW Eng Foundations item 2 scenario describes directly.",
-          "correct": true,
-          "explanation": "This option resolves exactly the constraint the scenario calls out, which is what the item is testing."
+          "text": "The SDK will detect the outer loop and disable its own retries, leaving three attempts.",
+          "correct": false,
+          "explanation": "The SDK cannot infer the external wrapper and continues its configured retry policy."
         },
         {
           "id": "b",
-          "text": "Apply a generic best practice without checking it against the SW Eng Foundations item 2 scenario.",
+          "text": "The request becomes effectively deterministic because the same call is repeated.",
           "correct": false,
-          "explanation": "A generic practice can be wrong here because it was not checked against this scenario's specific constraint."
+          "explanation": "Repeating a request changes neither sampling behavior nor correctness guarantees."
         },
         {
           "id": "c",
-          "text": "Defer the SW Eng Foundations item 2 decision until more requirements arrive.",
-          "correct": false,
-          "explanation": "Deferring avoids the decision the scenario is asking you to make now, based on what is already known."
+          "text": "The request can make up to nine attempts, amplifying load and rate-limit pressure.",
+          "correct": true,
+          "explanation": "Each outer attempt can invoke the SDK's initial call plus two retries, multiplying traffic for one logical operation."
         },
         {
           "id": "d",
-          "text": "Optimize the SW Eng Foundations item 2 response only for implementation speed, ignoring the constraint.",
+          "text": "Only authentication errors will be retried nine times; transient errors stop after two.",
           "correct": false,
-          "explanation": "Speed alone does not satisfy a constraint the scenario explicitly requires you to respect."
+          "explanation": "Authentication errors are terminal; the multiplication concerns transient errors the SDK retries."
         }
       ],
-      "rationale": "Placeholder item exercising the SW Eng Foundations area; real content lands in task E3.",
-      "sourceNote": "Original placeholder written to blueprint scope; not a real exam question."
+      "rationale": "Tests avoidance of stacked retry policies.",
+      "sourceNote": "Original item written to documented blueprint scope; not a real exam question."
     },
     {
       "id": "q-sw-eng-foundations-03",
@@ -332,71 +344,77 @@
       "subSkillId": "sw-eng-foundations",
       "type": "multi",
       "difficulty": "medium",
-      "stem": "Placeholder multi-select for Applications & Integration / SW Eng Foundations (#3): select all practices that satisfy the stated constraint.",
+      "stem": "A service launches 2,000 independent model calls at once and receives many 429s. Which changes are appropriate? Select all that apply.",
       "options": [
         {
           "id": "a",
-          "text": "Validate the SW Eng Foundations item 3 approach against the scenario's stated constraint.",
-          "correct": true,
-          "explanation": "Direct validation against the stated constraint is a correct, necessary practice here."
+          "text": "Use asyncio.gather without limits because asynchronous code should maximize parallelism.",
+          "correct": false,
+          "explanation": "Async concurrency still consumes RPM, ITPM, and OTPM; unbounded fan-out is the failure mode."
         },
         {
           "id": "b",
-          "text": "Document the SW Eng Foundations item 3 reasoning so the decision is auditable later.",
-          "correct": true,
-          "explanation": "Documenting the reasoning is a correct complementary practice for this kind of decision."
+          "text": "Retry 400 invalid_request_error responses with the same payload.",
+          "correct": false,
+          "explanation": "A malformed request is deterministic and must be fixed rather than retried."
         },
         {
           "id": "c",
-          "text": "Skip verification of the SW Eng Foundations item 3 scenario because it looks familiar.",
-          "correct": false,
-          "explanation": "Familiarity is not verification; skipping it can let a mismatched assumption through."
+          "text": "Use a bounded worker pool or semaphore sized to observed rate limits.",
+          "correct": true,
+          "explanation": "Bounded concurrency applies backpressure instead of producing an uncontrolled burst."
         },
         {
           "id": "d",
-          "text": "Apply the SW Eng Foundations item 3 decision globally without scoping it to this scenario.",
-          "correct": false,
-          "explanation": "Applying the decision outside its scope can violate constraints in other scenarios."
+          "text": "Add exponential backoff with jitter for genuinely retryable failures.",
+          "correct": true,
+          "explanation": "Jitter reduces synchronized retry storms while backoff gives capacity time to recover."
+        },
+        {
+          "id": "e",
+          "text": "Log rate-limit headers to tune the pool and monitor headroom.",
+          "correct": true,
+          "explanation": "The response headers expose the capacity signals needed to choose safe concurrency."
         }
       ],
-      "rationale": "Placeholder multi-select exercising the SW Eng Foundations area; real content lands in task E3.",
-      "sourceNote": "Original placeholder written to blueprint scope; not a real exam question."
+      "rationale": "Tests bounded concurrency and retry discipline.",
+      "sourceNote": "Original item written to documented blueprint scope; not a real exam question."
     },
     {
       "id": "q-sw-eng-foundations-04",
       "domainId": "applications-integration",
       "subSkillId": "sw-eng-foundations",
       "type": "single",
-      "difficulty": "medium",
-      "stem": "Placeholder item for Applications & Integration / SW Eng Foundations (#4): which approach best satisfies the stated constraint in this scenario?",
+      "difficulty": "easy",
+      "stem": "A regression test compares two JSON model responses as raw strings and fails only because object-key order changed. What should the test do?",
       "options": [
         {
           "id": "a",
-          "text": "Address the specific constraint the SW Eng Foundations item 4 scenario describes directly.",
+          "text": "Parse the JSON and compare the required object structure and values.",
           "correct": true,
-          "explanation": "This option resolves exactly the constraint the scenario calls out, which is what the item is testing."
+          "explanation": "JSON object key order and whitespace are serialization details; structural comparison tests the contract."
         },
         {
           "id": "b",
-          "text": "Apply a generic best practice without checking it against the SW Eng Foundations item 4 scenario.",
+          "text": "Raise temperature so the model emits keys in a consistent order.",
           "correct": false,
-          "explanation": "A generic practice can be wrong here because it was not checked against this scenario's specific constraint."
+          "explanation": "Sampling does not turn a serialized JSON string into a stable contractual representation."
         },
         {
           "id": "c",
-          "text": "Defer the SW Eng Foundations item 4 decision until more requirements arrive.",
+          "text": "Store the original string in conversation history for the next test run.",
           "correct": false,
-          "explanation": "Deferring avoids the decision the scenario is asking you to make now, based on what is already known."
+          "explanation": "History is not a test oracle and cannot solve serialization variation."
         },
         {
           "id": "d",
-          "text": "Optimize the SW Eng Foundations item 4 response only for implementation speed, ignoring the constraint.",
+          "text": "Disable all SDK retries so the response string cannot change between runs.",
           "correct": false,
-          "explanation": "Speed alone does not satisfy a constraint the scenario explicitly requires you to respect."
+          "explanation": "Retries are unrelated to JSON object ordering in successful responses."
         }
       ],
-      "rationale": "Placeholder item exercising the SW Eng Foundations area; real content lands in task E3.",
-      "sourceNote": "Original placeholder written to blueprint scope; not a real exam question."
+      "rationale": "Tests robust validation of structured outputs.",
+      "sourceNote": "Original item written to documented blueprint scope; not a real exam question."
     },
     {
       "id": "q-claude-app-design-01",
@@ -404,143 +422,149 @@
       "subSkillId": "claude-app-design",
       "type": "single",
       "difficulty": "medium",
-      "stem": "Placeholder item for Applications & Integration / Claude App Design (#1): which approach best satisfies the stated constraint in this scenario?",
+      "stem": "An application must generate a draft, run deterministic business-rule checks, and send only passing drafts to a reviewer. Which design best satisfies that requirement?",
       "options": [
         {
           "id": "a",
-          "text": "Address the specific constraint the Claude App Design item 1 scenario describes directly.",
-          "correct": true,
-          "explanation": "This option resolves exactly the constraint the scenario calls out, which is what the item is testing."
+          "text": "An autonomous agent that reads each draft and decides whether the business rules need checking.",
+          "correct": false,
+          "explanation": "The business-rule gate is mandatory and known in advance, so leaving it to agent discretion weakens the requirement."
         },
         {
           "id": "b",
-          "text": "Apply a generic best practice without checking it against the Claude App Design item 1 scenario.",
-          "correct": false,
-          "explanation": "A generic practice can be wrong here because it was not checked against this scenario's specific constraint."
+          "text": "A code-defined workflow that invokes the model and runs the business-rule checks as explicit gates.",
+          "correct": true,
+          "explanation": "Known validation stages belong in application control flow, where each gate can be tested and audited."
         },
         {
           "id": "c",
-          "text": "Defer the Claude App Design item 1 decision until more requirements arrive.",
+          "text": "A Message Batch that generates all drafts asynchronously, since several drafts may be produced per run.",
           "correct": false,
-          "explanation": "Deferring avoids the decision the scenario is asking you to make now, based on what is already known."
+          "explanation": "Batching changes delivery timing and price; it does not provide deterministic validation gates."
         },
         {
           "id": "d",
-          "text": "Optimize the Claude App Design item 1 response only for implementation speed, ignoring the constraint.",
+          "text": "Prompt caching of the business rules, so the model applies the same rule set consistently to every draft.",
           "correct": false,
-          "explanation": "Speed alone does not satisfy a constraint the scenario explicitly requires you to respect."
+          "explanation": "Caching may optimize repeated context but cannot execute or enforce application business rules."
         }
       ],
-      "rationale": "Placeholder item exercising the Claude App Design area; real content lands in task E3.",
-      "sourceNote": "Original placeholder written to blueprint scope; not a real exam question."
+      "rationale": "Tests deterministic application validation gates around model output.",
+      "sourceNote": "Original item written to documented blueprint scope; not a real exam question."
     },
     {
       "id": "q-claude-app-design-02",
       "domainId": "applications-integration",
       "subSkillId": "claude-app-design",
       "type": "single",
-      "difficulty": "medium",
-      "stem": "Placeholder item for Applications & Integration / Claude App Design (#2): which approach best satisfies the stated constraint in this scenario?",
+      "difficulty": "hard",
+      "stem": "A legal-answer feature must return source citations from PDFs and also emit a strict JSON response schema in one call. What should the team expect?",
       "options": [
         {
           "id": "a",
-          "text": "Address the specific constraint the Claude App Design item 2 scenario describes directly.",
-          "correct": true,
-          "explanation": "This option resolves exactly the constraint the scenario calls out, which is what the item is testing."
+          "text": "Both can be enabled together in one request, because citations are emitted as ordinary text fields inside the JSON.",
+          "correct": false,
+          "explanation": "Citations and JSON outputs are incompatible in the same Messages API request."
         },
         {
           "id": "b",
-          "text": "Apply a generic best practice without checking it against the Claude App Design item 2 scenario.",
+          "text": "Prefill an assistant message with an opening brace while citations are enabled, so the model emits JSON around them.",
           "correct": false,
-          "explanation": "A generic practice can be wrong here because it was not checked against this scenario's specific constraint."
+          "explanation": "Prefill is not the current structured-output mechanism and is rejected on newer models."
         },
         {
           "id": "c",
-          "text": "Defer the Claude App Design item 2 decision until more requirements arrive.",
+          "text": "Use a larger context window model, because the conflict is caused by the size of the PDFs, not the features.",
           "correct": false,
-          "explanation": "Deferring avoids the decision the scenario is asking you to make now, based on what is already known."
+          "explanation": "The limitation is an API feature incompatibility, not a context-capacity issue."
         },
         {
           "id": "d",
-          "text": "Optimize the Claude App Design item 2 response only for implementation speed, ignoring the constraint.",
-          "correct": false,
-          "explanation": "Speed alone does not satisfy a constraint the scenario explicitly requires you to respect."
+          "text": "Use two stages or redesign the response, because citations and JSON outputs cannot be combined in one request.",
+          "correct": true,
+          "explanation": "The system must separate sourcing from strict schema formatting when both guarantees are required."
         }
       ],
-      "rationale": "Placeholder item exercising the Claude App Design area; real content lands in task E3.",
-      "sourceNote": "Original placeholder written to blueprint scope; not a real exam question."
+      "rationale": "Tests output contracts and feature compatibility.",
+      "sourceNote": "Original item written to documented blueprint scope; not a real exam question."
     },
     {
       "id": "q-claude-app-design-03",
       "domainId": "applications-integration",
       "subSkillId": "claude-app-design",
-      "type": "single",
-      "difficulty": "medium",
-      "stem": "Placeholder item for Applications & Integration / Claude App Design (#3): which approach best satisfies the stated constraint in this scenario?",
+      "type": "multi",
+      "difficulty": "hard",
+      "stem": "A product team is selecting techniques for a large, frequently changing knowledge base. Which statements are correct? Select all that apply.",
       "options": [
         {
           "id": "a",
-          "text": "Address the specific constraint the Claude App Design item 3 scenario describes directly.",
+          "text": "RAG retrieves a relevant subset and can provide current facts at request time.",
           "correct": true,
-          "explanation": "This option resolves exactly the constraint the scenario calls out, which is what the item is testing."
+          "explanation": "Retrieval is appropriate when knowledge changes or the corpus is too large to include wholesale."
         },
         {
           "id": "b",
-          "text": "Apply a generic best practice without checking it against the Claude App Design item 3 scenario.",
-          "correct": false,
-          "explanation": "A generic practice can be wrong here because it was not checked against this scenario's specific constraint."
+          "text": "Prompt caching reduces the cost of a repeated prefix but does not reduce its context-window footprint.",
+          "correct": true,
+          "explanation": "Caching changes billing and ITPM accounting, while the cached material still occupies the model context."
         },
         {
           "id": "c",
-          "text": "Defer the Claude App Design item 3 decision until more requirements arrive.",
+          "text": "A one-million-token window makes retrieval unnecessary for accuracy.",
           "correct": false,
-          "explanation": "Deferring avoids the decision the scenario is asking you to make now, based on what is already known."
+          "explanation": "Large contexts can suffer context rot, and selective retrieval remains useful for relevance and freshness."
         },
         {
           "id": "d",
-          "text": "Optimize the Claude App Design item 3 response only for implementation speed, ignoring the constraint.",
+          "text": "The Messages API remembers prior sessions automatically once a document is sent once.",
           "correct": false,
-          "explanation": "Speed alone does not satisfy a constraint the scenario explicitly requires you to respect."
+          "explanation": "The API is stateless; the application owns history and must send relevant context each request."
+        },
+        {
+          "id": "e",
+          "text": "A shared static policy can be a candidate for prompt caching.",
+          "correct": true,
+          "explanation": "A stable repeated prefix is exactly the scenario prompt caching is designed to optimize."
         }
       ],
-      "rationale": "Placeholder item exercising the Claude App Design area; real content lands in task E3.",
-      "sourceNote": "Original placeholder written to blueprint scope; not a real exam question."
+      "rationale": "Tests RAG, statelessness, context, and caching trade-offs.",
+      "sourceNote": "Original item written to documented blueprint scope; not a real exam question."
     },
     {
       "id": "q-claude-app-design-04",
       "domainId": "applications-integration",
       "subSkillId": "claude-app-design",
-      "type": "multi",
-      "difficulty": "medium",
-      "stem": "Placeholder multi-select for Applications & Integration / Claude App Design (#4): select all practices that satisfy the stated constraint.",
+      "type": "single",
+      "difficulty": "easy",
+      "stem": "A job must summarize 60,000 records overnight, users do not wait for results, and cost matters. Which API mode best fits?",
       "options": [
         {
           "id": "a",
-          "text": "Validate the Claude App Design item 4 approach against the scenario's stated constraint.",
-          "correct": true,
-          "explanation": "Direct validation against the stated constraint is a correct, necessary practice here."
+          "text": "Synchronous streaming Messages requests per record.",
+          "correct": false,
+          "explanation": "Streaming improves interactive perceived latency, which this offline workload does not require."
         },
         {
           "id": "b",
-          "text": "Document the Claude App Design item 4 reasoning so the decision is auditable later.",
+          "text": "The Message Batches API, with one request per record.",
           "correct": true,
-          "explanation": "Documenting the reasoning is a correct complementary practice for this kind of decision."
+          "explanation": "The Batches API is built for asynchronous bulk work: results arrive within a processing window rather than immediately, and token usage is billed at a discounted batch rate."
         },
         {
           "id": "c",
-          "text": "Skip verification of the Claude App Design item 4 scenario because it looks familiar.",
+          "text": "A single long conversation containing all of the records.",
           "correct": false,
-          "explanation": "Familiarity is not verification; skipping it can let a mismatched assumption through."
+          "explanation": "A giant conversation is not a reliable bulk-processing strategy and can exceed practical context limits."
         },
         {
           "id": "d",
-          "text": "Apply the Claude App Design item 4 decision globally without scoping it to this scenario.",
+          "text": "An interactive Claude Code session pointed at the data.",
           "correct": false,
-          "explanation": "Applying the decision outside its scope can violate constraints in other scenarios."
+          "explanation": "Claude Code is an agentic developer product, not the delivery mechanism for a production record batch."
         }
       ],
-      "rationale": "Placeholder multi-select exercising the Claude App Design area; real content lands in task E3.",
-      "sourceNote": "Original placeholder written to blueprint scope; not a real exam question."
+      "rationale": "Tests batch versus real-time selection.",
+      "sourceNote": "Original item written to documented blueprint scope; not a real exam question."
     },
     {
       "id": "q-config-management-01",
@@ -548,35 +572,35 @@
       "subSkillId": "config-management",
       "type": "single",
       "difficulty": "medium",
-      "stem": "Placeholder item for Applications & Integration / Config Management (#1): which approach best satisfies the stated constraint in this scenario?",
+      "stem": "A production configuration references a model by a short alias that the provider may point at a newer snapshot over time. The team wants reproducible behavior across releases. What is the best change?",
       "options": [
         {
           "id": "a",
-          "text": "Address the specific constraint the Config Management item 1 scenario describes directly.",
-          "correct": true,
-          "explanation": "This option resolves exactly the constraint the scenario calls out, which is what the item is testing."
+          "text": "Keep the alias and add more few-shot examples to the prompt so behavior stays stable.",
+          "correct": false,
+          "explanation": "Examples may improve behavior but do not prevent the alias from resolving to a new model version."
         },
         {
           "id": "b",
-          "text": "Apply a generic best practice without checking it against the Config Management item 1 scenario.",
+          "text": "Replace the model ID with the organization API key, which is bound to a model.",
           "correct": false,
-          "explanation": "A generic practice can be wrong here because it was not checked against this scenario's specific constraint."
+          "explanation": "Credentials authenticate a request; they do not determine model-version reproducibility."
         },
         {
           "id": "c",
-          "text": "Defer the Config Management item 1 decision until more requirements arrive.",
-          "correct": false,
-          "explanation": "Deferring avoids the decision the scenario is asking you to make now, based on what is already known."
+          "text": "Pin the evaluated dated snapshot model ID in configuration and version control.",
+          "correct": true,
+          "explanation": "A dated snapshot identifies the exact evaluated model, while a short alias can advance to a newer snapshot."
         },
         {
           "id": "d",
-          "text": "Optimize the Config Management item 1 response only for implementation speed, ignoring the constraint.",
+          "text": "Switch to a different undated alias that the provider updates on a slower cadence.",
           "correct": false,
-          "explanation": "Speed alone does not satisfy a constraint the scenario explicitly requires you to respect."
+          "explanation": "Any undated alias can be re-pointed by the provider, so swapping one alias for another does not pin the evaluated model."
         }
       ],
-      "rationale": "Placeholder item exercising the Config Management area; real content lands in task E3.",
-      "sourceNote": "Original placeholder written to blueprint scope; not a real exam question."
+      "rationale": "Tests pinning model versions.",
+      "sourceNote": "Original item written to documented blueprint scope; not a real exam question."
     },
     {
       "id": "q-config-management-02",
@@ -584,71 +608,71 @@
       "subSkillId": "config-management",
       "type": "single",
       "difficulty": "medium",
-      "stem": "Placeholder item for Applications & Integration / Config Management (#2): which approach best satisfies the stated constraint in this scenario?",
+      "stem": "A repository needs shared coding guidance that the team can review and version, while each developer keeps personal local preferences. What is the best arrangement?",
       "options": [
         {
           "id": "a",
-          "text": "Address the specific constraint the Config Management item 2 scenario describes directly.",
-          "correct": true,
-          "explanation": "This option resolves exactly the constraint the scenario calls out, which is what the item is testing."
+          "text": "Put every preference, shared and personal, only in one senior developer's local settings file for others to copy.",
+          "correct": false,
+          "explanation": "Local-only settings cannot provide a shared, versioned team convention."
         },
         {
           "id": "b",
-          "text": "Apply a generic best practice without checking it against the Config Management item 2 scenario.",
+          "text": "Embed the shared guidance in every prompt sent during a session, and let each developer add personal notes to the same prompt.",
           "correct": false,
-          "explanation": "A generic practice can be wrong here because it was not checked against this scenario's specific constraint."
+          "explanation": "Repeated prompt text is harder to review and maintain than scoped project configuration."
         },
         {
           "id": "c",
-          "text": "Defer the Config Management item 2 decision until more requirements arrive.",
+          "text": "Encode all coding conventions as deny hooks in the repository, and keep personal preferences as additional hooks in user settings.",
           "correct": false,
-          "explanation": "Deferring avoids the decision the scenario is asking you to make now, based on what is already known."
+          "explanation": "Hooks are appropriate for deterministic execution controls, not ordinary explanatory team guidance."
         },
         {
           "id": "d",
-          "text": "Optimize the Config Management item 2 response only for implementation speed, ignoring the constraint.",
-          "correct": false,
-          "explanation": "Speed alone does not satisfy a constraint the scenario explicitly requires you to respect."
+          "text": "Store shared repository guidance in versioned project instructions or settings, and keep personal preferences in local user settings.",
+          "correct": true,
+          "explanation": "This gives the team a reviewable shared baseline without forcing personal preferences into repository configuration."
         }
       ],
-      "rationale": "Placeholder item exercising the Config Management area; real content lands in task E3.",
-      "sourceNote": "Original placeholder written to blueprint scope; not a real exam question."
+      "rationale": "Tests versioned project guidance versus personal local configuration and enforcement hooks.",
+      "sourceNote": "Original item written to documented blueprint scope; not a real exam question."
     },
     {
       "id": "q-llm-fundamentals-01",
       "domainId": "model-selection-optimization",
       "subSkillId": "llm-fundamentals",
       "type": "single",
-      "difficulty": "medium",
-      "stem": "Placeholder item for Model Selection & Optimization / LLM Fundamentals (#1): which approach best satisfies the stated constraint in this scenario?",
+      "difficulty": "easy",
+      "stem": "Which content contributes to a Messages API request's context-window budget?",
       "options": [
         {
           "id": "a",
-          "text": "Address the specific constraint the LLM Fundamentals item 1 scenario describes directly.",
-          "correct": true,
-          "explanation": "This option resolves exactly the constraint the scenario calls out, which is what the item is testing."
+          "text": "Only the user's message text and the final assistant answer; tools and history are separate.",
+          "correct": false,
+          "explanation": "This omits system instructions, tools, history, multimodal inputs, and reasoning output."
         },
         {
           "id": "b",
-          "text": "Apply a generic best practice without checking it against the LLM Fundamentals item 1 scenario.",
+          "text": "Only uncached input tokens; anything served from the prompt cache is outside the budget.",
           "correct": false,
-          "explanation": "A generic practice can be wrong here because it was not checked against this scenario's specific constraint."
+          "explanation": "Cached tokens are still present in context; caching does not create additional window capacity."
         },
         {
           "id": "c",
-          "text": "Defer the LLM Fundamentals item 1 decision until more requirements arrive.",
-          "correct": false,
-          "explanation": "Deferring avoids the decision the scenario is asking you to make now, based on what is already known."
+          "text": "System prompt, history, tool schemas and results, multimodal inputs, and generated output.",
+          "correct": true,
+          "explanation": "All of these consume the finite context budget, including cached content and thinking output."
         },
         {
           "id": "d",
-          "text": "Optimize the LLM Fundamentals item 1 response only for implementation speed, ignoring the constraint.",
+          "text": "Only the tokens counted by usage.input_tokens, since that field is the request's context size.",
           "correct": false,
-          "explanation": "Speed alone does not satisfy a constraint the scenario explicitly requires you to respect."
+          "explanation": "That field excludes cache reads and writes, so it is not the full context size."
         }
       ],
-      "rationale": "Placeholder item exercising the LLM Fundamentals area; real content lands in task E3.",
-      "sourceNote": "Original placeholder written to blueprint scope; not a real exam question."
+      "rationale": "Tests context-window composition.",
+      "sourceNote": "Original item written to documented blueprint scope; not a real exam question."
     },
     {
       "id": "q-llm-fundamentals-02",
@@ -656,71 +680,71 @@
       "subSkillId": "llm-fundamentals",
       "type": "single",
       "difficulty": "medium",
-      "stem": "Placeholder item for Model Selection & Optimization / LLM Fundamentals (#2): which approach best satisfies the stated constraint in this scenario?",
+      "stem": "A model’s API documentation says it uses adaptive thinking and rejects legacy manual thinking budgets. A request sends thinking.type set to enabled with budget_tokens and receives a 400. What should the client do?",
       "options": [
         {
           "id": "a",
-          "text": "Address the specific constraint the LLM Fundamentals item 2 scenario describes directly.",
-          "correct": true,
-          "explanation": "This option resolves exactly the constraint the scenario calls out, which is what the item is testing."
+          "text": "Increase the fixed budget_tokens value step by step until the request is accepted.",
+          "correct": false,
+          "explanation": "The request uses an unsupported configuration form, so a larger value cannot make it valid."
         },
         {
           "id": "b",
-          "text": "Apply a generic best practice without checking it against the LLM Fundamentals item 2 scenario.",
+          "text": "Set temperature to zero before retrying with the legacy thinking configuration.",
           "correct": false,
-          "explanation": "A generic practice can be wrong here because it was not checked against this scenario's specific constraint."
+          "explanation": "Sampling controls do not change which thinking configuration the documented model interface accepts."
         },
         {
           "id": "c",
-          "text": "Defer the LLM Fundamentals item 2 decision until more requirements arrive.",
+          "text": "Add an assistant prefill before enabling the legacy thinking configuration.",
           "correct": false,
-          "explanation": "Deferring avoids the decision the scenario is asking you to make now, based on what is already known."
+          "explanation": "Prefill is unrelated to the request-schema incompatibility and does not convert legacy manual thinking into adaptive thinking."
         },
         {
           "id": "d",
-          "text": "Optimize the LLM Fundamentals item 2 response only for implementation speed, ignoring the constraint.",
-          "correct": false,
-          "explanation": "Speed alone does not satisfy a constraint the scenario explicitly requires you to respect."
+          "text": "Use the model’s adaptive-thinking configuration and its documented effort control.",
+          "correct": true,
+          "explanation": "The documented capability contract, rather than a model-generation label, determines the valid request shape."
         }
       ],
-      "rationale": "Placeholder item exercising the LLM Fundamentals area; real content lands in task E3.",
-      "sourceNote": "Original placeholder written to blueprint scope; not a real exam question."
+      "rationale": "Tests adaptive versus legacy extended thinking.",
+      "sourceNote": "Original item written to documented blueprint scope; not a real exam question."
     },
     {
       "id": "q-llm-fundamentals-03",
       "domainId": "model-selection-optimization",
       "subSkillId": "llm-fundamentals",
-      "type": "multi",
-      "difficulty": "medium",
-      "stem": "Placeholder multi-select for Model Selection & Optimization / LLM Fundamentals (#3): select all practices that satisfy the stated constraint.",
+      "type": "single",
+      "difficulty": "hard",
+      "stem": "A team sets temperature to 0 and uses exact-string assertions for generated summaries. Tests are flaky. What is the best correction?",
       "options": [
         {
           "id": "a",
-          "text": "Validate the LLM Fundamentals item 3 approach against the scenario's stated constraint.",
+          "text": "Test required structure, factual criteria, and rubric outcomes across representative cases.",
           "correct": true,
-          "explanation": "Direct validation against the stated constraint is a correct, necessary practice here."
+          "explanation": "Non-deterministic language output should be evaluated by properties and distributions, not byte-for-byte prose."
         },
         {
           "id": "b",
-          "text": "Document the LLM Fundamentals item 3 reasoning so the decision is auditable later.",
-          "correct": true,
-          "explanation": "Documenting the reasoning is a correct complementary practice for this kind of decision."
+          "text": "Assume a platform defect because temperature zero guarantees identical output for identical input.",
+          "correct": false,
+          "explanation": "The documentation explicitly states that identical inputs can still produce different outputs at temperature zero."
         },
         {
           "id": "c",
-          "text": "Skip verification of the LLM Fundamentals item 3 scenario because it looks familiar.",
+          "text": "Raise max_tokens until every summary is identical, since truncation is what varies between runs.",
           "correct": false,
-          "explanation": "Familiarity is not verification; skipping it can let a mismatched assumption through."
+          "explanation": "A larger output cap prevents truncation but cannot make sampling deterministic."
         },
         {
           "id": "d",
-          "text": "Apply the LLM Fundamentals item 3 decision globally without scoping it to this scenario.",
+          "text": "Store the first successful output as a permanent golden string and assert equality.",
           "correct": false,
-          "explanation": "Applying the decision outside its scope can violate constraints in other scenarios."
+          "explanation": "A single sampled wording is a brittle oracle for an open-ended summarization task."
         }
       ],
-      "rationale": "Placeholder multi-select exercising the LLM Fundamentals area; real content lands in task E3.",
-      "sourceNote": "Original placeholder written to blueprint scope; not a real exam question."
+      "rationale": "Tests non-determinism and robust evaluation.",
+      "sourceNote": "Original item written to documented blueprint scope; not a real exam question."
     },
     {
       "id": "q-tech-fundamentals-01",
@@ -728,35 +752,35 @@
       "subSkillId": "tech-fundamentals",
       "type": "single",
       "difficulty": "medium",
-      "stem": "Placeholder item for Model Selection & Optimization / Tech Fundamentals (#1): which approach best satisfies the stated constraint in this scenario?",
+      "stem": "A chatbot answers questions about policies changed yesterday. Its prompt is well-written but answers are stale. What best addresses the root problem?",
       "options": [
         {
           "id": "a",
-          "text": "Address the specific constraint the Tech Fundamentals item 1 scenario describes directly.",
-          "correct": true,
-          "explanation": "This option resolves exactly the constraint the scenario calls out, which is what the item is testing."
+          "text": "Lower temperature to eliminate hallucinated policy details in the answers.",
+          "correct": false,
+          "explanation": "Sampling does not supply missing facts and cannot eliminate hallucination."
         },
         {
           "id": "b",
-          "text": "Apply a generic best practice without checking it against the Tech Fundamentals item 1 scenario.",
-          "correct": false,
-          "explanation": "A generic practice can be wrong here because it was not checked against this scenario's specific constraint."
+          "text": "Use retrieval to supply current policy material at request time.",
+          "correct": true,
+          "explanation": "The problem is missing current knowledge; retrieval grounds the answer in an external up-to-date source."
         },
         {
           "id": "c",
-          "text": "Defer the Tech Fundamentals item 1 decision until more requirements arrive.",
+          "text": "Fine-tune the model through the Claude API after every policy edit.",
           "correct": false,
-          "explanation": "Deferring avoids the decision the scenario is asking you to make now, based on what is already known."
+          "explanation": "Retraining is the wrong tool for facts that change daily: it is slow and expensive where available, and Claude's first-party API is used through prompting and retrieval rather than a fine-tuning endpoint."
         },
         {
           "id": "d",
-          "text": "Optimize the Tech Fundamentals item 1 response only for implementation speed, ignoring the constraint.",
+          "text": "Increase max_tokens so the model can recall more training data.",
           "correct": false,
-          "explanation": "Speed alone does not satisfy a constraint the scenario explicitly requires you to respect."
+          "explanation": "max_tokens controls generated output, not the knowledge available to the model."
         }
       ],
-      "rationale": "Placeholder item exercising the Tech Fundamentals area; real content lands in task E3.",
-      "sourceNote": "Original placeholder written to blueprint scope; not a real exam question."
+      "rationale": "Tests prompting, retrieval, and model knowledge distinctions.",
+      "sourceNote": "Original item written to documented blueprint scope; not a real exam question."
     },
     {
       "id": "q-tech-fundamentals-02",
@@ -764,71 +788,77 @@
       "subSkillId": "tech-fundamentals",
       "type": "single",
       "difficulty": "medium",
-      "stem": "Placeholder item for Model Selection & Optimization / Tech Fundamentals (#2): which approach best satisfies the stated constraint in this scenario?",
+      "stem": "Users say a long answer feels slow because no visible user-facing text appears for several seconds, though total generation time is acceptable. Which measure and change are most relevant?",
       "options": [
         {
           "id": "a",
-          "text": "Address the specific constraint the Tech Fundamentals item 2 scenario describes directly.",
+          "text": "Measure time to first visible text and stream user-facing response text.",
           "correct": true,
-          "explanation": "This option resolves exactly the constraint the scenario calls out, which is what the item is testing."
+          "explanation": "Time to first visible text measures the stated experience; streaming can expose user-facing text before the full response completes."
         },
         {
           "id": "b",
-          "text": "Apply a generic best practice without checking it against the Tech Fundamentals item 2 scenario.",
+          "text": "Measure only total generated tokens and disable streaming to reduce overhead.",
           "correct": false,
-          "explanation": "A generic practice can be wrong here because it was not checked against this scenario's specific constraint."
+          "explanation": "Total tokens do not isolate the delay before users see text, and disabling streaming worsens that experience."
         },
         {
           "id": "c",
-          "text": "Defer the Tech Fundamentals item 2 decision until more requirements arrive.",
+          "text": "Measure per-request cost and move the request to the Batches API.",
           "correct": false,
-          "explanation": "Deferring avoids the decision the scenario is asking you to make now, based on what is already known."
+          "explanation": "Batch requests are asynchronous and cannot improve an interactive first-visible-text delay."
         },
         {
           "id": "d",
-          "text": "Optimize the Tech Fundamentals item 2 response only for implementation speed, ignoring the constraint.",
+          "text": "Measure cache hit rate and cache the answer in the model's permanent memory.",
           "correct": false,
-          "explanation": "Speed alone does not satisfy a constraint the scenario explicitly requires you to respect."
+          "explanation": "The API has no permanent answer memory, and caching does not itself guarantee early visible output."
         }
       ],
-      "rationale": "Placeholder item exercising the Tech Fundamentals area; real content lands in task E3.",
-      "sourceNote": "Original placeholder written to blueprint scope; not a real exam question."
+      "rationale": "Tests TTFT versus total latency and streaming.",
+      "sourceNote": "Original item written to documented blueprint scope; not a real exam question."
     },
     {
       "id": "q-tech-fundamentals-03",
       "domainId": "model-selection-optimization",
       "subSkillId": "tech-fundamentals",
-      "type": "single",
-      "difficulty": "medium",
-      "stem": "Placeholder item for Model Selection & Optimization / Tech Fundamentals (#3): which approach best satisfies the stated constraint in this scenario?",
+      "type": "multi",
+      "difficulty": "hard",
+      "stem": "A retrieval system has weak ranking quality. Which changes are sound? Select all that apply.",
       "options": [
         {
           "id": "a",
-          "text": "Address the specific constraint the Tech Fundamentals item 3 scenario describes directly.",
+          "text": "Embed source documents as documents and user searches as queries when the embedding provider distinguishes them.",
           "correct": true,
-          "explanation": "This option resolves exactly the constraint the scenario calls out, which is what the item is testing."
+          "explanation": "Document and query embeddings can be optimized for their different roles; mixing the modes can degrade retrieval."
         },
         {
           "id": "b",
-          "text": "Apply a generic best practice without checking it against the Tech Fundamentals item 3 scenario.",
-          "correct": false,
-          "explanation": "A generic practice can be wrong here because it was not checked against this scenario's specific constraint."
+          "text": "Use a reranker to reorder retrieved candidates by relevance.",
+          "correct": true,
+          "explanation": "Reranking is a separate relevance-improvement stage after initial candidate retrieval."
         },
         {
           "id": "c",
-          "text": "Defer the Tech Fundamentals item 3 decision until more requirements arrive.",
+          "text": "Ask the generative Messages API to return embeddings for the vector store.",
           "correct": false,
-          "explanation": "Deferring avoids the decision the scenario is asking you to make now, based on what is already known."
+          "explanation": "Claude's Messages API is generative; Anthropic does not provide its own embedding model through it."
         },
         {
           "id": "d",
-          "text": "Optimize the Tech Fundamentals item 3 response only for implementation speed, ignoring the constraint.",
+          "text": "Put the entire corpus in every prompt because a larger context always improves recall.",
           "correct": false,
-          "explanation": "Speed alone does not satisfy a constraint the scenario explicitly requires you to respect."
+          "explanation": "Large contexts cost more and can suffer context rot, so relevance selection remains important."
+        },
+        {
+          "id": "e",
+          "text": "Attach citations or quotes to grounded answers when users need to verify source support.",
+          "correct": true,
+          "explanation": "Grounding with verifiable source evidence helps users distinguish supported claims from unsupported output."
         }
       ],
-      "rationale": "Placeholder item exercising the Tech Fundamentals area; real content lands in task E3.",
-      "sourceNote": "Original placeholder written to blueprint scope; not a real exam question."
+      "rationale": "Tests RAG pipeline components and grounding.",
+      "sourceNote": "Original item written to documented blueprint scope; not a real exam question."
     },
     {
       "id": "q-model-selection-01",
@@ -836,35 +866,35 @@
       "subSkillId": "model-selection",
       "type": "single",
       "difficulty": "medium",
-      "stem": "Placeholder item for Model Selection & Optimization / Model Selection (#1): which approach best satisfies the stated constraint in this scenario?",
+      "stem": "A high-volume real-time classifier has simple inputs, a tight latency budget, and evals show the fastest tier meets the quality threshold. Which selection principle applies?",
       "options": [
         {
           "id": "a",
-          "text": "Address the specific constraint the Model Selection item 1 scenario describes directly.",
-          "correct": true,
-          "explanation": "This option resolves exactly the constraint the scenario calls out, which is what the item is testing."
+          "text": "Always choose the most capable model because it has the largest context window.",
+          "correct": false,
+          "explanation": "A larger or more capable tier is not justified when the workload and evals do not require it."
         },
         {
           "id": "b",
-          "text": "Apply a generic best practice without checking it against the Model Selection item 1 scenario.",
+          "text": "Choose a batch-only configuration because the request volume is high.",
           "correct": false,
-          "explanation": "A generic practice can be wrong here because it was not checked against this scenario's specific constraint."
+          "explanation": "High volume does not remove the real-time latency requirement, which rules out asynchronous batch delivery."
         },
         {
           "id": "c",
-          "text": "Defer the Model Selection item 1 decision until more requirements arrive.",
+          "text": "Use a floating alias so the classifier receives silent capability upgrades.",
           "correct": false,
-          "explanation": "Deferring avoids the decision the scenario is asking you to make now, based on what is already known."
+          "explanation": "Production behavior should be pinned to the evaluated model identifier rather than a drifting alias."
         },
         {
           "id": "d",
-          "text": "Optimize the Model Selection item 1 response only for implementation speed, ignoring the constraint.",
-          "correct": false,
-          "explanation": "Speed alone does not satisfy a constraint the scenario explicitly requires you to respect."
+          "text": "Use the lower-cost, faster model that passes the task-specific evals.",
+          "correct": true,
+          "explanation": "Model choice should follow requirements and measured capability; over-provisioning wastes cost and latency."
         }
       ],
-      "rationale": "Placeholder item exercising the Model Selection area; real content lands in task E3.",
-      "sourceNote": "Original placeholder written to blueprint scope; not a real exam question."
+      "rationale": "Tests requirement- and eval-based model selection.",
+      "sourceNote": "Original item written to documented blueprint scope; not a real exam question."
     },
     {
       "id": "q-cost-token-management-01",
@@ -872,107 +902,185 @@
       "subSkillId": "cost-token-management",
       "type": "multi",
       "difficulty": "medium",
-      "stem": "Placeholder multi-select for Model Selection & Optimization / Cost/Token Management (#1): select all practices that satisfy the stated constraint.",
+      "stem": "A nightly job processes many independent records with a large shared rubric. Which choices reduce cost without sacrificing the offline requirement? Select all that apply.",
       "options": [
         {
           "id": "a",
-          "text": "Validate the Cost/Token Management item 1 approach against the scenario's stated constraint.",
+          "text": "Use the Message Batches API for the asynchronous work.",
           "correct": true,
-          "explanation": "Direct validation against the stated constraint is a correct, necessary practice here."
+          "explanation": "Batch processing is designed for offline workloads and bills token usage at a discounted batch rate compared with synchronous requests."
         },
         {
           "id": "b",
-          "text": "Document the Cost/Token Management item 1 reasoning so the decision is auditable later.",
+          "text": "Place an explicit cache breakpoint after the shared static rubric.",
           "correct": true,
-          "explanation": "Documenting the reasoning is a correct complementary practice for this kind of decision."
+          "explanation": "A stable shared prefix is the part that can be reused across requests for reduced input cost."
         },
         {
           "id": "c",
-          "text": "Skip verification of the Cost/Token Management item 1 scenario because it looks familiar.",
-          "correct": false,
-          "explanation": "Familiarity is not verification; skipping it can let a mismatched assumption through."
+          "text": "Use the one-hour cache TTL when processing may span longer than five minutes.",
+          "correct": true,
+          "explanation": "The longer TTL is appropriate for shared context reused with gaps beyond the default five-minute lifetime."
         },
         {
           "id": "d",
-          "text": "Apply the Cost/Token Management item 1 decision globally without scoping it to this scenario.",
+          "text": "Enable stream: true inside each batch request.",
           "correct": false,
-          "explanation": "Applying the decision outside its scope can violate constraints in other scenarios."
+          "explanation": "Streaming is unsupported in Message Batches and is unnecessary for an offline job."
+        },
+        {
+          "id": "e",
+          "text": "Assume batch results preserve submission order and zip them to inputs.",
+          "correct": false,
+          "explanation": "Batch results can arrive in any order and must be matched with their custom_id."
         }
       ],
-      "rationale": "Placeholder multi-select exercising the Cost/Token Management area; real content lands in task E3.",
-      "sourceNote": "Original placeholder written to blueprint scope; not a real exam question."
+      "rationale": "Tests batch, caching layout, and batch-result handling.",
+      "sourceNote": "Original item written to documented blueprint scope; not a real exam question."
     },
     {
       "id": "q-cost-token-management-02",
       "domainId": "model-selection-optimization",
       "subSkillId": "cost-token-management",
       "type": "single",
-      "difficulty": "medium",
-      "stem": "Placeholder item for Model Selection & Optimization / Cost/Token Management (#2): which approach best satisfies the stated constraint in this scenario?",
+      "difficulty": "hard",
+      "stem": "A team adds cache_control to an 800-token shared prompt on a model whose minimum cacheable length is 1024 tokens. Both cache usage fields remain zero. What happened?",
       "options": [
         {
           "id": "a",
-          "text": "Address the specific constraint the Cost/Token Management item 2 scenario describes directly.",
-          "correct": true,
-          "explanation": "This option resolves exactly the constraint the scenario calls out, which is what the item is testing."
+          "text": "The request failed validation because cache_control requires a prefix of at least 1024 tokens.",
+          "correct": false,
+          "explanation": "Being below the threshold is a silent cache miss, not an invalid request."
         },
         {
           "id": "b",
-          "text": "Apply a generic best practice without checking it against the Cost/Token Management item 2 scenario.",
-          "correct": false,
-          "explanation": "A generic practice can be wrong here because it was not checked against this scenario's specific constraint."
+          "text": "The API silently processed the prompt without caching because it was below the minimum.",
+          "correct": true,
+          "explanation": "Short prefixes do not produce an error; the usage fields reveal that no cache write or read occurred."
         },
         {
           "id": "c",
-          "text": "Defer the Cost/Token Management item 2 decision until more requirements arrive.",
+          "text": "The response exceeded max_tokens, so the cache entry was evicted before usage came back.",
           "correct": false,
-          "explanation": "Deferring avoids the decision the scenario is asking you to make now, based on what is already known."
+          "explanation": "Output truncation and the cacheable-prefix threshold are separate mechanisms."
         },
         {
           "id": "d",
-          "text": "Optimize the Cost/Token Management item 2 response only for implementation speed, ignoring the constraint.",
+          "text": "The prompt was cached, but cache reads are reported in headers rather than in usage.",
           "correct": false,
-          "explanation": "Speed alone does not satisfy a constraint the scenario explicitly requires you to respect."
+          "explanation": "Cache creation and read token fields are the documented way to verify caching behavior."
         }
       ],
-      "rationale": "Placeholder item exercising the Cost/Token Management area; real content lands in task E3.",
-      "sourceNote": "Original placeholder written to blueprint scope; not a real exam question."
+      "rationale": "Tests minimum cacheable lengths and observability.",
+      "sourceNote": "Original item written to documented blueprint scope; not a real exam question."
     },
     {
-      "id": "q-agent-architecture-01",
+      "id": "q-claude-code-operation-01",
+      "domainId": "claude-code",
+      "subSkillId": "claude-code-operation",
+      "type": "single",
+      "difficulty": "easy",
+      "stem": "A developer is in the middle of a long refactor and needs to retain the task context while freeing window space. Which Claude Code command is appropriate?",
+      "options": [
+        {
+          "id": "a",
+          "text": "/clear, because it keeps the active conversation intact.",
+          "correct": false,
+          "explanation": "Clear starts a new empty conversation; the old session is resumable but not active context."
+        },
+        {
+          "id": "b",
+          "text": "/rewind, because it summarizes the oldest messages.",
+          "correct": false,
+          "explanation": "Rewind restores checkpoints; it is not a context-management summarization command."
+        },
+        {
+          "id": "c",
+          "text": "/compact with focused instructions about the refactor.",
+          "correct": true,
+          "explanation": "Compaction summarizes the current conversation so the same task can continue with less context."
+        },
+        {
+          "id": "d",
+          "text": "/usage, because it trims token use automatically.",
+          "correct": false,
+          "explanation": "Usage reports consumption but does not change the context in the current session."
+        }
+      ],
+      "rationale": "Tests Claude Code context-management commands.",
+      "sourceNote": "Original item written to documented blueprint scope; not a real exam question."
+    },
+    {
+      "id": "q-hooks-01",
+      "domainId": "claude-code",
+      "subSkillId": "hooks",
+      "type": "single",
+      "difficulty": "hard",
+      "stem": "A repository must block a dangerous shell pattern every time Claude Code attempts it. Why is a blocking PreToolUse hook preferable to a sentence in CLAUDE.md?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Hooks are deterministic lifecycle automation and can deny the matching tool call.",
+          "correct": true,
+          "explanation": "A PreToolUse hook runs at the execution event and can enforce a block instead of relying on model interpretation."
+        },
+        {
+          "id": "b",
+          "text": "CLAUDE.md is ignored whenever a hooks configuration exists in the project.",
+          "correct": false,
+          "explanation": "CLAUDE.md still provides useful project context; it simply is not an enforcement mechanism."
+        },
+        {
+          "id": "c",
+          "text": "Hooks make the model's output deterministic, so it can no longer propose the pattern.",
+          "correct": false,
+          "explanation": "Hooks control lifecycle behavior, not the stochastic generation process."
+        },
+        {
+          "id": "d",
+          "text": "A hook is a documentation format for reusable prompts that the model reads more reliably.",
+          "correct": false,
+          "explanation": "Reusable prompt procedures are skills; hooks execute configured actions on lifecycle events."
+        }
+      ],
+      "rationale": "Tests hooks as deterministic enforcement.",
+      "sourceNote": "Original item written to documented blueprint scope; not a real exam question."
+    },
+    {
+      "id": "q-agent-architecture-04",
       "domainId": "agents-workflows",
       "subSkillId": "agent-architecture",
       "type": "single",
-      "difficulty": "medium",
-      "stem": "Placeholder item for Agents & Workflows / Agent Architecture (#1): which approach best satisfies the stated constraint in this scenario?",
+      "difficulty": "easy",
+      "stem": "A team wants Claude to fix failing tests in a repository. The number of edit-and-rerun cycles cannot be predicted, and each cycle's test output shows whether progress was made. Which approach fits best?",
       "options": [
         {
           "id": "a",
-          "text": "Address the specific constraint the Agent Architecture item 1 scenario describes directly.",
-          "correct": true,
-          "explanation": "This option resolves exactly the constraint the scenario calls out, which is what the item is testing."
+          "text": "A fixed prompt chain that analyses the failures, applies one edit, runs the tests once, and reports the outcome.",
+          "correct": false,
+          "explanation": "A fixed chain assumes the path is known in advance; a single edit-and-run pass cannot adapt when the first attempt does not make the tests pass."
         },
         {
           "id": "b",
-          "text": "Apply a generic best practice without checking it against the Agent Architecture item 1 scenario.",
-          "correct": false,
-          "explanation": "A generic practice can be wrong here because it was not checked against this scenario's specific constraint."
+          "text": "An autonomous agent loop that edits, runs the tests, reads the results, and stops on a pass or an iteration cap.",
+          "correct": true,
+          "explanation": "Unpredictable step counts with verifiable environment feedback are the documented case for an agent loop, with a stopping condition to keep it bounded."
         },
         {
           "id": "c",
-          "text": "Defer the Agent Architecture item 1 decision until more requirements arrive.",
+          "text": "A single Messages API call with the whole repository attached, asked to output the fully corrected source tree.",
           "correct": false,
-          "explanation": "Deferring avoids the decision the scenario is asking you to make now, based on what is already known."
+          "explanation": "One call gives the model no test feedback, so it cannot verify or correct its own edits and errors compound silently."
         },
         {
           "id": "d",
-          "text": "Optimize the Agent Architecture item 1 response only for implementation speed, ignoring the constraint.",
+          "text": "A routing step that classifies each failure by category and applies a pre-written canned fix for that category.",
           "correct": false,
-          "explanation": "Speed alone does not satisfy a constraint the scenario explicitly requires you to respect."
+          "explanation": "Routing dispatches to specialised handlers but still cannot iterate against test results; canned fixes do not adapt to what the suite reports."
         }
       ],
-      "rationale": "Placeholder item exercising the Agent Architecture area; real content lands in task E3.",
-      "sourceNote": "Original placeholder written to blueprint scope; not a real exam question."
+      "rationale": "Tests recognising when an agent (not a workflow) is the right architecture: open-ended steps plus ground-truth feedback.",
+      "sourceNote": "Original item written to documented blueprint scope; not a real exam question."
     },
     {
       "id": "q-agent-architecture-02",
@@ -980,179 +1088,179 @@
       "subSkillId": "agent-architecture",
       "type": "single",
       "difficulty": "medium",
-      "stem": "Placeholder item for Agents & Workflows / Agent Architecture (#2): which approach best satisfies the stated constraint in this scenario?",
+      "stem": "A lead agent delegates market, policy, and technical research to three workers. The final recommendation must be traceable and have one accountable decision-maker. Which architecture best fits?",
       "options": [
         {
           "id": "a",
-          "text": "Address the specific constraint the Agent Architecture item 2 scenario describes directly.",
-          "correct": true,
-          "explanation": "This option resolves exactly the constraint the scenario calls out, which is what the item is testing."
+          "text": "Let every worker independently edit the shared final recommendation as its research completes.",
+          "correct": false,
+          "explanation": "Independent edits create conflicting authority and obscure how evidence conflicts were resolved."
         },
         {
           "id": "b",
-          "text": "Apply a generic best practice without checking it against the Agent Architecture item 2 scenario.",
+          "text": "Give all workers the full lead transcript and let responsibilities emerge from the conversation.",
           "correct": false,
-          "explanation": "A generic practice can be wrong here because it was not checked against this scenario's specific constraint."
+          "explanation": "Shared context does not establish ownership, scopes, or an escalation path."
         },
         {
           "id": "c",
-          "text": "Defer the Agent Architecture item 2 decision until more requirements arrive.",
-          "correct": false,
-          "explanation": "Deferring avoids the decision the scenario is asking you to make now, based on what is already known."
+          "text": "A supervisor agent assigns bounded tasks, collects evidence, and owns synthesis and escalation.",
+          "correct": true,
+          "explanation": "A supervisor preserves one accountable owner for synthesis while delegating bounded evidence gathering."
         },
         {
           "id": "d",
-          "text": "Optimize the Agent Architecture item 2 response only for implementation speed, ignoring the constraint.",
+          "text": "Have every worker run the same broad research task and vote on which final answer to return.",
           "correct": false,
-          "explanation": "Speed alone does not satisfy a constraint the scenario explicitly requires you to respect."
+          "explanation": "Duplicated broad work wastes capacity and leaves no deliberate division of expertise."
         }
       ],
-      "rationale": "Placeholder item exercising the Agent Architecture area; real content lands in task E3.",
-      "sourceNote": "Original placeholder written to blueprint scope; not a real exam question."
+      "rationale": "Tests supervisor ownership, bounded delegation, and accountable synthesis in a multi-agent architecture.",
+      "sourceNote": "Original item written to blueprint scope; not a real exam question."
     },
     {
       "id": "q-agent-architecture-03",
       "domainId": "agents-workflows",
       "subSkillId": "agent-architecture",
-      "type": "single",
-      "difficulty": "medium",
-      "stem": "Placeholder item for Agents & Workflows / Agent Architecture (#3): which approach best satisfies the stated constraint in this scenario?",
+      "type": "multi",
+      "difficulty": "hard",
+      "stem": "What belongs in every prompt to a context-isolated research subagent? Select all that apply.",
       "options": [
         {
           "id": "a",
-          "text": "Address the specific constraint the Agent Architecture item 3 scenario describes directly.",
+          "text": "A concrete objective and scope boundary",
           "correct": true,
-          "explanation": "This option resolves exactly the constraint the scenario calls out, which is what the item is testing."
+          "explanation": "A subagent starts with a fresh context, so without an explicit objective and scope it will duplicate sibling work or wander into irrelevant research."
         },
         {
           "id": "b",
-          "text": "Apply a generic best practice without checking it against the Agent Architecture item 3 scenario.",
-          "correct": false,
-          "explanation": "A generic practice can be wrong here because it was not checked against this scenario's specific constraint."
+          "text": "A required output format and source guidance",
+          "correct": true,
+          "explanation": "The lead has to merge many workers' output, so telling each worker the deliverable shape and what sources count keeps results comparable and citable."
         },
         {
           "id": "c",
-          "text": "Defer the Agent Architecture item 3 decision until more requirements arrive.",
+          "text": "The entire parent transcript",
           "correct": false,
-          "explanation": "Deferring avoids the decision the scenario is asking you to make now, based on what is already known."
+          "explanation": "The point of context isolation is that the worker does not carry the parent's full history; pasting the transcript spends the worker's window on material it does not need."
         },
         {
           "id": "d",
-          "text": "Optimize the Agent Architecture item 3 response only for implementation speed, ignoring the constraint.",
+          "text": "Every intermediate tool result verbatim",
           "correct": false,
-          "explanation": "Speed alone does not satisfy a constraint the scenario explicitly requires you to respect."
+          "explanation": "Bulky intermediate results belong in a store or summary that the worker can fetch if needed; forwarding them verbatim crowds out the actual task."
         }
       ],
-      "rationale": "Placeholder item exercising the Agent Architecture area; real content lands in task E3.",
-      "sourceNote": "Original placeholder written to blueprint scope; not a real exam question."
+      "rationale": "Delegation quality.",
+      "sourceNote": "Original item written to blueprint scope; not a real exam question."
     },
     {
       "id": "q-agent-construction-01",
       "domainId": "agents-workflows",
       "subSkillId": "agent-construction",
-      "type": "multi",
+      "type": "single",
       "difficulty": "medium",
-      "stem": "Placeholder multi-select for Agents & Workflows / Agent Construction (#1): select all practices that satisfy the stated constraint.",
+      "stem": "Two client tool calls arrive in one response; one succeeds and one fails validation. What must the next request contain?",
       "options": [
         {
           "id": "a",
-          "text": "Validate the Agent Construction item 1 approach against the scenario's stated constraint.",
-          "correct": true,
-          "explanation": "Direct validation against the stated constraint is a correct, necessary practice here."
+          "text": "One tool result for the success now, and the failed call's result after the model replies",
+          "correct": false,
+          "explanation": "Splitting the results across two turns leaves one tool_use block without a matching tool_result in that turn, which the API rejects as malformed."
         },
         {
           "id": "b",
-          "text": "Document the Agent Construction item 1 reasoning so the decision is auditable later.",
-          "correct": true,
-          "explanation": "Documenting the reasoning is a correct complementary practice for this kind of decision."
+          "text": "Only the successful result, since the failed call produced nothing usable",
+          "correct": false,
+          "explanation": "Omitting the failed call's result leaves a tool_use block unanswered, violating the requirement that every tool call in a turn receives a corresponding result."
         },
         {
           "id": "c",
-          "text": "Skip verification of the Agent Construction item 1 scenario because it looks familiar.",
+          "text": "Two assistant-role messages, each carrying one tool result and its tool_use_id",
           "correct": false,
-          "explanation": "Familiarity is not verification; skipping it can let a mismatched assumption through."
+          "explanation": "Tool results must be returned as user-role content blocks, not assistant-role messages, which represent the model's own output."
         },
         {
           "id": "d",
-          "text": "Apply the Agent Construction item 1 decision globally without scoping it to this scenario.",
-          "correct": false,
-          "explanation": "Applying the decision outside its scope can violate constraints in other scenarios."
+          "text": "One user message with both matching tool results and is_error for the failure",
+          "correct": true,
+          "explanation": "Every tool_use block must get a matching tool_result in the same next turn, and the failed call must be marked is_error so the model treats it as a failure rather than a normal result."
         }
       ],
-      "rationale": "Placeholder multi-select exercising the Agent Construction area; real content lands in task E3.",
-      "sourceNote": "Original placeholder written to blueprint scope; not a real exam question."
+      "rationale": "Client tool-loop protocol.",
+      "sourceNote": "Original item written to blueprint scope; not a real exam question."
     },
     {
-      "id": "q-agent-construction-02",
+      "id": "q-agent-construction-04",
       "domainId": "agents-workflows",
       "subSkillId": "agent-construction",
       "type": "single",
       "difficulty": "medium",
-      "stem": "Placeholder item for Agents & Workflows / Agent Construction (#2): which approach best satisfies the stated constraint in this scenario?",
+      "stem": "A Claude Agent SDK run is configured with max_turns set to 8. The final ResultMessage has subtype error_max_turns. How should the harness interpret this?",
       "options": [
         {
           "id": "a",
-          "text": "Address the specific constraint the Agent Construction item 2 scenario describes directly.",
-          "correct": true,
-          "explanation": "This option resolves exactly the constraint the scenario calls out, which is what the item is testing."
+          "text": "The model produced a complete final answer, but the SDK truncated the returned transcript to the last eight messages before handing it back.",
+          "correct": false,
+          "explanation": "max_turns limits how many tool-use turns run, not the length of a text answer; an error subtype means no successful result was produced."
         },
         {
           "id": "b",
-          "text": "Apply a generic best practice without checking it against the Agent Construction item 2 scenario.",
+          "text": "The Messages API rejected the request because max_turns is not a valid parameter, so the harness should remove it and resend the same prompt.",
           "correct": false,
-          "explanation": "A generic practice can be wrong here because it was not checked against this scenario's specific constraint."
+          "explanation": "max_turns is an SDK-level loop control and never reaches the Messages API, so the API cannot reject it; the run completed but hit the cap."
         },
         {
           "id": "c",
-          "text": "Defer the Agent Construction item 2 decision until more requirements arrive.",
-          "correct": false,
-          "explanation": "Deferring avoids the decision the scenario is asking you to make now, based on what is already known."
+          "text": "The agent exhausted its tool-use turn budget before finishing; no result text is present and the harness must decide whether to resume or fail.",
+          "correct": true,
+          "explanation": "max_turns counts tool-use turns, and hitting it produces an error subtype whose result text is absent, so the harness owns the recovery decision rather than treating the output as an answer."
         },
         {
           "id": "d",
-          "text": "Optimize the Agent Construction item 2 response only for implementation speed, ignoring the constraint.",
+          "text": "The eighth tool call failed with an error, so the harness should retry that single tool call and then continue the loop from the same point.",
           "correct": false,
-          "explanation": "Speed alone does not satisfy a constraint the scenario explicitly requires you to respect."
+          "explanation": "The subtype reports budget exhaustion, not a tool failure; a single tool error would surface as a tool_result marked is_error inside the loop."
         }
       ],
-      "rationale": "Placeholder item exercising the Agent Construction area; real content lands in task E3.",
-      "sourceNote": "Original placeholder written to blueprint scope; not a real exam question."
+      "rationale": "Tests understanding of SDK termination guarantees (max_turns) and how result subtypes are read.",
+      "sourceNote": "Original item written to documented blueprint scope; not a real exam question."
     },
     {
       "id": "q-agent-construction-03",
       "domainId": "agents-workflows",
       "subSkillId": "agent-construction",
       "type": "single",
-      "difficulty": "medium",
-      "stem": "Placeholder item for Agents & Workflows / Agent Construction (#3): which approach best satisfies the stated constraint in this scenario?",
+      "difficulty": "easy",
+      "stem": "A response stops at max_tokens while emitting an incomplete tool call. What recovery is correct?",
       "options": [
         {
           "id": "a",
-          "text": "Address the specific constraint the Agent Construction item 3 scenario describes directly.",
-          "correct": true,
-          "explanation": "This option resolves exactly the constraint the scenario calls out, which is what the item is testing."
+          "text": "Execute the partial JSON, filling gaps with null",
+          "correct": false,
+          "explanation": "Partial JSON is not a valid tool call payload, and filling gaps with null risks executing the tool with unintended or unsafe arguments."
         },
         {
           "id": "b",
-          "text": "Apply a generic best practice without checking it against the Agent Construction item 3 scenario.",
-          "correct": false,
-          "explanation": "A generic practice can be wrong here because it was not checked against this scenario's specific constraint."
+          "text": "Retry with higher max_tokens so the call is regenerated",
+          "correct": true,
+          "explanation": "A response cut off at max_tokens contains a syntactically incomplete tool call, so the reliable fix is regenerating the whole response with enough budget to complete it."
         },
         {
           "id": "c",
-          "text": "Defer the Agent Construction item 3 decision until more requirements arrive.",
+          "text": "Return a successful tool result so the model can continue",
           "correct": false,
-          "explanation": "Deferring avoids the decision the scenario is asking you to make now, based on what is already known."
+          "explanation": "There is no complete tool_use to respond to since the call never finished emitting, so fabricating a success result would desynchronize the conversation from what the model actually requested."
         },
         {
           "id": "d",
-          "text": "Optimize the Agent Construction item 3 response only for implementation speed, ignoring the constraint.",
+          "text": "Treat it as pause_turn and resend the conversation as is",
           "correct": false,
-          "explanation": "Speed alone does not satisfy a constraint the scenario explicitly requires you to respect."
+          "explanation": "pause_turn describes a server-tool long-running pause, not a client response truncated by hitting the token limit; the two stop reasons require different handling."
         }
       ],
-      "rationale": "Placeholder item exercising the Agent Construction area; real content lands in task E3.",
-      "sourceNote": "Original placeholder written to blueprint scope; not a real exam question."
+      "rationale": "Truncated tool calls.",
+      "sourceNote": "Original item written to blueprint scope; not a real exam question."
     },
     {
       "id": "q-agent-patterns-01",
@@ -1160,35 +1268,35 @@
       "subSkillId": "agent-patterns",
       "type": "single",
       "difficulty": "medium",
-      "stem": "Placeholder item for Agents & Workflows / Agent Patterns (#1): which approach best satisfies the stated constraint in this scenario?",
+      "stem": "A support system classifies requests then sends each category to specialized prompts and tools. What pattern is this?",
       "options": [
         {
           "id": "a",
-          "text": "Address the specific constraint the Agent Patterns item 1 scenario describes directly.",
-          "correct": true,
-          "explanation": "This option resolves exactly the constraint the scenario calls out, which is what the item is testing."
+          "text": "Prompt chaining",
+          "correct": false,
+          "explanation": "Prompt chaining runs a fixed sequence of steps on every input; it does not branch to different specialized handling based on category."
         },
         {
           "id": "b",
-          "text": "Apply a generic best practice without checking it against the Agent Patterns item 1 scenario.",
+          "text": "Parallel voting",
           "correct": false,
-          "explanation": "A generic practice can be wrong here because it was not checked against this scenario's specific constraint."
+          "explanation": "Voting runs multiple attempts at the same task and aggregates results; it does not classify then dispatch to different specialists."
         },
         {
           "id": "c",
-          "text": "Defer the Agent Patterns item 1 decision until more requirements arrive.",
-          "correct": false,
-          "explanation": "Deferring avoids the decision the scenario is asking you to make now, based on what is already known."
+          "text": "Routing workflow",
+          "correct": true,
+          "explanation": "Classifying an input and directing it to a specialized prompt or tool per category is the defining behavior of the routing pattern."
         },
         {
           "id": "d",
-          "text": "Optimize the Agent Patterns item 1 response only for implementation speed, ignoring the constraint.",
+          "text": "Evaluator optimizer",
           "correct": false,
-          "explanation": "Speed alone does not satisfy a constraint the scenario explicitly requires you to respect."
+          "explanation": "This pattern iterates one output against a critique loop; it does not describe classification-driven dispatch to different prompts."
         }
       ],
-      "rationale": "Placeholder item exercising the Agent Patterns area; real content lands in task E3.",
-      "sourceNote": "Original placeholder written to blueprint scope; not a real exam question."
+      "rationale": "Routing definition.",
+      "sourceNote": "Original item written to blueprint scope; not a real exam question."
     },
     {
       "id": "q-agent-patterns-02",
@@ -1196,143 +1304,143 @@
       "subSkillId": "agent-patterns",
       "type": "single",
       "difficulty": "medium",
-      "stem": "Placeholder item for Agents & Workflows / Agent Patterns (#2): which approach best satisfies the stated constraint in this scenario?",
+      "stem": "A translation draft is critiqued by a separate model and revised until a clear rubric passes. What pattern fits?",
       "options": [
         {
           "id": "a",
-          "text": "Address the specific constraint the Agent Patterns item 2 scenario describes directly.",
+          "text": "An evaluator-optimizer loop",
           "correct": true,
-          "explanation": "This option resolves exactly the constraint the scenario calls out, which is what the item is testing."
+          "explanation": "A separate model critiquing the draft against a rubric and driving revisions until it passes is the defining evaluator-optimizer cycle."
         },
         {
           "id": "b",
-          "text": "Apply a generic best practice without checking it against the Agent Patterns item 2 scenario.",
+          "text": "A parallel sectioning workflow",
           "correct": false,
-          "explanation": "A generic practice can be wrong here because it was not checked against this scenario's specific constraint."
+          "explanation": "Sectioning splits one task into independent parallel subtasks; it does not describe an iterative critique-and-revise cycle against a rubric."
         },
         {
           "id": "c",
-          "text": "Defer the Agent Patterns item 2 decision until more requirements arrive.",
+          "text": "Static model selection up front",
           "correct": false,
-          "explanation": "Deferring avoids the decision the scenario is asking you to make now, based on what is already known."
+          "explanation": "Choosing a fixed model up front says nothing about an iterative critique-revise loop driving the draft toward passing a rubric."
         },
         {
           "id": "d",
-          "text": "Optimize the Agent Patterns item 2 response only for implementation speed, ignoring the constraint.",
+          "text": "A single programmatic gate",
           "correct": false,
-          "explanation": "Speed alone does not satisfy a constraint the scenario explicitly requires you to respect."
+          "explanation": "A single pass/fail code check has no revision step; the scenario requires a separate critiquing model driving iterative rewrites, not a one-shot gate."
         }
       ],
-      "rationale": "Placeholder item exercising the Agent Patterns area; real content lands in task E3.",
-      "sourceNote": "Original placeholder written to blueprint scope; not a real exam question."
+      "rationale": "Evaluator optimizer fit.",
+      "sourceNote": "Original item written to blueprint scope; not a real exam question."
     },
     {
       "id": "q-context-engineering-01",
       "domainId": "prompt-context-engineering",
       "subSkillId": "context-engineering",
-      "type": "multi",
+      "type": "single",
       "difficulty": "medium",
-      "stem": "Placeholder multi-select for Prompt & Context Engineering / Context Engineering (#1): select all practices that satisfy the stated constraint.",
+      "stem": "An agent loads complete records from 40 tools and increasingly misses key facts. What change best fixes the cause?",
       "options": [
         {
           "id": "a",
-          "text": "Validate the Context Engineering item 1 approach against the scenario's stated constraint.",
-          "correct": true,
-          "explanation": "Direct validation against the stated constraint is a correct, necessary practice here."
+          "text": "Raise max_tokens so the model has room to reason over every loaded record",
+          "correct": false,
+          "explanation": "max_tokens caps the length of the model's output, not the volume of loaded tool data, so it does not address records crowding out key facts."
         },
         {
           "id": "b",
-          "text": "Document the Context Engineering item 1 reasoning so the decision is auditable later.",
+          "text": "Return compact high-signal fields and retrieve detail just in time",
           "correct": true,
-          "explanation": "Documenting the reasoning is a correct complementary practice for this kind of decision."
+          "explanation": "Loading full records from every tool floods context with low-signal detail, so returning compact fields and fetching specifics only when needed keeps attention on what matters."
         },
         {
           "id": "c",
-          "text": "Skip verification of the Context Engineering item 1 scenario because it looks familiar.",
+          "text": "Move all the complete records into the system prompt for stable placement",
           "correct": false,
-          "explanation": "Familiarity is not verification; skipping it can let a mismatched assumption through."
+          "explanation": "Moving the same bulk of unfiltered records into the system prompt still floods context with irrelevant detail; it does not reduce what is loaded."
         },
         {
           "id": "d",
-          "text": "Apply the Context Engineering item 1 decision globally without scoping it to this scenario.",
+          "text": "Add an instruction telling the model to track key facts carefully",
           "correct": false,
-          "explanation": "Applying the decision outside its scope can violate constraints in other scenarios."
+          "explanation": "An instruction cannot compensate for context genuinely overloaded with low-signal data; the fix is reducing what is loaded, not asking the model to try harder."
         }
       ],
-      "rationale": "Placeholder multi-select exercising the Context Engineering area; real content lands in task E3.",
-      "sourceNote": "Original placeholder written to blueprint scope; not a real exam question."
+      "rationale": "Context as attention budget.",
+      "sourceNote": "Original item written to blueprint scope; not a real exam question."
     },
     {
       "id": "q-context-engineering-02",
       "domainId": "prompt-context-engineering",
       "subSkillId": "context-engineering",
       "type": "single",
-      "difficulty": "medium",
-      "stem": "Placeholder item for Prompt & Context Engineering / Context Engineering (#2): which approach best satisfies the stated constraint in this scenario?",
+      "difficulty": "hard",
+      "stem": "A long conversation needs a condensed narrative state instead of deletion of old tool results. Which mechanism fits?",
       "options": [
         {
           "id": "a",
-          "text": "Address the specific constraint the Context Engineering item 2 scenario describes directly.",
-          "correct": true,
-          "explanation": "This option resolves exactly the constraint the scenario calls out, which is what the item is testing."
+          "text": "Clearing older tool results",
+          "correct": false,
+          "explanation": "Clearing tool results discards content instead of condensing it into a narrative state, which is the opposite of what the scenario asks for."
         },
         {
           "id": "b",
-          "text": "Apply a generic best practice without checking it against the Context Engineering item 2 scenario.",
+          "text": "Additional few-shot input examples",
           "correct": false,
-          "explanation": "A generic practice can be wrong here because it was not checked against this scenario's specific constraint."
+          "explanation": "Adding examples increases prompt content rather than reducing an already-long conversation, so it does not solve a context-length problem."
         },
         {
           "id": "c",
-          "text": "Defer the Context Engineering item 2 decision until more requirements arrive.",
+          "text": "An assistant-turn prefill message",
           "correct": false,
-          "explanation": "Deferring avoids the decision the scenario is asking you to make now, based on what is already known."
+          "explanation": "Prefill constrains how the assistant's next reply begins; it has no effect on how much prior conversation history is retained."
         },
         {
           "id": "d",
-          "text": "Optimize the Context Engineering item 2 response only for implementation speed, ignoring the constraint.",
-          "correct": false,
-          "explanation": "Speed alone does not satisfy a constraint the scenario explicitly requires you to respect."
+          "text": "Server-side context compaction",
+          "correct": true,
+          "explanation": "Compaction produces a condensed summary of the conversation so far while preserving its narrative continuity, which is exactly the requirement instead of deleting old data outright."
         }
       ],
-      "rationale": "Placeholder item exercising the Context Engineering area; real content lands in task E3.",
-      "sourceNote": "Original placeholder written to blueprint scope; not a real exam question."
+      "rationale": "Compaction versus clearing.",
+      "sourceNote": "Original item written to blueprint scope; not a real exam question."
     },
     {
       "id": "q-prompt-engineering-01",
       "domainId": "prompt-context-engineering",
       "subSkillId": "prompt-engineering",
       "type": "single",
-      "difficulty": "medium",
-      "stem": "Placeholder item for Prompt & Context Engineering / Prompt Engineering (#1): which approach best satisfies the stated constraint in this scenario?",
+      "difficulty": "easy",
+      "stem": "Where should standing role instructions go in a Messages API request?",
       "options": [
         {
           "id": "a",
-          "text": "Address the specific constraint the Prompt Engineering item 1 scenario describes directly.",
-          "correct": true,
-          "explanation": "This option resolves exactly the constraint the scenario calls out, which is what the item is testing."
+          "text": "A message with the system role",
+          "correct": false,
+          "explanation": "The Messages API messages array only accepts user and assistant roles; there is no system-role message to place instructions in."
         },
         {
           "id": "b",
-          "text": "Apply a generic best practice without checking it against the Prompt Engineering item 1 scenario.",
-          "correct": false,
-          "explanation": "A generic practice can be wrong here because it was not checked against this scenario's specific constraint."
+          "text": "The top-level system parameter",
+          "correct": true,
+          "explanation": "The Messages API accepts a dedicated top-level system field precisely for standing role and behavior instructions, kept separate from the turn-by-turn messages array."
         },
         {
           "id": "c",
-          "text": "Defer the Prompt Engineering item 1 decision until more requirements arrive.",
+          "text": "A tool_result content block",
           "correct": false,
-          "explanation": "Deferring avoids the decision the scenario is asking you to make now, based on what is already known."
+          "explanation": "Tool result blocks carry the output of a specific tool call, not standing behavioral instructions for the whole conversation."
         },
         {
           "id": "d",
-          "text": "Optimize the Prompt Engineering item 1 response only for implementation speed, ignoring the constraint.",
+          "text": "The stop_sequences parameter",
           "correct": false,
-          "explanation": "Speed alone does not satisfy a constraint the scenario explicitly requires you to respect."
+          "explanation": "A stop sequence only tells the API when to stop generating text; it carries no instructional content at all."
         }
       ],
-      "rationale": "Placeholder item exercising the Prompt Engineering area; real content lands in task E3.",
-      "sourceNote": "Original placeholder written to blueprint scope; not a real exam question."
+      "rationale": "System-prompt placement.",
+      "sourceNote": "Original item written to blueprint scope; not a real exam question."
     },
     {
       "id": "q-prompt-engineering-02",
@@ -1340,107 +1448,107 @@
       "subSkillId": "prompt-engineering",
       "type": "single",
       "difficulty": "medium",
-      "stem": "Placeholder item for Prompt & Context Engineering / Prompt Engineering (#2): which approach best satisfies the stated constraint in this scenario?",
+      "stem": "A current model rejects an assistant-turn JSON prefill. What should enforce a fixed JSON reply shape?",
       "options": [
         {
           "id": "a",
-          "text": "Address the specific constraint the Prompt Engineering item 2 scenario describes directly.",
-          "correct": true,
-          "explanation": "This option resolves exactly the constraint the scenario calls out, which is what the item is testing."
+          "text": "temperature zero plus the same prefill",
+          "correct": false,
+          "explanation": "Lowering temperature only makes sampling more deterministic; it does not restore acceptance of a prefill technique the current model rejects."
         },
         {
           "id": "b",
-          "text": "Apply a generic best practice without checking it against the Prompt Engineering item 2 scenario.",
+          "text": "An opening brace inside a tool_result block",
           "correct": false,
-          "explanation": "A generic practice can be wrong here because it was not checked against this scenario's specific constraint."
+          "explanation": "A tool result is data returned from a tool call, not a mechanism for constraining the shape of the model's own reply."
         },
         {
           "id": "c",
-          "text": "Defer the Prompt Engineering item 2 decision until more requirements arrive.",
-          "correct": false,
-          "explanation": "Deferring avoids the decision the scenario is asking you to make now, based on what is already known."
+          "text": "output_config.format with a JSON Schema",
+          "correct": true,
+          "explanation": "A structured-output configuration constrains generation against a declared schema at the API level, which is the supported replacement once the model no longer accepts assistant-turn prefill."
         },
         {
           "id": "d",
-          "text": "Optimize the Prompt Engineering item 2 response only for implementation speed, ignoring the constraint.",
+          "text": "A longer stop sequence after the closing brace",
           "correct": false,
-          "explanation": "Speed alone does not satisfy a constraint the scenario explicitly requires you to respect."
+          "explanation": "A stop sequence only truncates output at a matched string; it cannot enforce that the output conforms to a JSON structure."
         }
       ],
-      "rationale": "Placeholder item exercising the Prompt Engineering area; real content lands in task E3.",
-      "sourceNote": "Original placeholder written to blueprint scope; not a real exam question."
+      "rationale": "Prefill migration.",
+      "sourceNote": "Original item written to blueprint scope; not a real exam question."
     },
     {
       "id": "q-prompt-engineering-03",
       "domainId": "prompt-context-engineering",
       "subSkillId": "prompt-engineering",
       "type": "single",
-      "difficulty": "medium",
-      "stem": "Placeholder item for Prompt & Context Engineering / Prompt Engineering (#3): which approach best satisfies the stated constraint in this scenario?",
+      "difficulty": "hard",
+      "stem": "For a 90k-token contract and five questions, what structure follows long-context guidance?",
       "options": [
         {
           "id": "a",
-          "text": "Address the specific constraint the Prompt Engineering item 3 scenario describes directly.",
+          "text": "Documents first, query last, with a quotes-first grounding step",
           "correct": true,
-          "explanation": "This option resolves exactly the constraint the scenario calls out, which is what the item is testing."
+          "explanation": "Placing long reference material before the question and asking for grounding quotes first improves retrieval accuracy over that material, consistent with long-context best practice."
         },
         {
           "id": "b",
-          "text": "Apply a generic best practice without checking it against the Prompt Engineering item 3 scenario.",
+          "text": "Questions first, then the documents, with a direct-answer instruction",
           "correct": false,
-          "explanation": "A generic practice can be wrong here because it was not checked against this scenario's specific constraint."
+          "explanation": "Putting the questions before a 90k-token document works against the model's attention pattern for long-context retrieval, which favors documents preceding the query."
         },
         {
           "id": "c",
-          "text": "Defer the Prompt Engineering item 3 decision until more requirements arrive.",
+          "text": "An exhaustive system-prompt summary of the contract instead of its text",
           "correct": false,
-          "explanation": "Deferring avoids the decision the scenario is asking you to make now, based on what is already known."
+          "explanation": "A summary in the system prompt discards the contract's actual text the five questions need to be answered against, trading recall for compression."
         },
         {
           "id": "d",
-          "text": "Optimize the Prompt Engineering item 3 response only for implementation speed, ignoring the constraint.",
+          "text": "Temperature zero for retrieval, with the documents in any order",
           "correct": false,
-          "explanation": "Speed alone does not satisfy a constraint the scenario explicitly requires you to respect."
+          "explanation": "Temperature only affects sampling randomness in generation; it has no role in how content is retrieved from a long context window."
         }
       ],
-      "rationale": "Placeholder item exercising the Prompt Engineering area; real content lands in task E3.",
-      "sourceNote": "Original placeholder written to blueprint scope; not a real exam question."
+      "rationale": "Long-context ordering.",
+      "sourceNote": "Original item written to blueprint scope; not a real exam question."
     },
     {
       "id": "q-output-handling-01",
       "domainId": "prompt-context-engineering",
       "subSkillId": "output-handling",
-      "type": "multi",
+      "type": "single",
       "difficulty": "medium",
-      "stem": "Placeholder multi-select for Prompt & Context Engineering / Output Handling (#1): select all practices that satisfy the stated constraint.",
+      "stem": "A structured-output extraction returns HTTP 200 with stop_reason refusal. What must the client assume?",
       "options": [
         {
           "id": "a",
-          "text": "Validate the Output Handling item 1 approach against the scenario's stated constraint.",
-          "correct": true,
-          "explanation": "Direct validation against the stated constraint is a correct, necessary practice here."
+          "text": "The schema is guaranteed to be satisfied, because HTTP 200 means success",
+          "correct": false,
+          "explanation": "A 200 status confirms the API call succeeded at the transport level, not that the model produced schema-conformant content; a refusal can still occur with that status."
         },
         {
           "id": "b",
-          "text": "Document the Output Handling item 1 reasoning so the decision is auditable later.",
+          "text": "The content may be unusable; inspect stop_reason and handle refusal",
           "correct": true,
-          "explanation": "Documenting the reasoning is a correct complementary practice for this kind of decision."
+          "explanation": "HTTP 200 only means the request was received; stop_reason communicates whether the model actually completed the requested output, so refusal must be checked and handled separately from transport status."
         },
         {
           "id": "c",
-          "text": "Skip verification of the Output Handling item 1 scenario because it looks familiar.",
+          "text": "Identical retries with the same payload will repair it on a later attempt",
           "correct": false,
-          "explanation": "Familiarity is not verification; skipping it can let a mismatched assumption through."
+          "explanation": "A refusal reflects the model declining the request as posed, so resending the identical request is likely to produce the same refusal rather than fix it."
         },
         {
           "id": "d",
-          "text": "Apply the Output Handling item 1 decision globally without scoping it to this scenario.",
+          "text": "It is a transient rate limit reported in-band, so back off and retry",
           "correct": false,
-          "explanation": "Applying the decision outside its scope can violate constraints in other scenarios."
+          "explanation": "Rate limiting is signaled through HTTP 429 responses, not a 200 response carrying a refusal stop_reason, so this misattributes the cause."
         }
       ],
-      "rationale": "Placeholder multi-select exercising the Output Handling area; real content lands in task E3.",
-      "sourceNote": "Original placeholder written to blueprint scope; not a real exam question."
+      "rationale": "Stop reason before content.",
+      "sourceNote": "Original item written to blueprint scope; not a real exam question."
     },
     {
       "id": "q-tool-implementation-01",
@@ -1448,215 +1556,215 @@
       "subSkillId": "tool-implementation",
       "type": "single",
       "difficulty": "medium",
-      "stem": "Placeholder item for Tools & MCPs / Tool Implementation (#1): which approach best satisfies the stated constraint in this scenario?",
+      "stem": "Claude picks a client tool in the wrong situations despite a good schema. What improves selection most?",
       "options": [
         {
           "id": "a",
-          "text": "Address the specific constraint the Tool Implementation item 1 scenario describes directly.",
+          "text": "A detailed description explaining use, non-use, parameters, and limits",
           "correct": true,
-          "explanation": "This option resolves exactly the constraint the scenario calls out, which is what the item is testing."
+          "explanation": "The model selects tools primarily from the natural-language description, so clarifying when to use it, when not to, and its parameter limits directly improves selection accuracy."
         },
         {
           "id": "b",
-          "text": "Apply a generic best practice without checking it against the Tool Implementation item 1 scenario.",
+          "text": "Setting strict to true on the input schema and dropping the description",
           "correct": false,
-          "explanation": "A generic practice can be wrong here because it was not checked against this scenario's specific constraint."
+          "explanation": "Strict schema enforcement only validates the shape of arguments once a tool is chosen; it gives the model no guidance on when that tool is the right one to pick."
         },
         {
           "id": "c",
-          "text": "Defer the Tool Implementation item 1 decision until more requirements arrive.",
+          "text": "A top-level switch that disables parallel tool use so calls run one at a time",
           "correct": false,
-          "explanation": "Deferring avoids the decision the scenario is asking you to make now, based on what is already known."
+          "explanation": "Controlling whether tools can be called in parallel affects execution concurrency, not which tool the model judges appropriate for a given situation."
         },
         {
           "id": "d",
-          "text": "Optimize the Tool Implementation item 1 response only for implementation speed, ignoring the constraint.",
+          "text": "Returning every database field from the tool so the model sees more context",
           "correct": false,
-          "explanation": "Speed alone does not satisfy a constraint the scenario explicitly requires you to respect."
+          "explanation": "The volume of data a tool returns after being called has no bearing on the model's decision of whether to call that tool in the first place."
         }
       ],
-      "rationale": "Placeholder item exercising the Tool Implementation area; real content lands in task E3.",
-      "sourceNote": "Original placeholder written to blueprint scope; not a real exam question."
+      "rationale": "Description versus schema.",
+      "sourceNote": "Original item written to blueprint scope; not a real exam question."
     },
     {
       "id": "q-tool-implementation-02",
       "domainId": "tools-mcps",
       "subSkillId": "tool-implementation",
-      "type": "single",
-      "difficulty": "medium",
-      "stem": "Placeholder item for Tools & MCPs / Tool Implementation (#2): which approach best satisfies the stated constraint in this scenario?",
+      "type": "multi",
+      "difficulty": "hard",
+      "stem": "A create_transfer client tool can move money. Its input carries an action field plus account and amount details. Which implementation controls are required to reject malformed or unauthorized calls before a transfer is made? Select all that apply.",
       "options": [
         {
           "id": "a",
-          "text": "Address the specific constraint the Tool Implementation item 2 scenario describes directly.",
+          "text": "Restrict the action field to an enum of supported operations.",
           "correct": true,
-          "explanation": "This option resolves exactly the constraint the scenario calls out, which is what the item is testing."
+          "explanation": "An enum rejects action names outside the handler contract before execution."
         },
         {
           "id": "b",
-          "text": "Apply a generic best practice without checking it against the Tool Implementation item 2 scenario.",
-          "correct": false,
-          "explanation": "A generic practice can be wrong here because it was not checked against this scenario's specific constraint."
+          "text": "Require the source account, destination account, and amount in the tool input schema.",
+          "correct": true,
+          "explanation": "Required fields prevent an incomplete transfer request from reaching execution."
         },
         {
           "id": "c",
-          "text": "Defer the Tool Implementation item 2 decision until more requirements arrive.",
-          "correct": false,
-          "explanation": "Deferring avoids the decision the scenario is asking you to make now, based on what is already known."
+          "text": "Validate account existence, authorization, and business limits in the server-side handler.",
+          "correct": true,
+          "explanation": "JSON Schema cannot establish identity, permissions, balances, or policy limits; the trusted handler must enforce them."
         },
         {
           "id": "d",
-          "text": "Optimize the Tool Implementation item 2 response only for implementation speed, ignoring the constraint.",
+          "text": "Rely on a detailed tool description as the only validation mechanism.",
           "correct": false,
-          "explanation": "Speed alone does not satisfy a constraint the scenario explicitly requires you to respect."
+          "explanation": "A description guides model selection but cannot reject malformed arguments or authorize a money movement."
         }
       ],
-      "rationale": "Placeholder item exercising the Tool Implementation area; real content lands in task E3.",
-      "sourceNote": "Original placeholder written to blueprint scope; not a real exam question."
+      "rationale": "Tests the boundary between JSON Schema argument validation and server-side semantic and authorization checks.",
+      "sourceNote": "Original item written to blueprint scope; not a real exam question."
     },
     {
       "id": "q-tool-implementation-03",
       "domainId": "tools-mcps",
       "subSkillId": "tool-implementation",
       "type": "single",
-      "difficulty": "medium",
-      "stem": "Placeholder item for Tools & MCPs / Tool Implementation (#3): which approach best satisfies the stated constraint in this scenario?",
+      "difficulty": "hard",
+      "stem": "Why can forced named tool choice fail with manual extended thinking?",
       "options": [
         {
           "id": "a",
-          "text": "Address the specific constraint the Tool Implementation item 3 scenario describes directly.",
-          "correct": true,
-          "explanation": "This option resolves exactly the constraint the scenario calls out, which is what the item is testing."
+          "text": "Tool choice must never be set when thinking is enabled; even auto and none are rejected",
+          "correct": false,
+          "explanation": "Tool choice can still be set to auto or none; the incompatibility is specifically with forcing a named tool, not with configuring tool_choice at all."
         },
         {
           "id": "b",
-          "text": "Apply a generic best practice without checking it against the Tool Implementation item 3 scenario.",
+          "text": "Parallel tool-call control must be moved to the request root before a tool can be forced",
           "correct": false,
-          "explanation": "A generic practice can be wrong here because it was not checked against this scenario's specific constraint."
+          "explanation": "Parallel tool-call control governs concurrent tool invocations and is unrelated to the conflict between forced tool choice and extended thinking."
         },
         {
           "id": "c",
-          "text": "Defer the Tool Implementation item 3 decision until more requirements arrive.",
+          "text": "Forcing a named client tool is unsupported; converting it to a server tool makes it valid",
           "correct": false,
-          "explanation": "Deferring avoids the decision the scenario is asking you to make now, based on what is already known."
+          "explanation": "Changing whether a tool executes server-side or client-side does not resolve the incompatibility between forced named tool_choice and manual extended thinking."
         },
         {
           "id": "d",
-          "text": "Optimize the Tool Implementation item 3 response only for implementation speed, ignoring the constraint.",
-          "correct": false,
-          "explanation": "Speed alone does not satisfy a constraint the scenario explicitly requires you to respect."
+          "text": "Forced tool use conflicts with manual extended thinking; use auto or an adaptive design",
+          "correct": true,
+          "explanation": "Manual extended thinking requires the model to reason freely before acting, which a forced named-tool choice overrides, so compatibility requires auto tool choice or a design that does not force a specific tool."
         }
       ],
-      "rationale": "Placeholder item exercising the Tool Implementation area; real content lands in task E3.",
-      "sourceNote": "Original placeholder written to blueprint scope; not a real exam question."
+      "rationale": "Thinking restriction.",
+      "sourceNote": "Original item written to blueprint scope; not a real exam question."
     },
     {
       "id": "q-mcp-development-01",
       "domainId": "tools-mcps",
       "subSkillId": "mcp-development",
       "type": "single",
-      "difficulty": "medium",
-      "stem": "Placeholder item for Tools & MCPs / MCP Development (#1): which approach best satisfies the stated constraint in this scenario?",
+      "difficulty": "easy",
+      "stem": "A Python stdio MCP server prints progress to stdout and the host reports parse errors. What fixes it?",
       "options": [
         {
           "id": "a",
-          "text": "Address the specific constraint the MCP Development item 1 scenario describes directly.",
-          "correct": true,
-          "explanation": "This option resolves exactly the constraint the scenario calls out, which is what the item is testing."
+          "text": "Wrap each progress print inside a tool result",
+          "correct": false,
+          "explanation": "Wrapping prints in tool results does not stop unrelated progress output from interleaving with JSON-RPC on stdout; the print statements themselves must move off stdout."
         },
         {
           "id": "b",
-          "text": "Apply a generic best practice without checking it against the MCP Development item 1 scenario.",
-          "correct": false,
-          "explanation": "A generic practice can be wrong here because it was not checked against this scenario's specific constraint."
+          "text": "Log to stderr and reserve stdout for JSON-RPC",
+          "correct": true,
+          "explanation": "A stdio MCP server communicates JSON-RPC exclusively over stdout, so any print statement mixed into that stream corrupts message framing; logging must go to stderr instead."
         },
         {
           "id": "c",
-          "text": "Defer the MCP Development item 1 decision until more requirements arrive.",
+          "text": "Have the host parse stdout as one JSON array instead",
           "correct": false,
-          "explanation": "Deferring avoids the decision the scenario is asking you to make now, based on what is already known."
+          "explanation": "The host expects newline-delimited individual JSON-RPC messages, not a JSON array, so reinterpreting the framing does not fix mixed plain-text and JSON-RPC content."
         },
         {
           "id": "d",
-          "text": "Optimize the MCP Development item 1 response only for implementation speed, ignoring the constraint.",
+          "text": "Switch the server to the legacy HTTP SSE transport",
           "correct": false,
-          "explanation": "Speed alone does not satisfy a constraint the scenario explicitly requires you to respect."
+          "explanation": "Changing transport is an unrelated and unnecessary architecture change; the actual defect is stdout being polluted with non-protocol text."
         }
       ],
-      "rationale": "Placeholder item exercising the MCP Development area; real content lands in task E3.",
-      "sourceNote": "Original placeholder written to blueprint scope; not a real exam question."
+      "rationale": "stdio framing.",
+      "sourceNote": "Original item written to blueprint scope; not a real exam question."
     },
     {
       "id": "q-mcp-development-02",
       "domainId": "tools-mcps",
       "subSkillId": "mcp-development",
-      "type": "multi",
+      "type": "single",
       "difficulty": "medium",
-      "stem": "Placeholder multi-select for Tools & MCPs / MCP Development (#2): select all practices that satisfy the stated constraint.",
+      "stem": "An app needs a local stdio MCP server with resources and prompts. How should it integrate?",
       "options": [
         {
           "id": "a",
-          "text": "Validate the MCP Development item 2 approach against the scenario's stated constraint.",
-          "correct": true,
-          "explanation": "Direct validation against the stated constraint is a correct, necessary practice here."
+          "text": "Pass the command as an mcp_servers URL",
+          "correct": false,
+          "explanation": "The mcp_servers connector field expects a remote HTTPS URL, not a local process launch command, so a stdio server cannot be wired in this way."
         },
         {
           "id": "b",
-          "text": "Document the MCP Development item 2 reasoning so the decision is auditable later.",
-          "correct": true,
-          "explanation": "Documenting the reasoning is a correct complementary practice for this kind of decision."
+          "text": "Use mcp_servers without an mcp_toolset",
+          "correct": false,
+          "explanation": "The remote connector only exposes tool calls and has no mechanism for resources or prompts regardless of toolset configuration, so it cannot satisfy this requirement."
         },
         {
           "id": "c",
-          "text": "Skip verification of the MCP Development item 2 scenario because it looks familiar.",
-          "correct": false,
-          "explanation": "Familiarity is not verification; skipping it can let a mismatched assumption through."
+          "text": "Use its own MCP client and SDK helpers",
+          "correct": true,
+          "explanation": "A local stdio server needing resources and prompts (not just tools) requires a full MCP client implementation via SDK helpers, since the hosted Messages API connector only supports remote tool calls."
         },
         {
           "id": "d",
-          "text": "Apply the MCP Development item 2 decision globally without scoping it to this scenario.",
+          "text": "Expose it over plaintext localhost HTTP",
           "correct": false,
-          "explanation": "Applying the decision outside its scope can violate constraints in other scenarios."
+          "explanation": "The app still needs an MCP client to speak the protocol over that HTTP endpoint, and plaintext localhost adds no capability for resources or prompts by itself."
         }
       ],
-      "rationale": "Placeholder multi-select exercising the MCP Development area; real content lands in task E3.",
-      "sourceNote": "Original placeholder written to blueprint scope; not a real exam question."
+      "rationale": "Connector limitation.",
+      "sourceNote": "Original item written to blueprint scope; not a real exam question."
     },
     {
       "id": "q-mcp-development-03",
       "domainId": "tools-mcps",
       "subSkillId": "mcp-development",
-      "type": "single",
+      "type": "multi",
       "difficulty": "medium",
-      "stem": "Placeholder item for Tools & MCPs / MCP Development (#3): which approach best satisfies the stated constraint in this scenario?",
+      "stem": "A remote server exposes read_issue and delete_issue; only read_issue may be available through the Messages API connector. Select all correct principles.",
       "options": [
         {
           "id": "a",
-          "text": "Address the specific constraint the MCP Development item 3 scenario describes directly.",
+          "text": "Define the remote server in mcp_servers and reference it from an mcp_toolset entry in tools",
           "correct": true,
-          "explanation": "This option resolves exactly the constraint the scenario calls out, which is what the item is testing."
+          "explanation": "The connector is two-part: mcp_servers describes how to reach the server and an mcp_toolset entry in tools decides which of its tools are exposed; one without the other exposes nothing."
         },
         {
           "id": "b",
-          "text": "Apply a generic best practice without checking it against the MCP Development item 3 scenario.",
-          "correct": false,
-          "explanation": "A generic practice can be wrong here because it was not checked against this scenario's specific constraint."
+          "text": "Disable by default and explicitly enable read_issue",
+          "correct": true,
+          "explanation": "Setting the toolset default to disabled and enabling only read_issue is an allowlist, so delete_issue never appears in the model's tool list at all."
         },
         {
           "id": "c",
-          "text": "Defer the MCP Development item 3 decision until more requirements arrive.",
-          "correct": false,
-          "explanation": "Deferring avoids the decision the scenario is asking you to make now, based on what is already known."
+          "text": "Use a publicly reachable HTTPS endpoint",
+          "correct": true,
+          "explanation": "The connector talks to servers over HTTP transports only; a local stdio process or a private host it cannot reach cannot be wired in this way."
         },
         {
           "id": "d",
-          "text": "Optimize the MCP Development item 3 response only for implementation speed, ignoring the constraint.",
+          "text": "Trust destructiveHint to block delete_issue",
           "correct": false,
-          "explanation": "Speed alone does not satisfy a constraint the scenario explicitly requires you to respect."
+          "explanation": "destructiveHint and similar annotations are advisory metadata for hosts and models; they do not remove the tool from the list or stop a call."
         }
       ],
-      "rationale": "Placeholder item exercising the MCP Development area; real content lands in task E3.",
-      "sourceNote": "Original placeholder written to blueprint scope; not a real exam question."
+      "rationale": "Secure MCP allowlisting.",
+      "sourceNote": "Original item written to blueprint scope; not a real exam question."
     },
     {
       "id": "q-ai-app-security-01",
@@ -1664,71 +1772,71 @@
       "subSkillId": "ai-app-security",
       "type": "single",
       "difficulty": "medium",
-      "stem": "Placeholder item for Security & Safety / AI App Security (#1): which approach best satisfies the stated constraint in this scenario?",
+      "stem": "A trusted user asks an agent to read an untrusted email containing malicious instructions. Where does the raw email body belong?",
       "options": [
         {
           "id": "a",
-          "text": "Address the specific constraint the AI App Security item 1 scenario describes directly.",
-          "correct": true,
-          "explanation": "This option resolves exactly the constraint the scenario calls out, which is what the item is testing."
+          "text": "In the system prompt, wrapped in XML tags",
+          "correct": false,
+          "explanation": "The system prompt is the highest-authority instruction channel, so placing untrusted content there risks the model treating injected text as privileged instructions rather than as data."
         },
         {
           "id": "b",
-          "text": "Apply a generic best practice without checking it against the AI App Security item 1 scenario.",
+          "text": "As ordinary user text in the next user turn",
           "correct": false,
-          "explanation": "A generic practice can be wrong here because it was not checked against this scenario's specific constraint."
+          "explanation": "Presenting the email as if it were the trusted user's own words removes the provenance signal that separates the user's real intent from injected instructions inside the email."
         },
         {
           "id": "c",
-          "text": "Defer the AI App Security item 1 decision until more requirements arrive.",
+          "text": "In an assistant message that quotes the email",
           "correct": false,
-          "explanation": "Deferring avoids the decision the scenario is asking you to make now, based on what is already known."
+          "explanation": "Assistant messages represent the model's own prior output; placing external untrusted content there misrepresents its origin and can make the model treat it as something it already said."
         },
         {
           "id": "d",
-          "text": "Optimize the AI App Security item 1 response only for implementation speed, ignoring the constraint.",
-          "correct": false,
-          "explanation": "Speed alone does not satisfy a constraint the scenario explicitly requires you to respect."
+          "text": "In a tool_result block with clear provenance",
+          "correct": true,
+          "explanation": "Wrapping the untrusted email in a tool_result block, distinct from the trusted user's own instructions, lets the agent treat it as data to inspect rather than as commands to obey."
         }
       ],
-      "rationale": "Placeholder item exercising the AI App Security area; real content lands in task E3.",
-      "sourceNote": "Original placeholder written to blueprint scope; not a real exam question."
+      "rationale": "Indirect injection isolation.",
+      "sourceNote": "Original item written to blueprint scope; not a real exam question."
     },
     {
       "id": "q-ai-app-security-02",
       "domainId": "security-safety",
       "subSkillId": "ai-app-security",
-      "type": "single",
-      "difficulty": "medium",
-      "stem": "Placeholder item for Security & Safety / AI App Security (#2): which approach best satisfies the stated constraint in this scenario?",
+      "type": "multi",
+      "difficulty": "hard",
+      "stem": "A browser agent reads untrusted pages and can change tickets. Which defense-in-depth controls help? Select all that apply.",
       "options": [
         {
           "id": "a",
-          "text": "Address the specific constraint the AI App Security item 2 scenario describes directly.",
-          "correct": true,
-          "explanation": "This option resolves exactly the constraint the scenario calls out, which is what the item is testing."
+          "text": "Place every fetched page in the system prompt",
+          "correct": false,
+          "explanation": "The system prompt is the highest-authority channel, so placing untrusted page content there elevates injected instructions instead of containing them."
         },
         {
           "id": "b",
-          "text": "Apply a generic best practice without checking it against the AI App Security item 2 scenario.",
-          "correct": false,
-          "explanation": "A generic practice can be wrong here because it was not checked against this scenario's specific constraint."
+          "text": "Minimal tool scopes and approval for destructive actions",
+          "correct": true,
+          "explanation": "Narrow tool scopes bound what a hijacked agent can do, and a human approval on destructive actions means an injected instruction cannot silently change a ticket."
         },
         {
           "id": "c",
-          "text": "Defer the AI App Security item 2 decision until more requirements arrive.",
-          "correct": false,
-          "explanation": "Deferring avoids the decision the scenario is asking you to make now, based on what is already known."
+          "text": "Screen and label tool output before model delivery",
+          "correct": true,
+          "explanation": "Screening fetched pages and labelling them as untrusted tool output before the model sees them lowers the chance that injected text is read as an instruction."
         },
         {
           "id": "d",
-          "text": "Optimize the AI App Security item 2 response only for implementation speed, ignoring the constraint.",
-          "correct": false,
-          "explanation": "Speed alone does not satisfy a constraint the scenario explicitly requires you to respect."
+          "text": "Sandbox tools and red-team with adversarial pages",
+          "correct": true,
+          "explanation": "Sandboxing limits the damage of a successful injection while adversarial testing finds injections before attackers do; each layer works even if the other fails."
         }
       ],
-      "rationale": "Placeholder item exercising the AI App Security area; real content lands in task E3.",
-      "sourceNote": "Original placeholder written to blueprint scope; not a real exam question."
+      "rationale": "Defense in depth.",
+      "sourceNote": "Original item written to blueprint scope; not a real exam question."
     },
     {
       "id": "q-guardrails-01",
@@ -1736,179 +1844,107 @@
       "subSkillId": "guardrails",
       "type": "single",
       "difficulty": "medium",
-      "stem": "Placeholder item for Security & Safety / Guardrails (#1): which approach best satisfies the stated constraint in this scenario?",
+      "stem": "A moderation pipeline needs a machine-readable decision for each comment. What design is best?",
       "options": [
         {
           "id": "a",
-          "text": "Address the specific constraint the Guardrails item 1 scenario describes directly.",
+          "text": "Explicit categories plus a structured JSON verdict branched on in code",
           "correct": true,
-          "explanation": "This option resolves exactly the constraint the scenario calls out, which is what the item is testing."
+          "explanation": "Defined categories with a structured verdict give the pipeline a stable machine-readable signal that application code can branch on deterministically for every comment."
         },
         {
           "id": "b",
-          "text": "Apply a generic best practice without checking it against the Guardrails item 1 scenario.",
+          "text": "A prose instruction asking the model to be safe and note any concerns",
           "correct": false,
-          "explanation": "A generic practice can be wrong here because it was not checked against this scenario's specific constraint."
+          "explanation": "A free-text safety instruction produces unstructured prose rather than a decision the pipeline can parse and branch on programmatically."
         },
         {
           "id": "c",
-          "text": "Defer the Guardrails item 1 decision until more requirements arrive.",
+          "text": "An assistant-turn JSON prefill so each reply starts with an opening brace",
           "correct": false,
-          "explanation": "Deferring avoids the decision the scenario is asking you to make now, based on what is already known."
+          "explanation": "Prefill only nudges the shape of the reply's start; it is not a substitute for an actual defined schema and category set enforced across every classification."
         },
         {
           "id": "d",
-          "text": "Optimize the Guardrails item 1 response only for implementation speed, ignoring the constraint.",
+          "text": "Retrying the same comment until the model returns a benign-looking answer",
           "correct": false,
-          "explanation": "Speed alone does not satisfy a constraint the scenario explicitly requires you to respect."
+          "explanation": "Retrying until a convenient answer appears discards genuine moderation signal and produces an unreliable, non-machine-readable outcome."
         }
       ],
-      "rationale": "Placeholder item exercising the Guardrails area; real content lands in task E3.",
-      "sourceNote": "Original placeholder written to blueprint scope; not a real exam question."
+      "rationale": "Classifier guardrail.",
+      "sourceNote": "Original item written to blueprint scope; not a real exam question."
     },
     {
       "id": "q-identity-secrets-01",
       "domainId": "security-safety",
       "subSkillId": "identity-secrets",
-      "type": "multi",
-      "difficulty": "medium",
-      "stem": "Placeholder multi-select for Security & Safety / Identity/Secrets (#1): select all practices that satisfy the stated constraint.",
-      "options": [
-        {
-          "id": "a",
-          "text": "Validate the Identity/Secrets item 1 approach against the scenario's stated constraint.",
-          "correct": true,
-          "explanation": "Direct validation against the stated constraint is a correct, necessary practice here."
-        },
-        {
-          "id": "b",
-          "text": "Document the Identity/Secrets item 1 reasoning so the decision is auditable later.",
-          "correct": true,
-          "explanation": "Documenting the reasoning is a correct complementary practice for this kind of decision."
-        },
-        {
-          "id": "c",
-          "text": "Skip verification of the Identity/Secrets item 1 scenario because it looks familiar.",
-          "correct": false,
-          "explanation": "Familiarity is not verification; skipping it can let a mismatched assumption through."
-        },
-        {
-          "id": "d",
-          "text": "Apply the Identity/Secrets item 1 decision globally without scoping it to this scenario.",
-          "correct": false,
-          "explanation": "Applying the decision outside its scope can violate constraints in other scenarios."
-        }
-      ],
-      "rationale": "Placeholder multi-select exercising the Identity/Secrets area; real content lands in task E3.",
-      "sourceNote": "Original placeholder written to blueprint scope; not a real exam question."
-    },
-    {
-      "id": "q-claude-code-operation-01",
-      "domainId": "claude-code",
-      "subSkillId": "claude-code-operation",
       "type": "single",
-      "difficulty": "medium",
-      "stem": "Placeholder item for Claude Code / Claude Code Operation (#1): which approach best satisfies the stated constraint in this scenario?",
+      "difficulty": "hard",
+      "stem": "A GitHub Actions deployment needs API access without storing a long-lived secret. What is the best option?",
       "options": [
         {
           "id": "a",
-          "text": "Address the specific constraint the Claude Code Operation item 1 scenario describes directly.",
-          "correct": true,
-          "explanation": "This option resolves exactly the constraint the scenario calls out, which is what the item is testing."
+          "text": "A personal API key committed to the repository in an encrypted secrets file",
+          "correct": false,
+          "explanation": "Even encrypted at rest, this is still a long-lived static credential checked into the repository, which is exactly what the requirement rules out."
         },
         {
           "id": "b",
-          "text": "Apply a generic best practice without checking it against the Claude Code Operation item 1 scenario.",
+          "text": "A legacy workspace key shared by every CI job and rotated manually each quarter",
           "correct": false,
-          "explanation": "A generic practice can be wrong here because it was not checked against this scenario's specific constraint."
+          "explanation": "A shared static workspace key is a long-lived secret with broad blast radius across every job that uses it, not a short-lived scoped credential."
         },
         {
           "id": "c",
-          "text": "Defer the Claude Code Operation item 1 decision until more requirements arrive.",
-          "correct": false,
-          "explanation": "Deferring avoids the decision the scenario is asking you to make now, based on what is already known."
-        },
-        {
-          "id": "d",
-          "text": "Optimize the Claude Code Operation item 1 response only for implementation speed, ignoring the constraint.",
-          "correct": false,
-          "explanation": "Speed alone does not satisfy a constraint the scenario explicitly requires you to respect."
-        }
-      ],
-      "rationale": "Placeholder item exercising the Claude Code Operation area; real content lands in task E3.",
-      "sourceNote": "Original placeholder written to blueprint scope; not a real exam question."
-    },
-    {
-      "id": "q-hooks-01",
-      "domainId": "claude-code",
-      "subSkillId": "hooks",
-      "type": "single",
-      "difficulty": "medium",
-      "stem": "Placeholder item for Claude Code / Hooks (#1): which approach best satisfies the stated constraint in this scenario?",
-      "options": [
-        {
-          "id": "a",
-          "text": "Address the specific constraint the Hooks item 1 scenario describes directly.",
+          "text": "Workload Identity Federation exchanging a platform JWT for a short-lived token",
           "correct": true,
-          "explanation": "This option resolves exactly the constraint the scenario calls out, which is what the item is testing."
-        },
-        {
-          "id": "b",
-          "text": "Apply a generic best practice without checking it against the Hooks item 1 scenario.",
-          "correct": false,
-          "explanation": "A generic practice can be wrong here because it was not checked against this scenario's specific constraint."
-        },
-        {
-          "id": "c",
-          "text": "Defer the Hooks item 1 decision until more requirements arrive.",
-          "correct": false,
-          "explanation": "Deferring avoids the decision the scenario is asking you to make now, based on what is already known."
+          "explanation": "Federation lets the CI job present its platform-issued JWT to obtain a short-lived credential on demand, so no long-lived secret ever needs to be stored in the pipeline."
         },
         {
           "id": "d",
-          "text": "Optimize the Hooks item 1 response only for implementation speed, ignoring the constraint.",
+          "text": "An API key placed in the deployment agent's system prompt so no secret store is needed",
           "correct": false,
-          "explanation": "Speed alone does not satisfy a constraint the scenario explicitly requires you to respect."
+          "explanation": "Putting a credential in the system prompt both fails to eliminate the long-lived secret and exposes it to the model's context, which is worse than typical secret storage."
         }
       ],
-      "rationale": "Placeholder item exercising the Hooks area; real content lands in task E3.",
-      "sourceNote": "Original placeholder written to blueprint scope; not a real exam question."
+      "rationale": "Workload identity.",
+      "sourceNote": "Original item written to blueprint scope; not a real exam question."
     },
     {
-      "id": "q-debugging-01",
+      "id": "q-debugging-02",
       "domainId": "eval-testing-debugging",
       "subSkillId": "debugging",
       "type": "single",
       "difficulty": "medium",
-      "stem": "Placeholder item for Eval / Testing / Debugging / Debugging (#1): which approach best satisfies the stated constraint in this scenario?",
+      "stem": "An extraction service sees two failure kinds: some requests return HTTP 529 overloaded_error, and some return HTTP 200 whose JSON fails the app's own validation. The team retries both unchanged up to five times. Which change is correct?",
       "options": [
         {
           "id": "a",
-          "text": "Address the specific constraint the Debugging item 1 scenario describes directly.",
-          "correct": true,
-          "explanation": "This option resolves exactly the constraint the scenario calls out, which is what the item is testing."
+          "text": "Retry both classes unchanged but raise the attempt limit from five to ten, since some validation failures eventually pass on a later sample.",
+          "correct": false,
+          "explanation": "More identical attempts help only the transient class; a deterministic output defect will keep reproducing and each replay wastes tokens."
         },
         {
           "id": "b",
-          "text": "Apply a generic best practice without checking it against the Debugging item 1 scenario.",
-          "correct": false,
-          "explanation": "A generic practice can be wrong here because it was not checked against this scenario's specific constraint."
+          "text": "Keep retrying the 529s unchanged with backoff, but re-prompt validation failures once or twice with the specific validation error included.",
+          "correct": true,
+          "explanation": "A transport-level 529 is transient and can succeed when replayed, whereas a model-output failure tends to reproduce unchanged; feeding back the concrete error is what changes the outcome."
         },
         {
           "id": "c",
-          "text": "Defer the Debugging item 1 decision until more requirements arrive.",
+          "text": "Stop retrying 529s because capacity errors never recover on their own, and keep retrying validation failures unchanged until one passes.",
           "correct": false,
-          "explanation": "Deferring avoids the decision the scenario is asking you to make now, based on what is already known."
+          "explanation": "This inverts the two classes: overloaded_error is exactly the kind of error that backoff is for, and unchanged replays are the wrong tool for a schema miss."
         },
         {
           "id": "d",
-          "text": "Optimize the Debugging item 1 response only for implementation speed, ignoring the constraint.",
+          "text": "Treat every failure of either class as a platform bug and open a support ticket with the request_id before allowing any retry to run.",
           "correct": false,
-          "explanation": "Speed alone does not satisfy a constraint the scenario explicitly requires you to respect."
+          "explanation": "Persistent 500-class errors deserve a ticket with request_id, but a 529 is a capacity signal and a validation miss is an application-side prompting problem, not a platform defect."
         }
       ],
-      "rationale": "Placeholder item exercising the Debugging area; real content lands in task E3.",
-      "sourceNote": "Original placeholder written to blueprint scope; not a real exam question."
+      "rationale": "Tests separating transport failures (retry unchanged) from model-output failures (bounded reprompt with the error).",
+      "sourceNote": "Original item written to documented blueprint scope; not a real exam question."
     }
   ]
 }
