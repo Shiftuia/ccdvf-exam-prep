@@ -61,6 +61,24 @@ else
     echo "[smoke] PASS: POST / correctly rejected (403)"
 fi
 
+# Bare paths (no trailing slash) must 301 to a *relative* location — no
+# internal port, no scheme — so they work from behind the tunnel where
+# port 9006 isn't published. This is the exact route form the internet-
+# facing acceptance criteria use.
+for path in /quiz /exam /cheat-sheet /framework /privacy; do
+    location=$(curl -sS -o /dev/null -D - -H "Host: ${DOMAIN}" "http://127.0.0.1${path}" | tr -d '\r' | awk -F': ' 'tolower($1)=="location"{print $2}')
+    code=$(curl -sS -o /dev/null -w '%{http_code}' -H "Host: ${DOMAIN}" "http://127.0.0.1${path}")
+    if [ "$code" != "301" ]; then
+        echo "[smoke] FAIL: GET ${path} (bare) returned ${code} (expected 301)"
+        fail=1
+    elif [[ "$location" == *":9006"* ]] || [[ "$location" == http://* ]]; then
+        echo "[smoke] FAIL: GET ${path} (bare) redirected to '${location}' (leaks internal port or wrong scheme)"
+        fail=1
+    else
+        echo "[smoke] PASS: GET ${path} (bare) -> 301 Location: ${location}"
+    fi
+done
+
 if [ "$fail" -ne 0 ]; then
     docker logs --tail 50 "$SERVICE_NAME" 2>&1
     exit 1

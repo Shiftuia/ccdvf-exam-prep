@@ -36,8 +36,8 @@ RUN rm -rf /usr/share/nginx/html/* \
 COPY nginx.conf /etc/nginx/nginx.conf
 COPY --from=build /app/dist /usr/share/nginx/html
 
-# Listen on 9006 (unprivileged, non-root, no CAP_NET_BIND_SERVICE needed).
-RUN sed -i 's/user  nginx;//' /etc/nginx/nginx.conf 2>/dev/null || true
+# Listen on 9006 (unprivileged, non-root, no CAP_NET_BIND_SERVICE needed) —
+# nginx.conf has no `user` directive, so there's nothing to strip here.
 
 EXPOSE 9006
 
