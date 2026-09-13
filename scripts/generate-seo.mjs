@@ -9,7 +9,10 @@ import { dirname, resolve } from 'node:path';
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const publicDir = resolve(__dirname, '..', 'public');
 
-const siteUrl = (process.env.VITE_SITE_URL || 'https://shiftuia.github.io/ccdvf-exam-prep').replace(/\/$/, '');
+// See generate-html.mjs: GitHub's `repository_owner` keeps the account's display
+// casing, but Pages serves from the lowercase host, so normalise the origin.
+const lowercaseOrigin = (url) => url.replace(/^(https?:\/\/)([^/]+)/i, (_, scheme, host) => scheme + host.toLowerCase());
+const siteUrl = lowercaseOrigin((process.env.VITE_SITE_URL || 'https://shiftuia.github.io/ccdvf-exam-prep').replace(/\/$/, ''));
 const navBase = (process.env.VITE_NAV_BASE || '').replace(/\/$/, '');
 const base = `${siteUrl}`;
 // navBase is already part of siteUrl's path when set (both derive from the

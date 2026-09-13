@@ -13,7 +13,12 @@ import { routes } from './routes.mjs';
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const root = resolve(__dirname, '..');
 
-const siteUrl = (process.env.VITE_SITE_URL || 'https://shiftuia.github.io/ccdvf-exam-prep').replace(/\/$/, '');
+// Lowercase the origin: GitHub's `repository_owner` preserves the account's
+// display casing (e.g. `Shiftuia`), but Pages serves from the lowercase host.
+// Canonical/OG/sitemap URLs must be the exact strings crawlers and social
+// scrapers fetch, so normalise the host while leaving the path case intact.
+const lowercaseOrigin = (url) => url.replace(/^(https?:\/\/)([^/]+)/i, (_, scheme, host) => scheme + host.toLowerCase());
+const siteUrl = lowercaseOrigin((process.env.VITE_SITE_URL || 'https://shiftuia.github.io/ccdvf-exam-prep').replace(/\/$/, ''));
 const ogImage = `${siteUrl}/og/ccdv-f.png`;
 
 const dirFor = (routePath) => (routePath === '/' ? '.' : routePath.replace(/^\//, '').replace(/\/$/, ''));
