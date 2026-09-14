@@ -28,7 +28,7 @@ const dirFor = (routePath) => (routePath === '/' ? '.' : routePath.replace(/^\//
 // ~/services/_scripts/README.md). Script/endpoint names are the renamed
 // (non-default) Umami paths configured on the metrics service to reduce
 // common ad-block filter hits — not a guaranteed bypass.
-const UMAMI_WEBSITE_ID = '8f9343a1-c7f8-453d-8aef-b24291cf9d13';
+const UMAMI_WEBSITE_ID = '87e83658-c9c5-4cb4-959d-9b5333dccc2f';
 const umamiSnippet = `<script defer src="https://metrics.shiftuia.com/hs.js" data-website-id="${UMAMI_WEBSITE_ID}"></script>`;
 
 for (const route of routes) {
