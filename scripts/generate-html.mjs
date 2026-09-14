@@ -25,7 +25,7 @@ const dirFor = (routePath) => (routePath === '/' ? '.' : routePath.replace(/^\//
 
 // First-party Umami analytics counter, mandatory on every public-facing
 // thinkcentre site per the umami-deployment convention (see
-// ~/services/_scripts/README.md). Script/endpoint names are the renamed
+// ~/dev/services/_scripts/README.md). Script/endpoint names are the renamed
 // (non-default) Umami paths configured on the metrics service to reduce
 // common ad-block filter hits — not a guaranteed bypass.
 const UMAMI_WEBSITE_ID = '87e83658-c9c5-4cb4-959d-9b5333dccc2f';

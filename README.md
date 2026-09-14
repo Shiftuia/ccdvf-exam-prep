@@ -38,8 +38,8 @@ as a "long-lived server start" — `build` then `create`+`start`, or
 `8f9343a1-c7f8-453d-8aef-b24291cf9d13`, tracker script
 `https://metrics.shiftuia.com/hs.js`) on all six routes, injected by
 `scripts/generate-html.mjs` at build time — see the umami-deployment
-convention documented in `~/services/_scripts/README.md` and
-`~/services/umami/README.md`. No other tracking/telemetry.
+convention documented in `~/dev/services/_scripts/README.md` and
+`~/dev/services/umami/README.md`. No other tracking/telemetry.
 
 Internal container port 9006, not published to the host — Traefik reaches it
 over the shared `proxy` docker network only. `GET /health` returns
