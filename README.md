@@ -73,8 +73,9 @@ browser already navigates directly.
   and the security headers are repeated per-location, not declared once at
   server level).
 - Security headers on every response: `Content-Security-Policy` (`default-
-  src 'self'`, no `unsafe-eval`, `connect-src 'none'` since the app makes no
-  network calls, `style-src 'self' 'unsafe-inline'` only for Vite's inlined
+  src 'self'`, no `unsafe-eval`, and only `metrics.shiftuia.com` permitted
+  in `script-src`/`connect-src` for the documented Umami tracker; `style-src
+  'self' 'unsafe-inline'` only for Vite's inlined
   `<style>` bootstrap tag), `X-Content-Type-Options: nosniff`,
   `X-Frame-Options: DENY`, `Referrer-Policy: strict-origin-when-cross-
   origin`, `Permissions-Policy` denying camera/microphone/geolocation.
