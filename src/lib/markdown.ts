@@ -16,6 +16,13 @@ function renderInline(text: string): string {
   return out;
 }
 
+export function slugify(text: string): string {
+  return text
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, '-')
+    .replace(/^-+|-+$/g, '');
+}
+
 function renderTable(lines: string[]): string {
   // lines[0] = header row, lines[1] = alignment row, lines[2..] = body rows
   const splitRow = (line: string) =>
@@ -79,7 +86,8 @@ export function renderMarkdown(source: string): string {
       flushParagraph();
       flushList();
       const level = heading[1].length;
-      html.push(`<h${level}>${renderInline(heading[2])}</h${level}>`);
+      const id = slugify(heading[2]);
+      html.push(`<h${level}${level <= 3 && id ? ` id="${id}"` : ''}>${renderInline(heading[2])}</h${level}>`);
       i += 1;
       continue;
     }

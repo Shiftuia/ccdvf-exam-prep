@@ -18,9 +18,8 @@ COPY . .
 # Root-served on a custom domain: no path prefix needed for nav links.
 ENV VITE_NAV_BASE=
 ENV VITE_SITE_URL=https://anthropic-quiz.shiftuia.com
-# App makes zero network calls in production — both optional HTTP adapters
-# stay no-ops. This is a deliberate security property, not a placeholder.
-ENV VITE_RESULTS_ADAPTER=noop
+# App makes zero network calls in production. There is no results adapter in
+# the code at all; the email adapter stays a no-op.
 ENV VITE_EMAIL_ADAPTER=noop
 
 RUN npm run build

@@ -16,9 +16,13 @@ export const examMeta = {
   maxScaledScore: domainsDoc.maxScaledScore,
 };
 
+export const contentVersion = `${questionsDoc.schemaVersion}-${questionsDoc.generatedAt}`;
+export const contentGeneratedAt = questionsDoc.generatedAt as string;
+
 export const domains: Domain[] = parsedDomains.domains.map((domain) => ({
   id: domain.id,
   name: domain.name,
+  weightPercent: domain.weightPercent,
   questionCount: domain.questionCount,
 }));
 

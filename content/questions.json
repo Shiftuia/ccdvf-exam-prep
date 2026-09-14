@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-09-12",
+  "generatedAt": "2026-09-14",
   "questions": [
     {
       "id": "q-understanding-requirements-01",
@@ -44,7 +44,7 @@
       "subSkillId": "understanding-requirements",
       "type": "multi",
       "difficulty": "medium",
-      "stem": "A team must reduce support handling time while keeping responses safe and affordable. Which statements are valid requirements rather than design decisions? Select all that apply.",
+      "stem": "A team must reduce support handling time while keeping responses safe and affordable. Which statements are valid requirements rather than design decisions? Select THREE.",
       "options": [
         {
           "id": "a",
@@ -158,7 +158,7 @@
       "subSkillId": "claude-api-mechanics",
       "type": "multi",
       "difficulty": "hard",
-      "stem": "An app receives HTTP 200 from the Messages API. Which response conditions still require application-specific handling rather than treating the call as a completed answer? Select all that apply.",
+      "stem": "An app receives HTTP 200 from the Messages API. Which response conditions still require application-specific handling rather than treating the call as a completed answer? Select THREE.",
       "options": [
         {
           "id": "a",
@@ -344,7 +344,7 @@
       "subSkillId": "sw-eng-foundations",
       "type": "multi",
       "difficulty": "medium",
-      "stem": "A service launches 2,000 independent model calls at once and receives many 429s. Which changes are appropriate? Select all that apply.",
+      "stem": "A service launches 2,000 independent model calls at once and receives many 429s. Which changes are appropriate? Select THREE.",
       "options": [
         {
           "id": "a",
@@ -494,7 +494,7 @@
       "subSkillId": "claude-app-design",
       "type": "multi",
       "difficulty": "hard",
-      "stem": "A product team is selecting techniques for a large, frequently changing knowledge base. Which statements are correct? Select all that apply.",
+      "stem": "A product team is selecting techniques for a large, frequently changing knowledge base. Which statements are correct? Select THREE.",
       "options": [
         {
           "id": "a",
@@ -824,7 +824,7 @@
       "subSkillId": "tech-fundamentals",
       "type": "multi",
       "difficulty": "hard",
-      "stem": "A retrieval system has weak ranking quality. Which changes are sound? Select all that apply.",
+      "stem": "A retrieval system has weak ranking quality. Which changes are sound? Select THREE.",
       "options": [
         {
           "id": "a",
@@ -902,7 +902,7 @@
       "subSkillId": "cost-token-management",
       "type": "multi",
       "difficulty": "medium",
-      "stem": "A nightly job processes many independent records with a large shared rubric. Which choices reduce cost without sacrificing the offline requirement? Select all that apply.",
+      "stem": "A nightly job processes many independent records with a large shared rubric. Which choices reduce cost without sacrificing the offline requirement? Select THREE.",
       "options": [
         {
           "id": "a",
@@ -1124,7 +1124,7 @@
       "subSkillId": "agent-architecture",
       "type": "multi",
       "difficulty": "hard",
-      "stem": "What belongs in every prompt to a context-isolated research subagent? Select all that apply.",
+      "stem": "What belongs in every prompt to a context-isolated research subagent? Select TWO.",
       "options": [
         {
           "id": "a",
@@ -1592,7 +1592,7 @@
       "subSkillId": "tool-implementation",
       "type": "multi",
       "difficulty": "hard",
-      "stem": "A create_transfer client tool can move money. Its input carries an action field plus account and amount details. Which implementation controls are required to reject malformed or unauthorized calls before a transfer is made? Select all that apply.",
+      "stem": "A create_transfer client tool can move money. Its input carries an action field plus account and amount details. Which implementation controls are required to reject malformed or unauthorized calls before a transfer is made? Select THREE.",
       "options": [
         {
           "id": "a",
@@ -1736,7 +1736,7 @@
       "subSkillId": "mcp-development",
       "type": "multi",
       "difficulty": "medium",
-      "stem": "A remote server exposes read_issue and delete_issue; only read_issue may be available through the Messages API connector. Select all correct principles.",
+      "stem": "A remote server exposes read_issue and delete_issue; only read_issue may be available through the Messages API connector. Select THREE correct principles.",
       "options": [
         {
           "id": "a",
@@ -1808,7 +1808,7 @@
       "subSkillId": "ai-app-security",
       "type": "multi",
       "difficulty": "hard",
-      "stem": "A browser agent reads untrusted pages and can change tickets. Which defense-in-depth controls help? Select all that apply.",
+      "stem": "A browser agent reads untrusted pages and can change tickets. Which defense-in-depth controls help? Select THREE.",
       "options": [
         {
           "id": "a",

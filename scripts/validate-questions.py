@@ -57,6 +57,56 @@ def is_nonempty_string(value):
     return isinstance(value, str) and bool(value.strip())
 
 
+NUMBER_WORDS = {"ONE": 1, "TWO": 2, "THREE": 3, "FOUR": 4, "FIVE": 5}
+STATED_COUNT = re.compile(r"\bSelect\s+(ONE|TWO|THREE|FOUR|FIVE)\b")
+# df=3, alpha=0.05. A skewed bank (correct answer clustered on one letter)
+# is the classic failure mode of generated question sets, so it fails the
+# build rather than being caught in review.
+CHI2_LIMIT = 7.81
+LONGEST_FAIL = 0.35
+LONGEST_WARN = 0.30
+
+
+def position_chi_square(questions):
+    """Chi-square of the correct option's index over 4-option single-answer items."""
+    counts = Counter()
+    total = 0
+    for question in questions:
+        if question.get("type") != "single":
+            continue
+        options = question.get("options")
+        if not isinstance(options, list) or len(options) != 4:
+            continue
+        for index, option in enumerate(options):
+            if isinstance(option, dict) and option.get("correct") is True:
+                counts[index] += 1
+                total += 1
+                break
+    if total == 0:
+        return 0.0, counts, 0
+    expected = total / 4
+    chi2 = sum((counts[index] - expected) ** 2 / expected for index in range(4))
+    return chi2, counts, total
+
+
+def longest_correct_share(questions):
+    """Share of items whose (single) longest option is the correct one."""
+    hits = 0
+    total = 0
+    for question in questions:
+        options = question.get("options")
+        if not isinstance(options, list) or not options:
+            continue
+        if not all(isinstance(o, dict) and is_nonempty_string(o.get("text")) for o in options):
+            continue
+        total += 1
+        longest = max(len(o["text"]) for o in options)
+        winners = [o for o in options if len(o["text"]) == longest]
+        if len(winners) == 1 and winners[0].get("correct") is True:
+            hits += 1
+    return (hits / total if total else 0.0), hits, total
+
+
 def validate(questions_doc, domains_doc, raw_questions):
     errors = []
     def error(message):
@@ -237,6 +287,14 @@ def validate(questions_doc, domains_doc, raw_questions):
             error(f"{label} ({question_id}): single requires exactly one correct option; found {correct_count}")
         if question.get("type") == "multi" and (correct_count < 2 or correct_count == len(options)):
             error(f"{label} ({question_id}): multi requires at least two correct and at least one incorrect option; found {correct_count}")
+        if question.get("type") == "multi" and isinstance(stem, str) and stem.strip():
+            stated = STATED_COUNT.search(stem)
+            if not stated:
+                error(f"{label} ({question_id}): multi stem must state how many to pick (e.g. 'Select TWO.')")
+            elif NUMBER_WORDS[stated.group(1)] != correct_count:
+                error(
+                    f"{label} ({question_id}): stem says Select {stated.group(1)} but {correct_count} options are correct"
+                )
 
     for domain_id, expected in EXPECTED_DOMAIN_COUNTS.items():
         if actual_domains[domain_id] != expected:
@@ -244,6 +302,13 @@ def validate(questions_doc, domains_doc, raw_questions):
     for subskill_id, expected in EXPECTED_SUBSKILL_COUNTS.items():
         if actual_subskills[subskill_id] != expected:
             error(f"questions: sub-skill {subskill_id!r} requires {expected} items; found {actual_subskills[subskill_id]}")
+
+    chi2, _counts, chi2_items = position_chi_square(questions)
+    if chi2_items and chi2 > CHI2_LIMIT:
+        error(f"questions: correct-answer position is biased (chi2={chi2:.2f} over {chi2_items} items, limit {CHI2_LIMIT})")
+    share, hits, share_items = longest_correct_share(questions)
+    if share_items and share > LONGEST_FAIL:
+        error(f"questions: correct answer is the longest option in {hits}/{share_items} items ({share:.0%}, limit {LONGEST_FAIL:.0%})")
     return errors
 
 
@@ -273,6 +338,12 @@ def main():
     print("SUBSKILLS=" + ", ".join(f"{key}:{count}" for key, count in sorted(Counter(q['subSkillId'] for q in questions).items())))
     print("TYPES=" + ", ".join(f"{key}:{count}" for key, count in sorted(Counter(q['type'] for q in questions).items())))
     print("DIFFICULTIES=" + ", ".join(f"{key}:{count}" for key, count in sorted(Counter(q['difficulty'] for q in questions).items())))
+    chi2, counts, chi2_items = position_chi_square(questions)
+    share, hits, share_items = longest_correct_share(questions)
+    print(f"POSITION_CHI2={chi2:.2f} limit={CHI2_LIMIT} items={chi2_items} distribution=" + ",".join(str(counts[i]) for i in range(4)))
+    print(f"LONGEST_CORRECT={share:.0%} ({hits}/{share_items}) warn={LONGEST_WARN:.0%} fail={LONGEST_FAIL:.0%}")
+    if share > LONGEST_WARN:
+        print(f"WARNING: correct answer is the longest option in {share:.0%} of items (warn threshold {LONGEST_WARN:.0%})")
     return 0
 
 

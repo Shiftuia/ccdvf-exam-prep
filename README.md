@@ -5,8 +5,12 @@ Claude certification practice exam material (53 questions, 6 pages: home,
 `/quiz`, `/exam`, `/framework`, `/cheat-sheet`, `/privacy`). Served here by
 nginx as a hardened container. Zero backend, zero database, zero user input
 ever reaching the server — this is a deliberate security property, not an
-accident: the app's own HTTP adapters (`VITE_RESULTS_ADAPTER`,
-`VITE_EMAIL_ADAPTER`) are built as no-ops.
+accident: there is no results adapter at all (quiz answers have no code path
+that could send them anywhere), and the one remaining HTTP adapter
+(`VITE_EMAIL_ADAPTER`, mailing list) is built as a no-op unless explicitly
+set to `http` with `VITE_API_ENDPOINT`. Turning it on would make the site
+collect personal data and requires `/privacy` to be updated in the same
+change.
 
 Source and site code live in this same repo (moved here from
 `~/repos/ccdvf-exam-prep`, same git remote) — a static site under a service
