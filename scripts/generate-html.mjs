@@ -23,6 +23,14 @@ const ogImage = `${siteUrl}/og/ccdv-f.png`;
 
 const dirFor = (routePath) => (routePath === '/' ? '.' : routePath.replace(/^\//, '').replace(/\/$/, ''));
 
+// First-party Umami analytics counter, mandatory on every public-facing
+// thinkcentre site per the umami-deployment convention (see
+// ~/services/_scripts/README.md). Script/endpoint names are the renamed
+// (non-default) Umami paths configured on the metrics service to reduce
+// common ad-block filter hits — not a guaranteed bypass.
+const UMAMI_WEBSITE_ID = '8f9343a1-c7f8-453d-8aef-b24291cf9d13';
+const umamiSnippet = `<script defer src="https://metrics.shiftuia.com/hs.js" data-website-id="${UMAMI_WEBSITE_ID}"></script>`;
+
 for (const route of routes) {
   const canonical = `${siteUrl}${route.path}`;
   const jsonLd = {
@@ -53,6 +61,7 @@ for (const route of routes) {
 <meta name="twitter:title" content="${route.title}"/>
 <meta name="twitter:description" content="${route.description}"/>
 <script type="application/ld+json">${JSON.stringify(jsonLd)}</script>
+${umamiSnippet}
 </head><body><div id="app"></div><script type="module" src="/src/main.ts"></script></body></html>`;
   const target = resolve(root, dirFor(route.path), 'index.html');
   writeFileSync(target, html);
