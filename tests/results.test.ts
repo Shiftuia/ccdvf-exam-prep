@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import { answeredQuestions, domainOutcomes, missedQuestions, sampleQuickCheck } from '../src/lib/results';
+import { answeredQuestions, domainOutcomes, missedQuestions, sampleQuickCheck, scopedQuestions } from '../src/lib/results';
 import { cheatSheetAnchor, cheatSheetHeadings } from '../src/lib/study-links';
 import { renderMarkdown, slugify } from '../src/lib/markdown';
 import { cheatSheetPage } from '../src/content/pages';
@@ -73,6 +73,45 @@ describe('review filtering', () => {
 
   it('reports which questions the user actually answered', () => {
     expect(answeredQuestions(bank, answers).map((q) => q.id)).toEqual(['a', 'b']);
+  });
+});
+
+describe('partial quick check', () => {
+  const bank = [item('h-0', 'heavy'), item('h-1', 'heavy'), item('l-0', 'light')];
+
+  it('ranks only the domains the user actually answered', () => {
+    const answers = { 'h-0': ['b'] };
+    const scoped = scopedQuestions(bank, answers, 'answered');
+    expect(scoped.map((q) => q.id)).toEqual(['h-0']);
+    const ranked = domainOutcomes(scoped, answers, testDomains);
+    expect(ranked.map((o) => o.id)).toEqual(['heavy']);
+    expect(ranked[0].total).toBe(1);
+    expect(ranked[0].missed).toBe(1);
+  });
+
+  it('never reports an untouched domain as a weakness', () => {
+    const answers = { 'h-0': ['a'] };
+    const ranked = domainOutcomes(scopedQuestions(bank, answers, 'answered'), answers, testDomains);
+    expect(ranked.some((o) => o.id === 'light')).toBe(false);
+  });
+
+  it('leaves the full set untouched when scope is all', () => {
+    expect(scopedQuestions(bank, { 'h-0': ['a'] }, 'all')).toHaveLength(3);
+  });
+});
+
+describe('partial quick check on the real bank', () => {
+  it('ranks only answered domains for a 3-of-8 attempt', () => {
+    const sample = sampleQuickCheck(questions, domains, () => 0);
+    expect(sample).toHaveLength(8);
+    const answers: Record<string, string[]> = {};
+    for (const picked of sample.slice(0, 3)) answers[picked.id] = [picked.options[0].id];
+    const scoped = scopedQuestions(sample, answers, 'answered');
+    expect(scoped).toHaveLength(3);
+    const ranked = domainOutcomes(scoped, answers, domains);
+    expect(ranked).toHaveLength(3);
+    expect(new Set(ranked.map((o) => o.id))).toEqual(new Set(sample.slice(0, 3).map((q) => q.domainId)));
+    for (const outcome of ranked) expect(outcome.total).toBe(1);
   });
 });
 

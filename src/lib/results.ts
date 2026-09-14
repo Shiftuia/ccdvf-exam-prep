@@ -41,6 +41,17 @@ export function answeredQuestions(questions: Question[], answers: Record<string,
   return questions.filter((question) => (answers[question.id] || []).length > 0);
 }
 
+// A partial attempt must be judged on answered items only: domainOutcomes counts
+// an unanswered question as missed, so scoping to the whole set would send the
+// user to study domains they never reached.
+export function scopedQuestions(
+  questions: Question[],
+  answers: Record<string, string[]>,
+  scope: 'all' | 'answered'
+): Question[] {
+  return scope === 'answered' ? answeredQuestions(questions, answers) : questions;
+}
+
 // One item per domain, medium first so the sampler leans on representative
 // items rather than the easiest or the hardest in each domain.
 export function sampleQuickCheck(

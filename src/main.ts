@@ -4,7 +4,7 @@ import { certifications } from './data/certifications';
 import { contentGeneratedAt, contentVersion, domains, examMeta, questions } from './data/questions';
 import { scaledScore, scoreAnswer, shuffleOptions } from './lib/quiz';
 import { attemptQuestions, createAttempt, loadAttempt, type Attempt, type AttemptMode } from './lib/attempt';
-import { domainOutcomes, missedQuestions, sampleQuickCheck, type DomainOutcome } from './lib/results';
+import { answeredQuestions, domainOutcomes, missedQuestions, sampleQuickCheck, scopedQuestions, type DomainOutcome } from './lib/results';
 import { cheatSheetAnchor } from './lib/study-links';
 import { cheatSheetPage, examOverviewPage, frameworkPage } from './content/pages';
 
@@ -143,8 +143,13 @@ function mountQuiz() {
       ? `<div class="verdict">${scoreAnswer(question.options, [...selected]) ? '<strong>✓ Correct.</strong> You got this one.' : '<strong>× Incorrect.</strong> Not this one — the explanations under each option say why.'}</div>`
       : '';
     const pacingMinutes = Math.round((total * PACING_SECONDS_PER_ITEM) / 60);
+    const answered = answeredQuestions(items, attempt.answers).length;
+    const partialExit =
+      quick && answered > 0 && answered < total
+        ? `<button class="link" id="finish-quick">See where to start now (${answered} of ${total} answered)</button>`
+        : '';
     root.innerHTML = shell(
-      `<section class="quiz"><p class="eyebrow">${quick ? 'Quick check' : 'Practice exam'} · Question ${attempt.index + 1} of ${total} · ${domainName}</p><progress value="${attempt.index + 1}" max="${total}"></progress><p id="timer" class="muted">${elapsedLabel(attempt.startedAt)}</p><p class="muted">Pacing guide: about ${pacingMinutes} minutes for these ${total} questions.</p><h1 id="question-heading" tabindex="-1">${question.stem}</h1><form id="question-form"><fieldset><legend class="visually-hidden">${question.stem}${question.type === 'multi' ? ` Select ${correctCount} options.` : ''}</legend>${question.type === 'multi' ? `<p>Select ${correctCount}.</p>` : ''}${choices}</fieldset><div id="reveal" aria-live="polite">${verdict}</div><div class="actions">${revealed ? `<button>${attempt.index === total - 1 ? 'See your results' : 'Next question'}</button>` : '<button disabled>Check answer</button>'}</div></form><div class="actions secondary-actions">${quick ? `<button class="link" id="switch-full">Take the full ${examMeta.itemCount}-question exam instead</button>` : ''}<button class="link" id="reset">Reset and start over</button></div></section>`
+      `<section class="quiz"><p class="eyebrow">${quick ? 'Quick check' : 'Practice exam'} · Question ${attempt.index + 1} of ${total} · ${domainName}</p><progress value="${attempt.index + 1}" max="${total}"></progress><p id="timer" class="muted">${elapsedLabel(attempt.startedAt)}</p><p class="muted">Pacing guide: about ${pacingMinutes} minutes for these ${total} questions.</p><h1 id="question-heading" tabindex="-1">${question.stem}</h1><form id="question-form"><fieldset><legend class="visually-hidden">${question.stem}${question.type === 'multi' ? ` Select ${correctCount} options.` : ''}</legend>${question.type === 'multi' ? `<p>Select ${correctCount}.</p>` : ''}${choices}</fieldset><div id="reveal" aria-live="polite">${verdict}</div><div class="actions">${revealed ? `<button>${attempt.index === total - 1 ? 'See your results' : 'Next question'}</button>` : '<button disabled>Check answer</button>'}</div></form><div class="actions secondary-actions">${partialExit}${quick ? `<button class="link" id="switch-full">Take the full ${examMeta.itemCount}-question exam instead</button>` : ''}<button class="link" id="reset">Reset and start over</button></div></section>`
     );
     const timer = document.querySelector('#timer')!;
     ticker = setInterval(() => (timer.textContent = elapsedLabel(attempt.startedAt)), 1000);
@@ -164,6 +169,7 @@ function mountQuiz() {
       focusHeading();
     });
     document.querySelector('#switch-full')?.addEventListener('click', () => begin('full'));
+    document.querySelector('#finish-quick')?.addEventListener('click', () => renderResults(attempt, 'answered'));
     document.querySelector('#reset')!.addEventListener('click', () => {
       localStorage.removeItem(storageKey);
       start();
@@ -188,16 +194,18 @@ function mountQuiz() {
     return `${missed.length ? `<h2>Review these first</h2><p class="muted">Ordered by what a miss costs you on the real exam — questions missed times that domain's published weight.</p><ol class="study-plan">${lines}</ol>` : '<h2>Nothing to review</h2><p>You answered every question in this set correctly.</p>'}${cleanLine}`;
   }
 
-  function renderResults(attempt: Attempt) {
+  function renderResults(attempt: Attempt, scope: 'all' | 'answered' = 'all') {
     stopTicker();
-    const items = attemptQuestions(attempt, questions);
+    const all = attemptQuestions(attempt, questions);
+    const items = scopedQuestions(all, attempt.answers, scope);
+    const partial = scope === 'answered' && items.length < all.length;
     const outcomes = domainOutcomes(items, attempt.answers, domains);
     const quick = attempt.mode === 'quick';
     const correct = items.filter((q) => scoreAnswer(q.options, attempt.answers[q.id] || [])).length;
     const score = scaledScore(correct, items.length);
     const passed = score >= examMeta.passScaledScore;
     const header = quick
-      ? `<h1>Where to start</h1><p class="disclaimer">A quick check is not a score. These ${items.length} questions — one per domain, drawn from the same ${examMeta.itemCount} — only point you at what to read first. They do not predict the real exam.</p>`
+      ? `<h1>Where to start</h1><p class="disclaimer">A quick check is not a score. ${partial ? `This is based only on the ${items.length} of ${all.length} questions you answered — the domains you haven't reached yet aren't judged here.` : `These ${items.length} questions — one per domain, drawn from the same ${examMeta.itemCount} — only point you at what to read first.`} It does not predict the real exam.</p>`
       : `<h1>${passed ? "You'd have passed this one." : 'Not there yet.'}</h1><p>${score} out of ${examMeta.maxScaledScore} on this practice set. The real exam passes at ${examMeta.passScaledScore}${passed ? '.' : " — here's where the gaps are."}</p><p class="muted">This is a practice set, not a predictor. The real exam is scaled and equated; this number is just your percentage, weighted by domain.</p>`;
     const emailSection = quick
       ? ''
@@ -205,13 +213,17 @@ function mountQuiz() {
         ? `<h2>Want the next one?</h2><p>I'm writing practice sets for the other three Claude certifications. Leave an email and I'll send one message when the next one is live. Nothing else, ever.</p><form id="email-form"><label>Email <input type="email" required placeholder="you@example.com"></label><label><input type="checkbox" required> Email me when a new practice exam goes up. I can unsubscribe from any message.</label><button>Send it to me</button><p id="email-message" aria-live="polite"></p></form><p class="muted">Your email is stored for this one purpose and nothing else. No tracking, no sharing, no other mail.</p>`
         : `<h2>Want the next one?</h2><p class="muted">The mailing list isn't wired up yet for this launch — the practice exam itself is complete and free either way. Check back once the next certification set is ready.</p>`;
     const nextStep = quick
-      ? `<div class="actions"><button id="go-full">Take the full ${examMeta.itemCount}-question exam</button></div>`
+      ? `<div class="actions">${partial ? `<button id="resume-quick">Finish the remaining ${all.length - items.length} quick-check questions</button>` : ''}<button id="go-full"${partial ? ' class="secondary"' : ''}>Take the full ${examMeta.itemCount}-question exam</button></div>`
       : '';
     root.innerHTML = shell(
       `<section class="quiz results">${header}${studyPlan(outcomes)}${nextStep}<p><button class="link" id="review-missed">Review the questions you missed</button></p>${emailSection}<button class="link" id="retake">${quick ? 'Clear this quick check' : 'Retake the exam'}</button></section>`
     );
-    document.querySelector('#review-missed')!.addEventListener('click', () => renderReview(attempt, 'missed'));
+    document.querySelector('#review-missed')!.addEventListener('click', () => renderReview(attempt, 'missed', scope));
     document.querySelector('#go-full')?.addEventListener('click', () => begin('full'));
+    document.querySelector('#resume-quick')?.addEventListener('click', () => {
+      renderQuestion(attempt);
+      focusHeading();
+    });
     if (EMAIL_LIVE && !quick) {
       document.querySelector('#email-form')!.addEventListener('submit', async (e) => {
         e.preventDefault();
@@ -237,9 +249,9 @@ function mountQuiz() {
     });
   }
 
-  function renderReview(attempt: Attempt, scope: 'missed' | 'all') {
+  function renderReview(attempt: Attempt, scope: 'missed' | 'all', itemScope: 'all' | 'answered' = 'all') {
     stopTicker();
-    const all = attemptQuestions(attempt, questions);
+    const all = scopedQuestions(attemptQuestions(attempt, questions), attempt.answers, itemScope);
     const missed = missedQuestions(all, attempt.answers);
     const shown = scope === 'missed' ? missed : all;
     const byDomain = domains
@@ -266,14 +278,15 @@ function mountQuiz() {
       shown.length === 0
         ? '<p>Nothing to show here — you answered every question in this set correctly.</p>'
         : '';
+    const noun = itemScope === 'answered' ? 'answered questions' : 'questions';
     root.innerHTML = shell(
-      `<section class="quiz review"><h1 id="review-heading" tabindex="-1">${scope === 'missed' ? 'What you missed' : 'Full review'}</h1><p class="muted">${scope === 'missed' ? `${missed.length} of ${all.length} questions, grouped by domain, with the reasoning behind every option.` : `All ${all.length} questions, grouped by domain.`}</p><div class="actions"><button class="link" id="toggle-scope">${scope === 'missed' ? `Show all ${all.length} questions` : 'Show only what I missed'}</button></div>${empty}${byDomain}<button class="link" id="back-to-results">Back to results</button></section>`
+      `<section class="quiz review"><h1 id="review-heading" tabindex="-1">${scope === 'missed' ? 'What you missed' : 'Full review'}</h1><p class="muted">${scope === 'missed' ? `${missed.length} of ${all.length} ${noun}, grouped by domain, with the reasoning behind every option.` : `All ${all.length} ${noun}, grouped by domain.`}</p><div class="actions"><button class="link" id="toggle-scope">${scope === 'missed' ? `Show all ${all.length} ${noun}` : 'Show only what I missed'}</button></div>${empty}${byDomain}<button class="link" id="back-to-results">Back to results</button></section>`
     );
     document.querySelector<HTMLElement>('#review-heading')?.focus();
     document
       .querySelector('#toggle-scope')!
-      .addEventListener('click', () => renderReview(attempt, scope === 'missed' ? 'all' : 'missed'));
-    document.querySelector('#back-to-results')!.addEventListener('click', () => renderResults(attempt));
+      .addEventListener('click', () => renderReview(attempt, scope === 'missed' ? 'all' : 'missed', itemScope));
+    document.querySelector('#back-to-results')!.addEventListener('click', () => renderResults(attempt, itemScope));
   }
 
   resume();
