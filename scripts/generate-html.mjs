@@ -29,7 +29,7 @@ const dirFor = (routePath) => (routePath === '/' ? '.' : routePath.replace(/^\//
 // (non-default) Umami paths configured on the metrics service to reduce
 // common ad-block filter hits — not a guaranteed bypass.
 const UMAMI_WEBSITE_ID = '87e83658-c9c5-4cb4-959d-9b5333dccc2f';
-const umamiSnippet = `<script defer src="https://metrics.shiftuia.com/hs.js" data-website-id="${UMAMI_WEBSITE_ID}"></script>`;
+const umamiSnippet = `<script defer src="https://metrics.shiftuia.com/hs.js" data-website-id="${UMAMI_WEBSITE_ID}" data-domains="anthropic-quiz.shiftuia.com"></script>`;
 
 for (const route of routes) {
   const canonical = `${siteUrl}${route.path}`;
