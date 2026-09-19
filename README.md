@@ -30,9 +30,21 @@ as a "long-lived server start" — `build` then `create`+`start`, or
 
 **Reachable at:**
 - LAN: http://anthropic-quiz.thinkcentre.local (via Traefik + avahi mDNS)
-- Public: https://anthropic-quiz.shiftuia.com (via a Cloudflare Tunnel —
-  set up in a separate task; the Traefik router for this hostname already
-  exists here so the tunnel just needs to forward to Traefik)
+- Public: https://anthropic-quiz.shiftuia.com (via the thinkcentre Cloudflare
+  Tunnel — `~/dev/services/_maintenance/cloudflared` — forwarding to Traefik)
+
+**Deployment:** self-hosted only. GitHub Pages was a temporary fallback
+during the Cloudflare Tunnel rollout and has been decommissioned
+(`.github/workflows/pages.yml` removed, Pages disabled in repo settings,
+`shiftuia.github.io/ccdvf-exam-prep/` 404s). There is no
+`blueprint.holyshifted.com` deployment — that custom domain never went live
+and is not part of this service. To ship a content or code change:
+```
+docker compose build
+docker compose rm -f anthropic-quiz && docker compose create anthropic-quiz && docker start anthropic-quiz
+./smoke_test.sh
+```
+See "Rebuilding after content changes" below for the content-only case.
 
 **Analytics:** carries the mandatory first-party Umami counter (website id
 `8f9343a1-c7f8-453d-8aef-b24291cf9d13`, tracker script
