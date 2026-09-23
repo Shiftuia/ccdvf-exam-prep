@@ -60,6 +60,9 @@ for (const route of routes) {
 <meta name="twitter:site" content="@holyshifted"/>
 <meta name="twitter:title" content="${route.title}"/>
 <meta name="twitter:description" content="${route.description}"/>
+<link rel="icon" href="/favicon.svg" type="image/svg+xml"/>
+<link rel="icon" href="/favicon.ico" sizes="any"/>
+<link rel="apple-touch-icon" href="/apple-touch-icon.png"/>
 <script type="application/ld+json">${JSON.stringify(jsonLd)}</script>
 ${umamiSnippet}
 </head><body><div id="app"></div><script type="module" src="/src/main.ts"></script></body></html>`;
