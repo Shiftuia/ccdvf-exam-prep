@@ -7,8 +7,8 @@ services:
       - TZ=Asia/Jerusalem
     # Fully static site, zero user input reaching the server (deliberate
     # security property, see _catalog.yaml). No .env, no bind mounts, no
-    # docker socket, no host-published port -- Traefik reaches it over the
-    # `proxy` network only.
+    # docker socket, no host-published port -- Traefik reaches it over its
+    # own network only.
     user: "101:101"
     read_only: true
     tmpfs:
@@ -20,9 +20,10 @@ services:
     cap_drop:
       - ALL
     networks:
-      - proxy
+      - anthropic-quiz
     labels:
       - "traefik.enable=true"
+      - "traefik.docker.network=anthropic-quiz"
       # LAN access, same as every other service.
       - "traefik.http.routers.anthropic-quiz-lan.rule=Host(`anthropic-quiz.thinkcentre.local`)"
       - "traefik.http.routers.anthropic-quiz-lan.entrypoints=web"
@@ -36,5 +37,6 @@ services:
       - "traefik.http.services.anthropic-quiz.loadbalancer.healthcheck.interval=30s"
 
 networks:
-  proxy:
-    external: true
+  anthropic-quiz:
+    name: anthropic-quiz
+    driver: bridge
