@@ -25,7 +25,8 @@ services:
       - "traefik.enable=true"
       - "traefik.docker.network=anthropic-quiz"
       # LAN access, same as every other service.
-      - "traefik.http.routers.anthropic-quiz-lan.rule=Host(`anthropic-quiz.thinkcentre.local`)"
+      # TODO: drop thinkcentre.local after 2026-12-01
+      - "traefik.http.routers.anthropic-quiz-lan.rule=Host(`anthropic-quiz.homeserver.local`) || Host(`anthropic-quiz.thinkcentre.local`)"
       - "traefik.http.routers.anthropic-quiz-lan.entrypoints=web"
       # Public hostname -- what the Cloudflare Tunnel targets (tunnel is set
       # up in a separate task; this router just needs to exist so Traefik

@@ -29,7 +29,7 @@ as a "long-lived server start" — `build` then `create`+`start`, or
 `stop && rm -f && create && start`, are the reliable equivalents used here.)
 
 **Reachable at:**
-- LAN: http://anthropic-quiz.thinkcentre.local (via Traefik + avahi mDNS)
+- LAN: http://anthropic-quiz.homeserver.local (compatibility alias http://anthropic-quiz.thinkcentre.local via Traefik + avahi mDNS)
 - Public: https://anthropic-quiz.shiftuia.com (via the thinkcentre Cloudflare
   Tunnel — `~/dev/services/_maintenance/cloudflared` — forwarding to Traefik)
 
