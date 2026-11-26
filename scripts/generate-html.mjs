@@ -31,6 +31,12 @@ const dirFor = (routePath) => (routePath === '/' ? '.' : routePath.replace(/^\//
 const UMAMI_WEBSITE_ID = '87e83658-c9c5-4cb4-959d-9b5333dccc2f';
 const umamiSnippet = `<script defer src="https://metrics.shiftuia.com/hs.js" data-website-id="${UMAMI_WEBSITE_ID}" data-domains="anthropic-quiz.shiftuia.com"></script>`;
 
+// Above-the-fold support link pointing to the single entry point
+// https://shiftuia.com/support (see ~/dev/services/_scripts/README.md).
+// Placed outside #app so main.ts re-renders never wipe it; inline SVG +
+// inline styles keep the strict CSP unchanged (no third-party origins).
+const supportBarSnippet = `<div style="display:flex;justify-content:flex-end;align-items:center;padding:6px 24px;background:#f6f4ef;border-bottom:1px solid #dcd7cc;font:400 13px/1.2 -apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif"><a href="https://shiftuia.com/support" rel="noopener" data-umami-event="support-click" data-umami-event-placement="quiz-topbar" style="display:inline-flex;align-items:center;gap:6px;padding:4px 10px;border:1px solid #dcd7cc;border-radius:999px;background:#ffffff;color:#1f5c5a;text-decoration:none;font-weight:500"><svg aria-hidden="true" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 8h1a4 4 0 1 1 0 8h-1"/><path d="M3 8h14v9a4 4 0 0 1-4 4H7a4 4 0 0 1-4-4Z"/><line x1="6" y1="2" x2="6" y2="4"/><line x1="10" y1="2" x2="10" y2="4"/><line x1="14" y1="2" x2="14" y2="4"/></svg>Support the author</a></div>`;
+
 for (const route of routes) {
   const canonical = `${siteUrl}${route.path}`;
   const jsonLd = {
@@ -65,7 +71,7 @@ for (const route of routes) {
 <link rel="apple-touch-icon" href="/apple-touch-icon.png"/>
 <script type="application/ld+json">${JSON.stringify(jsonLd)}</script>
 ${umamiSnippet}
-</head><body><div id="app"></div><script type="module" src="/src/main.ts"></script></body></html>`;
+</head><body>${supportBarSnippet}<div id="app"></div><script type="module" src="/src/main.ts"></script></body></html>`;
   const target = resolve(root, dirFor(route.path), 'index.html');
   writeFileSync(target, html);
   console.log(`Wrote ${target}`);

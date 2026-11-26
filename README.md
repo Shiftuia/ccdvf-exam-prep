@@ -47,7 +47,7 @@ docker compose rm -f anthropic-quiz && docker compose create anthropic-quiz && d
 See "Rebuilding after content changes" below for the content-only case.
 
 **Analytics:** carries the mandatory first-party Umami counter (website id
-`8f9343a1-c7f8-453d-8aef-b24291cf9d13`, tracker script
+`87e83658-c9c5-4cb4-959d-9b5333dccc2f`, tracker script
 `https://metrics.shiftuia.com/hs.js`) on all six routes, injected by
 `scripts/generate-html.mjs` at build time — see the umami-deployment
 convention documented in `~/dev/services/_scripts/README.md` and
