@@ -54,6 +54,9 @@ header {
 nav { display: flex; gap: 24px; flex-wrap: wrap; }
 nav a { text-decoration: none; color: var(--ink-muted); font-size: 0.9375rem; }
 nav a:hover { color: var(--accent); }
+nav a.support-nav { display: inline-flex; align-items: center; gap: 6px; color: var(--accent); font-weight: 500; white-space: nowrap; }
+nav a.support-nav:hover { color: var(--accent-hover); }
+nav a.support-nav svg { flex: none; }
 
 main { max-width: 1100px; margin: 0 auto; padding: 48px clamp(24px, 6vw, 80px); }
 
@@ -192,4 +195,11 @@ progress::-webkit-progress-value { background: var(--accent); border-radius: 999
   main { padding: 24px 16px; }
   h1 { font-size: 2rem; }
   header { padding: 16px; flex-wrap: wrap; gap: 12px; }
+  /* brand + support cup share the first row; the four page links sit on one row below */
+  nav { display: contents; }
+  .brand { flex: 1 0 calc(100% - 48px); order: 0; }
+  nav a { order: 2; font-size: 0.875rem; }
+  header { column-gap: 14px; }
+  nav a.support-nav { order: 1; padding: 6px; margin: -6px -6px -6px 0; }
+  nav a.support-nav span { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
 }

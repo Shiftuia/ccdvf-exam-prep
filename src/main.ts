@@ -18,7 +18,7 @@ const authorBlock = `<p><strong>Who made this.</strong> I'm Dima — I build wit
 const BASE = (import.meta.env.VITE_NAV_BASE as string | undefined)?.replace(/\/$/, '') || '';
 const footer = `<footer><p>${footerDisclaimer}</p><p class="muted">Question set: ${contentGeneratedAt} · ${examMeta.itemCount} items</p></footer>`;
 const shell = (content: string) =>
-  `<header><a class="brand" href="${BASE}/">Blueprint <small>by Holy Shifted</small></a><nav><a href="${BASE}/exam/">Exam</a><a href="${BASE}/framework/">Framework</a><a href="${BASE}/cheat-sheet/">Cheat sheet</a><a href="${BASE}/quiz/">Practice exam</a></nav></header><main>${content}</main>${footer}`;
+  `<header><a class="brand" href="${BASE}/">Blueprint <small>by Holy Shifted</small></a><nav><a href="${BASE}/exam/">Exam</a><a href="${BASE}/framework/">Framework</a><a href="${BASE}/cheat-sheet/">Cheat sheet</a><a href="${BASE}/quiz/">Practice exam</a><a class="support-nav" href="https://shiftuia.com/support" rel="noopener" data-umami-event="support-click" data-umami-event-placement="quiz-header"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"><path d="M5 9.5h12v6.2A3.8 3.8 0 0 1 13.2 19.5H8.8A3.8 3.8 0 0 1 5 15.7Z"/><path d="M17 11h1.1a2.5 2.5 0 0 1 0 5H17"/><path d="M4 21.5h14"/><path d="M8 3v3.5"/><path d="M11 3.5v3"/><path d="M14 3v3.5"/></svg><span>Support my work</span></a></nav></header><main>${content}</main>${footer}`;
 
 const tiles = certifications
   .map((item) =>
